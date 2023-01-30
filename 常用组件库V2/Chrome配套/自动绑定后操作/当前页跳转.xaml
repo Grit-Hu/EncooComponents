@@ -1,0 +1,122 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bcci="clr-namespace:BotTimeUI.Common.Control.Interface;assembly=BotTimeUI.Common" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:eaw="clr-namespace:Encootech.AutomationActivity.WebAction;assembly=AutomationActivity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="跳转网址" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>525,859</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="10">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTimeUI.Common.Control.Interface</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>Encootech.AutomationActivity.WebAction</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>BotTimeUI.Common</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>AutomationActivity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="485,779" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="bcci:IBotTimeWebDriver" Name="uiBrowser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取Chrome浏览器对象" sap:VirtualizedContainerService.HintSize="463,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <OutArgument x:TypeArguments="bcci:IBotTimeWebDriver" x:Key="uiBrowser">
+          <mca:CSharpReference x:TypeArguments="bcci:IBotTimeWebDriver" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">uiBrowser</mca:CSharpReference>
+        </OutArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">Chrome配套\获取Chrome浏览器对象.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 提示并写入日志" sap:VirtualizedContainerService.HintSize="463,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_2" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="提示信息">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">当前页跳转。</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="提示时长">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="1" />
+        </InArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">日志增强\提示并写入日志.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <eaw:BrowserAttach DelayAfter="{x:Null}" DelayBefore="{x:Null}" ScreenShoot="{x:Null}" Selector="{x:Null}" Selector2="{x:Null}" SelectorId="{x:Null}" StoreId="{x:Null}" Timeout="{x:Null}" WaitTimeout="{x:Null}" ActivityName="绑定浏览器" BringWindowType="Default" BrowserType="Default" ContinueOnError="False" DisplayName="绑定浏览器" ElementRect="0, 0, 0, 0" Guid="a591f485-cee4-4823-b8a5-8b4bbb3ed0a7" sap:VirtualizedContainerService.HintSize="463,227" sap2010:WorkflowViewState.IdRef="BrowserAttach_1" IsEndClose="False" IsIgnore="False" IsMaximize="False" SelectionRect="0, 0, 0, 0">
+      <eaw:BrowserAttach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CurrentBrowser" />
+          </ActivityAction.Argument>
+          <eaw:BrowserNavigate DelayAfter="{x:Null}" DelayBefore="{x:Null}" TimeOut="{x:Null}" ActivityName="BrowserNavigate" ContinueOnError="False" DisplayName="当前页跳转" Guid="d6a833ab-5308-4c44-9af0-8e5a866cc387" sap:VirtualizedContainerService.HintSize="449,58" sap2010:WorkflowViewState.IdRef="BrowserNavigate_1" IsIgnore="False" IsReady="True">
+            <eaw:BrowserNavigate.Url>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">System.Convert.ToString(跳转网址)</mca:CSharpValue>
+              </InArgument>
+            </eaw:BrowserNavigate.Url>
+            <eaw:BrowserNavigate.WaitTimeout>
+              <InArgument x:TypeArguments="x:Int32">
+                <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="30000" />
+              </InArgument>
+            </eaw:BrowserNavigate.WaitTimeout>
+          </eaw:BrowserNavigate>
+        </ActivityAction>
+      </eaw:BrowserAttach.Body>
+      <eaw:BrowserAttach.Browser>
+        <InArgument x:TypeArguments="bcci:IBotTimeWebDriver">
+          <mca:CSharpValue x:TypeArguments="bcci:IBotTimeWebDriver" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">uiBrowser</mca:CSharpValue>
+        </InArgument>
+      </eaw:BrowserAttach.Browser>
+    </eaw:BrowserAttach>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" sap2010:Annotation.AnnotationText="浏览器对象之后用不到，等待垃圾回收。" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="463,116" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;uiBrowser&quot;,&quot;ToTypeName&quot;:&quot;BotTimeUI.Common.Control.Interface.IBotTimeWebDriver, BotTimeUI.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;Val&quot;:&quot;null&quot;,&quot;ValTypeName&quot;:&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="bcci:IBotTimeWebDriver">
+              <mca:CSharpReference x:TypeArguments="bcci:IBotTimeWebDriver">uiBrowser</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object">null</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </bfa:MultipleAssign>
+  </Sequence>
+</Activity>

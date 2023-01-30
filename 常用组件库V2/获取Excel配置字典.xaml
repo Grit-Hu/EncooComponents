@@ -1,0 +1,153 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bda="clr-namespace:BotTime.DataTableActivity.Activities;assembly=BotTime.DataTableActivity" xmlns:boa="clr-namespace:BotTime.Office.Activity;assembly=BotTime.Office.Activity" xmlns:ecaad="clr-namespace:Encoo.CodeTool.Activity.Activities.Dictionary;assembly=Encoo.CodeTool.Activity" xmlns:ecam="clr-namespace:Encoo.CodeTool.Activity.Models;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="配置表路径" Type="InArgument(x:String)" />
+    <x:Property Name="工作表名称" Type="InArgument(x:String)" />
+    <x:Property Name="配置表字典" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>628,1284</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="11">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.DataTableActivity.Activities</x:String>
+      <x:String>BotTime.Office.Activity</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Dictionary</x:String>
+      <x:String>Encoo.CodeTool.Activity.Models</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
+      <AssemblyReference>BotTime.Office.Activity</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="588,1204" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="lastRowIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ecaad:InitializeDictionaryActivity ActivityName="初始化字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="初始化字典" sap:VirtualizedContainerService.HintSize="566,58" sap2010:WorkflowViewState.IdRef="InitializeDictionaryActivity_1">
+      <ecaad:InitializeDictionaryActivity.Dictionary>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+          <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">配置表字典</mca:CSharpReference>
+        </OutArgument>
+      </ecaad:InitializeDictionaryActivity.Dictionary>
+    </ecaad:InitializeDictionaryActivity>
+    <boa:OfficeExcelOpenOrCreateActivity OfficeVersion="{x:Null}" Password="{x:Null}" SaveAs="{x:Null}" ActivityName="打开/新建" AutoSave="False" ContinueOnError="No" CreateNewFile="False" DelayAfter="0" DelayBefore="0" DisplayName="打开/新建" EnableMacro="False" sap:VirtualizedContainerService.HintSize="566,982" sap2010:WorkflowViewState.IdRef="OfficeExcelOpenOrCreateActivity_1" MultiEngineType="Office" ReadOnly="True" Visible="False" needRestoreKey="False">
+      <boa:OfficeExcelOpenOrCreateActivity.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="XlWorkbook" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="472,874" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <boa:OfficeExcelGetLastRowIndexActivity ColumnIndex="{x:Null}" ColumnNo="{x:Null}" LettersColumnIndex="{x:Null}" ActivityName="获取末行号" ColumnType="NumberColumn" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="获取末行号" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="OfficeExcelGetLastRowIndexActivity_1">
+              <boa:OfficeExcelGetLastRowIndexActivity.LastRowIndex>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">lastRowIndex</mca:CSharpReference>
+                </OutArgument>
+              </boa:OfficeExcelGetLastRowIndexActivity.LastRowIndex>
+              <boa:OfficeExcelGetLastRowIndexActivity.SheetName>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">System.Convert.ToString(工作表名称)</mca:CSharpValue>
+                </InArgument>
+              </boa:OfficeExcelGetLastRowIndexActivity.SheetName>
+            </boa:OfficeExcelGetLastRowIndexActivity>
+            <boa:OfficeExcelReadRangeActivity ActivityName="读取区域" AddHeaders="True" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="读取区域" sap:VirtualizedContainerService.HintSize="450,129" sap2010:WorkflowViewState.IdRef="OfficeExcelReadRangeActivity_1" PreserveFormat="False" RepeatedColumn="False" UseFilter="False">
+              <boa:OfficeExcelReadRangeActivity.Data>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dataTable</mca:CSharpReference>
+                </OutArgument>
+              </boa:OfficeExcelReadRangeActivity.Data>
+              <boa:OfficeExcelReadRangeActivity.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Convert.ToString("A1:B"+lastRowIndex)</mca:CSharpValue>
+                </InArgument>
+              </boa:OfficeExcelReadRangeActivity.Range>
+              <boa:OfficeExcelReadRangeActivity.SheetName>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">System.Convert.ToString(工作表名称)</mca:CSharpValue>
+                </InArgument>
+              </boa:OfficeExcelReadRangeActivity.SheetName>
+            </boa:OfficeExcelReadRangeActivity>
+            <bda:ForEach CurrentIndex="{x:Null}" ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行" sap:VirtualizedContainerService.HintSize="450,304" sap2010:WorkflowViewState.IdRef="ForEach_1">
+              <bda:ForEach.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">dataTable</mca:CSharpValue>
+                </InArgument>
+              </bda:ForEach.DataTable>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <ecaad:AddDictionaryActivity ActivityName="添加键值对" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加键值对" sap:VirtualizedContainerService.HintSize="349,117" sap2010:WorkflowViewState.IdRef="AddDictionaryActivity_1" KeyValuePairJsonText="[{&quot;Key&quot;:&quot;row[0].ToString()&quot;,&quot;KeyTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Value&quot;:&quot;row[1].ToString()&quot;,&quot;ValueTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                  <ecaad:AddDictionaryActivity.Dictionary>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                      <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">配置表字典</mca:CSharpValue>
+                    </InArgument>
+                  </ecaad:AddDictionaryActivity.Dictionary>
+                  <ecaad:AddDictionaryActivity.KeyValuePairs>
+                    <ecam:KeyValueModel Index="1" IsNotFirst="False">
+                      <ecam:KeyValueModel.Key>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">row[0].ToString()</mca:CSharpValue>
+                        </InArgument>
+                      </ecam:KeyValueModel.Key>
+                      <ecam:KeyValueModel.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">row[1].ToString()</mca:CSharpValue>
+                        </InArgument>
+                      </ecam:KeyValueModel.Value>
+                    </ecam:KeyValueModel>
+                  </ecaad:AddDictionaryActivity.KeyValuePairs>
+                </ecaad:AddDictionaryActivity>
+              </ActivityAction>
+            </bda:ForEach>
+            <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="450,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_1">
+              <ecaad:PrintDictionaryActivity.Dictionary>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">配置表字典</mca:CSharpValue>
+                </InArgument>
+              </ecaad:PrintDictionaryActivity.Dictionary>
+            </ecaad:PrintDictionaryActivity>
+          </Sequence>
+        </ActivityAction>
+      </boa:OfficeExcelOpenOrCreateActivity.Body>
+      <boa:OfficeExcelOpenOrCreateActivity.ExcelFile>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(配置表路径)</mca:CSharpValue>
+        </InArgument>
+      </boa:OfficeExcelOpenOrCreateActivity.ExcelFile>
+    </boa:OfficeExcelOpenOrCreateActivity>
+  </Sequence>
+</Activity>

@@ -1,0 +1,224 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasd="clr-namespace:BotTime.ActivityLibrary.Activities.System.Data;assembly=BotTime.ActivityLibrary" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bda="clr-namespace:BotTime.DataTableActivity.Activities;assembly=BotTime.DataTableActivity" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="日期" Type="InArgument(x:String)" />
+    <x:Property Name="日期列名" Type="InArgument(x:String)" />
+    <x:Property Name="数据表" Type="InOutArgument(sd:DataTable)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>634,2021</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="11">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Data</x:String>
+      <x:String>BotTime.DataTableActivity.Activities</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      
+      <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="594,1941" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="临时数据表" />
+      <Variable x:TypeArguments="x:String" Name="标准化日期文本" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="572,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">=====过滤和格式化数据表日期=====</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="572,58" sap2010:WorkflowViewState.IdRef="LogActivity_2" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">System.Convert.ToString("日期="+日期)</mca:CSharpValue>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="572,58" sap2010:WorkflowViewState.IdRef="LogActivity_3" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">System.Convert.ToString("日期列名="+日期列名)</mca:CSharpValue>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="572,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;临时数据表&quot;,&quot;ToTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;数据表.Clone()&quot;,&quot;ValTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpReference x:TypeArguments="sd:DataTable">临时数据表</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpValue x:TypeArguments="sd:DataTable">数据表.Clone()</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <bda:ForEach CurrentIndex="{x:Null}" ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行" sap:VirtualizedContainerService.HintSize="572,1261" sap2010:WorkflowViewState.IdRef="ForEach_1">
+      <bda:ForEach.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">数据表</mca:CSharpValue>
+        </InArgument>
+      </bda:ForEach.DataTable>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ActivityAction x:TypeArguments="sd:DataRow">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="556,1146" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="yyyyMMdd形式的文本，不支持使用数据格式化组件转换，需要处理一下。" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,517" sap2010:WorkflowViewState.IdRef="If_2" IsIgnore="False">
+            <bfa:If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">row[日期列名].ToString().Length==8</mca:CSharpValue>
+              </InArgument>
+            </bfa:If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <bfa:If.Then>
+              <baasd:FormatDataActivity CultureName="{x:Null}" ActivityName="数据格式化" ContinueOnError="No" DataType="DateAndTime" DateFormat="yyyy-MM-dd" DecimalNum="2" DelayAfter="0" DelayBefore="0" DisplayName="数据格式化" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="FormatDataActivity_3" IsContainSplit="False">
+                <baasd:FormatDataActivity.Data>
+                  <InArgument x:TypeArguments="x:Object">
+                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">DateTime.ParseExact(row[日期列名].ToString(), "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture)</mca:CSharpValue>
+                  </InArgument>
+                </baasd:FormatDataActivity.Data>
+                <baasd:FormatDataActivity.FormatData>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">标准化日期文本</mca:CSharpReference>
+                  </OutArgument>
+                </baasd:FormatDataActivity.FormatData>
+              </baasd:FormatDataActivity>
+            </bfa:If.Then>
+            <bfa:If.Else>
+              <baasd:FormatDataActivity CultureName="{x:Null}" ActivityName="数据格式化" ContinueOnError="No" DataType="DateAndTime" DateFormat="yyyy-MM-dd" DecimalNum="2" DelayAfter="0" DelayBefore="0" DisplayName="数据格式化" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="FormatDataActivity_2" IsContainSplit="False">
+                <baasd:FormatDataActivity.Data>
+                  <InArgument x:TypeArguments="x:Object">
+                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">row[日期列名].ToString()</mca:CSharpValue>
+                  </InArgument>
+                </baasd:FormatDataActivity.Data>
+                <baasd:FormatDataActivity.FormatData>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">标准化日期文本</mca:CSharpReference>
+                  </OutArgument>
+                </baasd:FormatDataActivity.FormatData>
+              </baasd:FormatDataActivity>
+            </bfa:If.Else>
+          </bfa:If>
+          <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,465" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
+            <bfa:If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">标准化日期文本.Equals(日期)</mca:CSharpValue>
+              </InArgument>
+            </bfa:If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <bfa:If.Then>
+              <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="382,277" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="360,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_3" IsIgnore="False" Text="[{&quot;To&quot;:&quot;row[日期列名]&quot;,&quot;ToTypeName&quot;:&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;标准化日期文本&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                  <bfa:MultipleAssign.AssignModels>
+                    <bfa:AssignModel Index="1" IsNotFirst="False">
+                      <bfa:AssignModel.To>
+                        <OutArgument x:TypeArguments="x:Object">
+                          <mca:CSharpReference x:TypeArguments="x:Object">row[日期列名]</mca:CSharpReference>
+                        </OutArgument>
+                      </bfa:AssignModel.To>
+                      <bfa:AssignModel.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">标准化日期文本</mca:CSharpValue>
+                        </InArgument>
+                      </bfa:AssignModel.Value>
+                    </bfa:AssignModel>
+                  </bfa:MultipleAssign.AssignModels>
+                </bfa:MultipleAssign>
+                <bda:DataTableAddRowActivity DataRow="{x:Null}" ActivityName="添加数据行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加数据行" sap:VirtualizedContainerService.HintSize="360,22" sap2010:WorkflowViewState.IdRef="DataTableAddRowActivity_1">
+                  <bda:DataTableAddRowActivity.ArrayRow>
+                    <InArgument x:TypeArguments="s:Object[]">
+                      <mca:CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">row.ItemArray</mca:CSharpValue>
+                    </InArgument>
+                  </bda:DataTableAddRowActivity.ArrayRow>
+                  <bda:DataTableAddRowActivity.DataTable>
+                    <InArgument x:TypeArguments="sd:DataTable">
+                      <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">临时数据表</mca:CSharpValue>
+                    </InArgument>
+                  </bda:DataTableAddRowActivity.DataTable>
+                </bda:DataTableAddRowActivity>
+              </Sequence>
+            </bfa:If.Then>
+          </bfa:If>
+        </Sequence>
+      </ActivityAction>
+    </bda:ForEach>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="572,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_2" IsIgnore="False" Text="[{&quot;To&quot;:&quot;数据表&quot;,&quot;ToTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;临时数据表&quot;,&quot;ValTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpReference x:TypeArguments="sd:DataTable">数据表</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpValue x:TypeArguments="sd:DataTable">临时数据表</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+  </Sequence>
+</Activity>

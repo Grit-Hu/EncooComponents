@@ -1,0 +1,494 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bda="clr-namespace:BotTime.DataTableActivity.Activities;assembly=BotTime.DataTableActivity" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:boa="clr-namespace:BotTime.Office.Activity;assembly=BotTime.Office.Activity" xmlns:eae="clr-namespace:Encootech.ActivityCommon.EncooCommonActivity;assembly=ActivityCommon" xmlns:ecaad="clr-namespace:Encoo.CodeTool.Activity.Activities.Dictionary;assembly=Encoo.CodeTool.Activity" xmlns:ecam="clr-namespace:Encoo.CodeTool.Activity.Models;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="工作表名称" Type="InArgument(x:String)" />
+    <x:Property Name="配置表路径" Type="InArgument(x:String)" />
+    <x:Property Name="数据表字段配置映射一层字典" Type="OutArgument(scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))))" />
+  </x:Members>
+  <this:Main.工作表名称>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_59">数据表字段配置映射</Literal>
+    </InArgument>
+  </this:Main.工作表名称>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>637,4997</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="14">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.DataTableActivity.Activities</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>BotTime.Office.Activity</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Dictionary</x:String>
+      <x:String>Encoo.CodeTool.Activity.Models</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>BotTime.Office.Activity</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>ActivityCommon</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="597,4917" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="序列-获取数据表字段映射配置字典" sap:VirtualizedContainerService.HintSize="575,4793" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" Name="不同模块数据表区域字典" />
+        <Variable x:TypeArguments="sd:DataTable" Name="总映射数据表" />
+        <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" Name="二层字典" />
+        <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="三层字典" />
+        <Variable x:TypeArguments="x:Int32" Name="currentIndex" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="553,58" sap2010:WorkflowViewState.IdRef="LogActivity_13" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_57">=====获取数据表字段映射=====</Literal>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+      <boa:OfficeExcelOpenOrCreateActivity OfficeVersion="{x:Null}" Password="{x:Null}" SaveAs="{x:Null}" ActivityName="打开/新建" AutoSave="False" ContinueOnError="No" CreateNewFile="False" DelayAfter="0" DelayBefore="0" DisplayName="打开/新建" EnableMacro="False" sap:VirtualizedContainerService.HintSize="553,800" sap2010:WorkflowViewState.IdRef="OfficeExcelOpenOrCreateActivity_1" MultiEngineType="Office" ReadOnly="True" Visible="False" needRestoreKey="False">
+        <boa:OfficeExcelOpenOrCreateActivity.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="XlWorkbook" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="序列-Excel" sap:VirtualizedContainerService.HintSize="393,692" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="序列-获取总数据表" sap:VirtualizedContainerService.HintSize="371,568" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Int32" Name="lastRowIndex" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <boa:OfficeExcelGetLastRowIndexActivity ColumnIndex="{x:Null}" LettersColumnIndex="{x:Null}" ActivityName="获取末行号" ColumnType="NumberColumn" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="获取末行号" sap:VirtualizedContainerService.HintSize="349,139" sap2010:WorkflowViewState.IdRef="OfficeExcelGetLastRowIndexActivity_1">
+                  <boa:OfficeExcelGetLastRowIndexActivity.ColumnNo>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"A"</mca:CSharpValue>
+                    </InArgument>
+                  </boa:OfficeExcelGetLastRowIndexActivity.ColumnNo>
+                  <boa:OfficeExcelGetLastRowIndexActivity.LastRowIndex>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">lastRowIndex</mca:CSharpReference>
+                    </OutArgument>
+                  </boa:OfficeExcelGetLastRowIndexActivity.LastRowIndex>
+                  <boa:OfficeExcelGetLastRowIndexActivity.SheetName>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">工作表名称</mca:CSharpValue>
+                    </InArgument>
+                  </boa:OfficeExcelGetLastRowIndexActivity.SheetName>
+                </boa:OfficeExcelGetLastRowIndexActivity>
+                <boa:OfficeExcelReadRangeActivity ActivityName="读取区域" AddHeaders="True" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="读取区域" sap:VirtualizedContainerService.HintSize="349,129" sap2010:WorkflowViewState.IdRef="OfficeExcelReadRangeActivity_1" PreserveFormat="False" RepeatedColumn="False" UseFilter="False">
+                  <boa:OfficeExcelReadRangeActivity.Data>
+                    <OutArgument x:TypeArguments="sd:DataTable">
+                      <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">总映射数据表</mca:CSharpReference>
+                    </OutArgument>
+                  </boa:OfficeExcelReadRangeActivity.Data>
+                  <boa:OfficeExcelReadRangeActivity.Range>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Convert.ToString("A1:D"+lastRowIndex)</mca:CSharpValue>
+                    </InArgument>
+                  </boa:OfficeExcelReadRangeActivity.Range>
+                  <boa:OfficeExcelReadRangeActivity.SheetName>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">工作表名称</mca:CSharpValue>
+                    </InArgument>
+                  </boa:OfficeExcelReadRangeActivity.SheetName>
+                </boa:OfficeExcelReadRangeActivity>
+                <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 打印数据表" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+                  <bfa:InvokeWorkflow.Arguments>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="传入的数据表">
+                      <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">总映射数据表</mca:CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="数据表名称">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_60">总映射数据表</Literal>
+                    </InArgument>
+                  </bfa:InvokeWorkflow.Arguments>
+                  <bfa:InvokeWorkflow.WorkflowPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_61">日志增强\打印数据表.xaml</Literal>
+                    </InArgument>
+                  </bfa:InvokeWorkflow.WorkflowPath>
+                </bfa:InvokeWorkflow>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </boa:OfficeExcelOpenOrCreateActivity.Body>
+        <boa:OfficeExcelOpenOrCreateActivity.ExcelFile>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">System.Convert.ToString(配置表路径)</mca:CSharpValue>
+          </InArgument>
+        </boa:OfficeExcelOpenOrCreateActivity.ExcelFile>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </boa:OfficeExcelOpenOrCreateActivity>
+      <Sequence DisplayName="序列-不同模块数据表分割" sap:VirtualizedContainerService.HintSize="553,939" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ecaad:InitializeDictionaryActivity ActivityName="初始化字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="初始化字典" sap:VirtualizedContainerService.HintSize="450,58" sap2010:WorkflowViewState.IdRef="InitializeDictionaryActivity_2">
+          <ecaad:InitializeDictionaryActivity.Dictionary>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)">
+              <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">不同模块数据表区域字典</mca:CSharpReference>
+            </OutArgument>
+          </ecaad:InitializeDictionaryActivity.Dictionary>
+        </ecaad:InitializeDictionaryActivity>
+        <bda:ForEach CurrentIndex="{x:Null}" ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行" sap:VirtualizedContainerService.HintSize="450,330" sap2010:WorkflowViewState.IdRef="ForEach_2">
+          <bda:ForEach.DataTable>
+            <InArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">总映射数据表</mca:CSharpValue>
+            </InArgument>
+          </bda:ForEach.DataTable>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="382,215" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="360,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_4" IsIgnore="False" Text="[{&quot;To&quot;:&quot;不同模块数据表区域字典[row[\&quot;模块名称\&quot;].ToString()]&quot;,&quot;ToTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;总映射数据表.Clone()&quot;,&quot;ValTypeName&quot;:&quot;System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                <bfa:MultipleAssign.AssignModels>
+                  <bfa:AssignModel Index="1" IsNotFirst="False">
+                    <bfa:AssignModel.To>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <mca:CSharpReference x:TypeArguments="sd:DataTable">不同模块数据表区域字典[row["模块名称"].ToString()]</mca:CSharpReference>
+                      </OutArgument>
+                    </bfa:AssignModel.To>
+                    <bfa:AssignModel.Value>
+                      <InArgument x:TypeArguments="sd:DataTable">
+                        <mca:CSharpValue x:TypeArguments="sd:DataTable">总映射数据表.Clone()</mca:CSharpValue>
+                      </InArgument>
+                    </bfa:AssignModel.Value>
+                  </bfa:AssignModel>
+                </bfa:MultipleAssign.AssignModels>
+              </bfa:MultipleAssign>
+            </Sequence>
+          </ActivityAction>
+        </bda:ForEach>
+        <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="450,58" sap2010:WorkflowViewState.IdRef="LogActivity_6" Level="Info">
+          <baast:LogActivity.LogContent>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_46">字典结构创建完成。</Literal>
+            </InArgument>
+          </baast:LogActivity.LogContent>
+        </baast:LogActivity>
+        <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="450,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_6">
+          <ecaad:PrintDictionaryActivity.Dictionary>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)">
+              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">不同模块数据表区域字典</mca:CSharpValue>
+            </InArgument>
+          </ecaad:PrintDictionaryActivity.Dictionary>
+        </ecaad:PrintDictionaryActivity>
+        <bda:ForEach ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行-不同模块数据表添加数据。" sap:VirtualizedContainerService.HintSize="450,53" sap2010:WorkflowViewState.IdRef="ForEach_3">
+          <bda:ForEach.CurrentIndex>
+            <OutArgument x:TypeArguments="x:Int32">
+              <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">currentIndex</mca:CSharpReference>
+            </OutArgument>
+          </bda:ForEach.CurrentIndex>
+          <bda:ForEach.DataTable>
+            <InArgument x:TypeArguments="sd:DataTable">
+              <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">总映射数据表</mca:CSharpValue>
+            </InArgument>
+          </bda:ForEach.DataTable>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="222,146" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <bda:DataTableAddRowActivity DataRow="{x:Null}" ActivityName="添加数据行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加数据行" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DataTableAddRowActivity_1">
+                <bda:DataTableAddRowActivity.ArrayRow>
+                  <InArgument x:TypeArguments="s:Object[]">
+                    <mca:CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">row.ItemArray</mca:CSharpValue>
+                  </InArgument>
+                </bda:DataTableAddRowActivity.ArrayRow>
+                <bda:DataTableAddRowActivity.DataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">不同模块数据表区域字典[row["模块名称"].ToString()]</mca:CSharpValue>
+                  </InArgument>
+                </bda:DataTableAddRowActivity.DataTable>
+              </bda:DataTableAddRowActivity>
+            </Sequence>
+          </ActivityAction>
+        </bda:ForEach>
+        <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="450,58" sap2010:WorkflowViewState.IdRef="LogActivity_11" Level="Info">
+          <baast:LogActivity.LogContent>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_51">数据表内容添加完成。</Literal>
+            </InArgument>
+          </baast:LogActivity.LogContent>
+        </baast:LogActivity>
+      </Sequence>
+      <Sequence DisplayName="序列-构建一层字典" sap:VirtualizedContainerService.HintSize="553,2654" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ecaad:InitializeDictionaryActivity ActivityName="初始化字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="初始化字典" sap:VirtualizedContainerService.HintSize="531,58" sap2010:WorkflowViewState.IdRef="InitializeDictionaryActivity_3">
+          <ecaad:InitializeDictionaryActivity.Dictionary>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))">
+              <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">数据表字段配置映射一层字典</mca:CSharpReference>
+            </OutArgument>
+          </ecaad:InitializeDictionaryActivity.Dictionary>
+        </ecaad:InitializeDictionaryActivity>
+        <bfa:ForEach x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)" CurrentIndex="{x:Null}" ActivityName="循环操作（For Each）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="循环操作（For Each）" sap:VirtualizedContainerService.HintSize="531,2081" sap2010:WorkflowViewState.IdRef="ForEach`1_2" IsIgnore="False">
+          <bfa:ForEach.Values>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)">
+              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">不同模块数据表区域字典</mca:CSharpValue>
+            </InArgument>
+          </bfa:ForEach.Values>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)" Name="item" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="序列-每个模块数据表创建字典" sap:VirtualizedContainerService.HintSize="515,1976" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="493,58" sap2010:WorkflowViewState.IdRef="LogActivity_3" Level="Info">
+                <baast:LogActivity.LogContent>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">System.Convert.ToString("====处理item.Key="+item.Key)</mca:CSharpValue>
+                  </InArgument>
+                </baast:LogActivity.LogContent>
+              </baast:LogActivity>
+              <ecaad:InitializeDictionaryActivity ActivityName="初始化字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="初始化字典" sap:VirtualizedContainerService.HintSize="493,58" sap2010:WorkflowViewState.IdRef="InitializeDictionaryActivity_4">
+                <ecaad:InitializeDictionaryActivity.Dictionary>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">
+                    <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">二层字典</mca:CSharpReference>
+                  </OutArgument>
+                </ecaad:InitializeDictionaryActivity.Dictionary>
+              </ecaad:InitializeDictionaryActivity>
+              <bda:ForEach ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行-构建二层字典" sap:VirtualizedContainerService.HintSize="493,993" sap2010:WorkflowViewState.IdRef="ForEach_1">
+                <bda:ForEach.CurrentIndex>
+                  <OutArgument x:TypeArguments="x:Int32">
+                    <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">currentIndex</mca:CSharpReference>
+                  </OutArgument>
+                </bda:ForEach.CurrentIndex>
+                <bda:ForEach.DataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">item.Value</mca:CSharpValue>
+                  </InArgument>
+                </bda:ForEach.DataTable>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="序列-构建二层字典" sap:VirtualizedContainerService.HintSize="477,878" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+                      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_8" Level="Info">
+                        <baast:LogActivity.LogContent>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_55">----三层，字段配置----</Literal>
+                          </InArgument>
+                        </baast:LogActivity.LogContent>
+                      </baast:LogActivity>
+                    </eae:CommentActivity>
+                    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）-三层字典直接初始化并赋值。" sap:VirtualizedContainerService.HintSize="455,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_2" IsIgnore="False" Text="[{&quot;To&quot;:&quot;三层字典&quot;,&quot;ToTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;new Dictionary&lt;String,String&gt;{{\&quot;数据库表字段名称\&quot;,row[\&quot;数据库表字段名称\&quot;].ToString()},{\&quot;字段类型\&quot;,row[\&quot;字段类型\&quot;].ToString()}}&quot;,&quot;ValTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                      <bfa:MultipleAssign.AssignModels>
+                        <bfa:AssignModel Index="1" IsNotFirst="False">
+                          <bfa:AssignModel.To>
+                            <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                              <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)">三层字典</mca:CSharpReference>
+                            </OutArgument>
+                          </bfa:AssignModel.To>
+                          <bfa:AssignModel.Value>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)">new Dictionary&lt;String,String&gt;{{"数据库表字段名称",row["数据库表字段名称"].ToString()},{"字段类型",row["字段类型"].ToString()}}</mca:CSharpValue>
+                            </InArgument>
+                          </bfa:AssignModel.Value>
+                        </bfa:AssignModel>
+                      </bfa:MultipleAssign.AssignModels>
+                    </bfa:MultipleAssign>
+                    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_3">
+                      <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_1">
+                        <ecaad:PrintDictionaryActivity.Dictionary>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                            <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">三层字典</mca:CSharpValue>
+                          </InArgument>
+                        </ecaad:PrintDictionaryActivity.Dictionary>
+                      </ecaad:PrintDictionaryActivity>
+                    </eae:CommentActivity>
+                    <ecaad:AddDictionaryActivity ActivityName="添加键值对" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加键值对" sap:VirtualizedContainerService.HintSize="455,117" sap2010:WorkflowViewState.IdRef="AddDictionaryActivity_3" KeyValuePairJsonText="[{&quot;Key&quot;:&quot;row[\&quot;待插入数据表字段\&quot;].ToString()&quot;,&quot;KeyTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Value&quot;:&quot;三层字典&quot;,&quot;ValueTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                      <ecaad:AddDictionaryActivity.Dictionary>
+                        <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">
+                          <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">二层字典</mca:CSharpValue>
+                        </InArgument>
+                      </ecaad:AddDictionaryActivity.Dictionary>
+                      <ecaad:AddDictionaryActivity.KeyValuePairs>
+                        <ecam:KeyValueModel Index="1" IsNotFirst="False">
+                          <ecam:KeyValueModel.Key>
+                            <InArgument x:TypeArguments="x:String">
+                              <mca:CSharpValue x:TypeArguments="x:String">row["待插入数据表字段"].ToString()</mca:CSharpValue>
+                            </InArgument>
+                          </ecam:KeyValueModel.Key>
+                          <ecam:KeyValueModel.Value>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)">三层字典</mca:CSharpValue>
+                            </InArgument>
+                          </ecam:KeyValueModel.Value>
+                        </ecam:KeyValueModel>
+                      </ecaad:AddDictionaryActivity.KeyValuePairs>
+                    </ecaad:AddDictionaryActivity>
+                  </Sequence>
+                </ActivityAction>
+              </bda:ForEach>
+              <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="493,213" sap2010:WorkflowViewState.IdRef="CommentActivity_4">
+                <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_9" Level="Info">
+                  <baast:LogActivity.LogContent>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_54">----二层，字段名称：配置----</Literal>
+                    </InArgument>
+                  </baast:LogActivity.LogContent>
+                </baast:LogActivity>
+              </eae:CommentActivity>
+              <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="493,213" sap2010:WorkflowViewState.IdRef="CommentActivity_5">
+                <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_2">
+                  <ecaad:PrintDictionaryActivity.Dictionary>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">
+                      <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">二层字典</mca:CSharpValue>
+                    </InArgument>
+                  </ecaad:PrintDictionaryActivity.Dictionary>
+                </ecaad:PrintDictionaryActivity>
+              </eae:CommentActivity>
+              <ecaad:AddDictionaryActivity ActivityName="添加键值对" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加键值对" sap:VirtualizedContainerService.HintSize="493,117" sap2010:WorkflowViewState.IdRef="AddDictionaryActivity_4" KeyValuePairJsonText="[{&quot;Key&quot;:&quot;item.Key&quot;,&quot;KeyTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Value&quot;:&quot;二层字典&quot;,&quot;ValueTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                <ecaad:AddDictionaryActivity.Dictionary>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))">
+                    <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">数据表字段配置映射一层字典</mca:CSharpValue>
+                  </InArgument>
+                </ecaad:AddDictionaryActivity.Dictionary>
+                <ecaad:AddDictionaryActivity.KeyValuePairs>
+                  <ecam:KeyValueModel Index="1" IsNotFirst="False">
+                    <ecam:KeyValueModel.Key>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">item.Key</mca:CSharpValue>
+                      </InArgument>
+                    </ecam:KeyValueModel.Key>
+                    <ecam:KeyValueModel.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">
+                        <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">二层字典</mca:CSharpValue>
+                      </InArgument>
+                    </ecam:KeyValueModel.Value>
+                  </ecam:KeyValueModel>
+                </ecaad:AddDictionaryActivity.KeyValuePairs>
+              </ecaad:AddDictionaryActivity>
+            </Sequence>
+          </ActivityAction>
+        </bfa:ForEach>
+        <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="531,213" sap2010:WorkflowViewState.IdRef="CommentActivity_6">
+          <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_12" Level="Info">
+            <baast:LogActivity.LogContent>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_53">----一层，模块名称：字段----</Literal>
+              </InArgument>
+            </baast:LogActivity.LogContent>
+          </baast:LogActivity>
+        </eae:CommentActivity>
+        <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="531,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_3">
+          <ecaad:PrintDictionaryActivity.Dictionary>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))">
+              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">数据表字段配置映射一层字典</mca:CSharpValue>
+            </InArgument>
+          </ecaad:PrintDictionaryActivity.Dictionary>
+        </ecaad:PrintDictionaryActivity>
+      </Sequence>
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="553,58" sap2010:WorkflowViewState.IdRef="LogActivity_14" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_58">=====获取数据表字段映射完成=====</Literal>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </Sequence>
+  </Sequence>
+</Activity>

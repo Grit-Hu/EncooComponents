@@ -1,0 +1,175 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasf="clr-namespace:BotTime.ActivityLibrary.Activities.System.File;assembly=BotTime.ActivityLibrary" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="下载文件保存路径" Type="InArgument(x:String)" />
+    <x:Property Name="重复等待次数" Type="InArgument(x:Int32)" />
+    <x:Property Name="重复等待延迟字符串" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.重复等待次数>
+    <InArgument x:TypeArguments="x:Int32">
+      <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_34" Value="10" />
+    </InArgument>
+  </this:Main.重复等待次数>
+  <this:Main.重复等待延迟字符串>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_38">0.0:0:1</Literal>
+    </InArgument>
+  </this:Main.重复等待延迟字符串>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>638,1562</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="10">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.File</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Globalization.Extensions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
+      <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="598,1482" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="等待文件出现计数" />
+      <Variable x:TypeArguments="x:TimeSpan" Name="重复等待延迟" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="576,58" sap2010:WorkflowViewState.IdRef="LogActivity_6" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">System.Convert.ToString("下载文件保存路径："+下载文件保存路径)</mca:CSharpValue>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="576,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;重复等待延迟&quot;,&quot;ToTypeName&quot;:&quot;System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;TimeSpan.Parse(重复等待延迟字符串)&quot;,&quot;ValTypeName&quot;:&quot;System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:TimeSpan">
+              <mca:CSharpReference x:TypeArguments="x:TimeSpan">重复等待延迟</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:TimeSpan">
+              <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.Parse(重复等待延迟字符串)</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <bfa:ForPro ActivityName="重复操作" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="重复操作" sap:VirtualizedContainerService.HintSize="576,1129" sap2010:WorkflowViewState.IdRef="ForPro_1" IsIgnore="False">
+      <bfa:ForPro.CurrentNumber>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_97">等待文件出现计数</mca:CSharpReference>
+        </OutArgument>
+      </bfa:ForPro.CurrentNumber>
+      <bfa:ForPro.Cycles>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_115">重复等待次数</mca:CSharpValue>
+        </InArgument>
+      </bfa:ForPro.Cycles>
+      <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="556,1017" sap2010:WorkflowViewState.IdRef="Sequence_17">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Boolean" Name="exists" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="LogActivity_7" Level="Info">
+          <baast:LogActivity.LogContent>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">System.Convert.ToString("等待文件出现计数："+等待文件出现计数)</mca:CSharpValue>
+            </InArgument>
+          </baast:LogActivity.LogContent>
+        </baast:LogActivity>
+        <baasf:PathExistsActivity ActivityName="文件/文件夹是否存在" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="文件/文件夹是否存在" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="PathExistsActivity_2" InputType="File">
+          <baasf:PathExistsActivity.Exists>
+            <OutArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_98">exists</mca:CSharpReference>
+            </OutArgument>
+          </baasf:PathExistsActivity.Exists>
+          <baasf:PathExistsActivity.InputPath>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">System.Convert.ToString(下载文件保存路径)</mca:CSharpValue>
+            </InArgument>
+          </baasf:PathExistsActivity.InputPath>
+        </baasf:PathExistsActivity>
+        <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）-文件是否存在" sap:VirtualizedContainerService.HintSize="534,282" sap2010:WorkflowViewState.IdRef="If_10" IsIgnore="False">
+          <bfa:If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">exists == true</mca:CSharpValue>
+            </InArgument>
+          </bfa:If.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <bfa:If.Then>
+            <bfa:Break BreakAction="{x:Null}" ActivityName="终止循环" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="终止循环" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_2" IsIgnore="False" />
+          </bfa:If.Then>
+        </bfa:If>
+        <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）-是否到了等待限制" sap:VirtualizedContainerService.HintSize="534,282" sap2010:WorkflowViewState.IdRef="If_11" IsIgnore="False">
+          <bfa:If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">等待文件出现计数==重复等待次数</mca:CSharpValue>
+            </InArgument>
+          </bfa:If.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <bfa:If.Then>
+            <bfa:Throw DisplayName="抛出异常" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2">
+              <InArgument x:TypeArguments="s:Exception">
+                <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">new Exception("等待文件超时。")</mca:CSharpValue>
+              </InArgument>
+            </bfa:Throw>
+          </bfa:If.Then>
+        </bfa:If>
+        <bfa:Delay DelayTimeSpan="00:00:00" DisplayName="延迟" sap:VirtualizedContainerService.HintSize="534,53" sap2010:WorkflowViewState.IdRef="Delay_2">
+          <bfa:Delay.WaitTimeSpan>
+            <InArgument x:TypeArguments="x:TimeSpan">
+              <mca:CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">重复等待延迟</mca:CSharpValue>
+            </InArgument>
+          </bfa:Delay.WaitTimeSpan>
+        </bfa:Delay>
+      </Sequence>
+    </bfa:ForPro>
+  </Sequence>
+</Activity>

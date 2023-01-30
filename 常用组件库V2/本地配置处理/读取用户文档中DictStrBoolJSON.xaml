@@ -1,0 +1,93 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasf="clr-namespace:BotTime.ActivityLibrary.Activities.System.File;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ecaaj="clr-namespace:Encoo.CodeTool.Activity.Activities.Json;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="文件名称" Type="InArgument(x:String)" />
+    <x:Property Name="Dict对象" Type="OutArgument(scg:Dictionary(x:String, x:Boolean))" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>411,460</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="10">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.File</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Json</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,380" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="文档路径" />
+      <Variable x:TypeArguments="x:String" Name="fileContent" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取用户文档路径" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="文档路径">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">文档路径</mca:CSharpReference>
+        </OutArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">字符串处理\获取用户文档路径.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <baasf:ReadTextFile ActivityName="读取文件" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="读取文件" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <baasf:ReadTextFile.EncodingStr>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">UTF-8</Literal>
+        </InArgument>
+      </baasf:ReadTextFile.EncodingStr>
+      <baasf:ReadTextFile.FileContent>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">fileContent</mca:CSharpReference>
+        </OutArgument>
+      </baasf:ReadTextFile.FileContent>
+      <baasf:ReadTextFile.FilePath>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">文档路径+文件名称</mca:CSharpValue>
+        </InArgument>
+      </baasf:ReadTextFile.FilePath>
+    </baasf:ReadTextFile>
+    <ecaaj:DeserializeObjectActivity ActivityName="反序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="反序列化" sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="DeserializeObjectActivity_1">
+      <ecaaj:DeserializeObjectActivity.JsonString>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">fileContent</mca:CSharpValue>
+        </InArgument>
+      </ecaaj:DeserializeObjectActivity.JsonString>
+      <ecaaj:DeserializeObjectActivity.Result>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Boolean)">
+          <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Boolean)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Dict对象</mca:CSharpReference>
+        </OutArgument>
+      </ecaaj:DeserializeObjectActivity.Result>
+    </ecaaj:DeserializeObjectActivity>
+  </Sequence>
+</Activity>

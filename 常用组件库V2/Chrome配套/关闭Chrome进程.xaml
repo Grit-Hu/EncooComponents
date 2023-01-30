@@ -1,0 +1,81 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="411,673" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baas="clr-namespace:BotTime.ActivityLibrary.Activities.System;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="8">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,593" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 提示并写入日志" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="提示信息">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">关闭Chrome进程。</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="提示时长">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_7" Value="1" />
+        </InArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8">日志增强\提示并写入日志.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <baas:KillProcessActivity ActivityName="关闭进程" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="关闭进程" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="KillProcessActivity_1" IgnoreNotExist="True">
+      <baas:KillProcessActivity.ProcessName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">chrome</Literal>
+        </InArgument>
+      </baas:KillProcessActivity.ProcessName>
+    </baas:KillProcessActivity>
+    <baas:KillProcessActivity ActivityName="关闭进程" sap2010:Annotation.AnnotationText="云扩进程也要关闭，免得提示浏览器插件错误。" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="关闭进程" sap:VirtualizedContainerService.HintSize="349,83" sap2010:WorkflowViewState.IdRef="KillProcessActivity_2" IgnoreNotExist="True">
+      <baas:KillProcessActivity.ProcessName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">EncooNativeMessageHost</Literal>
+        </InArgument>
+      </baas:KillProcessActivity.ProcessName>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </baas:KillProcessActivity>
+    <bfa:Delay sap2010:Annotation.AnnotationText="本组件后马上打开浏览器可能会报插件错误，所以增加延迟试试。" DelayTimeSpan="00:00:00" DisplayName="延迟" sap:VirtualizedContainerService.HintSize="349,112" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <bfa:Delay.WaitTimeSpan>
+        <InArgument x:TypeArguments="x:TimeSpan">
+          <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="00:00:03" />
+        </InArgument>
+      </bfa:Delay.WaitTimeSpan>
+    </bfa:Delay>
+  </Sequence>
+</Activity>
