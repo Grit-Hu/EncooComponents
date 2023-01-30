@@ -1,0 +1,267 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="555,2405" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasf="clr-namespace:BotTime.ActivityLibrary.Activities.System.File;assembly=BotTime.ActivityLibrary" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ea="clr-namespace:Encootech.AutomationActivity;assembly=AutomationActivity" xmlns:eae="clr-namespace:Encootech.ActivityCommon.EncooCommonActivity;assembly=ActivityCommon" xmlns:ecaaj="clr-namespace:Encoo.CodeTool.Activity.Activities.Json;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="13">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.File</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Json</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>Encootech.AutomationActivity</x:String>
+      <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Globalization.Extensions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>AutomationActivity</AssemblyReference>
+      <AssemblyReference>ActivityCommon</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="515,2325" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="x" />
+      <Variable x:TypeArguments="x:Int32" Name="y" />
+      <Variable x:TypeArguments="scg:List(s:Int32[])" Name="移动轨迹List" />
+      <Variable x:TypeArguments="x:String" Name="result" />
+      <Variable x:TypeArguments="x:Int32" Name="currentNumber" />
+      <Variable x:TypeArguments="x:Int32" Name="x_start" />
+      <Variable x:TypeArguments="x:Int32" Name="y_start" />
+      <Variable x:TypeArguments="x:Int32" Name="操作秒数长度" />
+      <Variable x:TypeArguments="x:Int32" Name="截取起始索引" />
+      <Variable x:TypeArguments="x:Int32" Name="截取长度" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="493,58" sap2010:WorkflowViewState.IdRef="LogActivity_5" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_15">--鼠标移动--</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <baasf:ReadTextFile ActivityName="读取文件" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="读取文件" sap:VirtualizedContainerService.HintSize="493,58" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <baasf:ReadTextFile.EncodingStr>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_19">UTF-8</Literal>
+        </InArgument>
+      </baasf:ReadTextFile.EncodingStr>
+      <baasf:ReadTextFile.FileContent>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">result</mca:CSharpReference>
+        </OutArgument>
+      </baasf:ReadTextFile.FileContent>
+      <baasf:ReadTextFile.FilePath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_21">.code\鼠标移动轨迹List.json</Literal>
+        </InArgument>
+      </baasf:ReadTextFile.FilePath>
+    </baasf:ReadTextFile>
+    <ecaaj:DeserializeObjectActivity ActivityName="反序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="反序列化" sap:VirtualizedContainerService.HintSize="493,22" sap2010:WorkflowViewState.IdRef="DeserializeObjectActivity_1">
+      <ecaaj:DeserializeObjectActivity.JsonString>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">result</mca:CSharpValue>
+        </InArgument>
+      </ecaaj:DeserializeObjectActivity.JsonString>
+      <ecaaj:DeserializeObjectActivity.Result>
+        <OutArgument x:TypeArguments="scg:List(s:Int32[])">
+          <mca:CSharpReference x:TypeArguments="scg:List(s:Int32[])" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">移动轨迹List</mca:CSharpReference>
+        </OutArgument>
+      </ecaaj:DeserializeObjectActivity.Result>
+    </ecaaj:DeserializeObjectActivity>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取指定范围随机整数" sap:VirtualizedContainerService.HintSize="493,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="随机数">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">操作秒数长度</mca:CSharpReference>
+        </OutArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="最小值">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_22" Value="1" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="最大值">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_23" Value="2" />
+        </InArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_24">获取指定范围随机整数.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="493,213" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">System.Convert.ToString("操作秒数长度="+操作秒数长度)</mca:CSharpValue>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </eae:CommentActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="493,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_2" IsIgnore="False" Text="[{&quot;To&quot;:&quot;截取长度&quot;,&quot;ToTypeName&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;操作秒数长度*60&quot;,&quot;ValTypeName&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:Int32">
+              <mca:CSharpReference x:TypeArguments="x:Int32">截取长度</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:Int32">
+              <mca:CSharpValue x:TypeArguments="x:Int32">操作秒数长度*60</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="493,213" sap2010:WorkflowViewState.IdRef="CommentActivity_3">
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_3" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">System.Convert.ToString("截取长度="+截取长度)</mca:CSharpValue>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </eae:CommentActivity>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取指定范围随机整数" sap:VirtualizedContainerService.HintSize="493,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_2" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="随机数">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">截取起始索引</mca:CSharpReference>
+        </OutArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="最小值">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_26" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="最大值">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">移动轨迹List.Count-截取长度</mca:CSharpValue>
+        </InArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_25">获取指定范围随机整数.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="493,213" sap2010:WorkflowViewState.IdRef="CommentActivity_4">
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_2" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">System.Convert.ToString("截取起始索引="+截取起始索引)</mca:CSharpValue>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </eae:CommentActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="493,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;移动轨迹List&quot;,&quot;ToTypeName&quot;:&quot;System.Collections.Generic.List`1[[System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;移动轨迹List.GetRange(截取起始索引,截取长度)&quot;,&quot;ValTypeName&quot;:&quot;System.Collections.Generic.List`1[[System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="scg:List(s:Int32[])">
+              <mca:CSharpReference x:TypeArguments="scg:List(s:Int32[])">移动轨迹List</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="scg:List(s:Int32[])">
+              <mca:CSharpValue x:TypeArguments="scg:List(s:Int32[])">移动轨迹List.GetRange(截取起始索引,截取长度)</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <bfa:ForEach x:TypeArguments="s:Int32[]" CurrentIndex="{x:Null}" ActivityName="循环操作（For Each）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="循环操作（For Each）" sap:VirtualizedContainerService.HintSize="493,650" sap2010:WorkflowViewState.IdRef="ForEach`1_2" IsIgnore="False">
+      <bfa:ForEach.Values>
+        <InArgument x:TypeArguments="scg:List(s:Int32[])">
+          <mca:CSharpValue x:TypeArguments="scg:List(s:Int32[])" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">移动轨迹List</mca:CSharpValue>
+        </InArgument>
+      </bfa:ForEach.Values>
+      <ActivityAction x:TypeArguments="s:Int32[]">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="s:Int32[]" Name="item" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="477,545" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_1">
+            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_4" Level="Info">
+              <baast:LogActivity.LogContent>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">System.Convert.ToString(item[0]+" "+item[1])</mca:CSharpValue>
+                </InArgument>
+              </baast:LogActivity.LogContent>
+            </baast:LogActivity>
+          </eae:CommentActivity>
+          <ea:GetMousePointActivity WaitTimeout="{x:Null}" ActivityName="获取鼠标位置" ContinueOnError="False" DisplayName="获取鼠标位置" Guid="cfa552b8-fbe0-4cb1-83f5-e7e40b469a03" sap:VirtualizedContainerService.HintSize="455,22" sap2010:WorkflowViewState.IdRef="GetMousePointActivity_1" IsIgnore="False">
+            <ea:GetMousePointActivity.DelayAfter>
+              <InArgument x:TypeArguments="s:UInt32">
+                <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_5" />
+              </InArgument>
+            </ea:GetMousePointActivity.DelayAfter>
+            <ea:GetMousePointActivity.DelayBefore>
+              <InArgument x:TypeArguments="s:UInt32">
+                <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_7" />
+              </InArgument>
+            </ea:GetMousePointActivity.DelayBefore>
+            <ea:GetMousePointActivity.X>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">x</mca:CSharpReference>
+              </OutArgument>
+            </ea:GetMousePointActivity.X>
+            <ea:GetMousePointActivity.Y>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">y</mca:CSharpReference>
+              </OutArgument>
+            </ea:GetMousePointActivity.Y>
+          </ea:GetMousePointActivity>
+          <ea:MouseMoveActivity ControlElement="{x:Null}" ScreenShoot="{x:Null}" Selector="{x:Null}" Selector2="{x:Null}" SelectorId="{x:Null}" StoreId="{x:Null}" Timeout="{x:Null}" WaitTimeout="{x:Null}" ActivityName="移动鼠标" BringWindowType="Default" ContinueOnError="False" DisplayName="移动鼠标" ElementRect="0, 0, 0, 0" Guid="c5c2d7ba-3699-4dfe-8add-bbaf343c1aa4" sap:VirtualizedContainerService.HintSize="455,106" sap2010:WorkflowViewState.IdRef="MouseMoveActivity_1" IsIgnore="False" RelPositionType="Default" SelectionRect="0, 0, 0, 0">
+            <ea:MouseMoveActivity.DelayAfter>
+              <InArgument x:TypeArguments="s:UInt32">
+                <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_8" />
+              </InArgument>
+            </ea:MouseMoveActivity.DelayAfter>
+            <ea:MouseMoveActivity.DelayBefore>
+              <InArgument x:TypeArguments="s:UInt32">
+                <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_12" />
+              </InArgument>
+            </ea:MouseMoveActivity.DelayBefore>
+            <ea:MouseMoveActivity.X>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">x+item[0]</mca:CSharpValue>
+              </InArgument>
+            </ea:MouseMoveActivity.X>
+            <ea:MouseMoveActivity.Y>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">y+item[1]</mca:CSharpValue>
+              </InArgument>
+            </ea:MouseMoveActivity.Y>
+          </ea:MouseMoveActivity>
+        </Sequence>
+      </ActivityAction>
+    </bfa:ForEach>
+  </Sequence>
+</Activity>

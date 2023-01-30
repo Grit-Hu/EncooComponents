@@ -1,0 +1,1312 @@
+{
+  "ProjectName": "常用组件库V3_数据库增强",
+  "Version": "1.0.0",
+  "SchemaVersion": "4.0",
+  "ProjectType": "Library",
+  "Description": null,
+  "Author": "mailwork.hu",
+  "Company": null,
+  "License": null,
+  "Settings": [
+    {
+      "Key": "UIA",
+      "Value": "UIA3"
+    }
+  ],
+  "ProjectEntryItem": "",
+  "Items": [
+    "获取数据表字段配置映射.xaml",
+    "写入数据库_插入数据表方式.xaml"
+  ],
+  "TargetFramework": ".NETFramework,Version=v4.6.2",
+  "ProjectDependencies": [
+    {
+      "Id": "AutomationActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.ActivityLibrary",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.DataBase.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.DataTableActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Flow.Activities",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Mail.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Office.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.WPS.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "1.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Text.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.CodeTool.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Trigger.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Console.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Pdf.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.AIHub.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Automation.MobileActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Resource.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "1.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_电商场景常用",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    }
+  ],
+  "ProjectDependencyItems": [
+    {
+      "Id": "AutomationActivity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.ActivityLibrary",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.ActivityLibrary",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "CredentialManagement",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "DotNetZip",
+          "MaxVersion": null,
+          "MinVersion": "1.14.0"
+        },
+        {
+          "Id": "FreeRDP-Sharp",
+          "MaxVersion": null,
+          "MinVersion": "0.1.0"
+        },
+        {
+          "Id": "FreeRDP-Sharp.Native",
+          "MaxVersion": null,
+          "MinVersion": "1.1.1"
+        },
+        {
+          "Id": "HtmlAgilityPack",
+          "MaxVersion": null,
+          "MinVersion": "1.8.11"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.VisualBasic",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.Workspaces.Common",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "SharpCompress",
+          "MaxVersion": null,
+          "MinVersion": "0.24.0"
+        },
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "System.Buffers",
+          "MaxVersion": null,
+          "MinVersion": "4.5.1"
+        },
+        {
+          "Id": "System.Numerics.Vectors",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.7.1"
+        },
+        {
+          "Id": "System.Text.Encoding.CodePages",
+          "MaxVersion": null,
+          "MinVersion": "4.5.1"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
+      "Version": "20.1.1",
+      "Title": "Actipro SyntaxEditor .NET Languages Add-on (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.Shared",
+      "Version": "20.1.1",
+      "Title": "Actipro Shared Library (for WPF)",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
+      "Version": "20.1.1",
+      "Title": "Actipro SyntaxEditor (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
+      "Title": "CredentialManagement",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "DotNetZip",
+      "Version": "1.14.0",
+      "Title": "DotNetZip",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "FreeRDP-Sharp",
+      "Version": "0.1.0",
+      "Title": "FreeRDP-Sharp",
+      "InnerDependencies": [
+        {
+          "Id": "FreeRDP-Sharp.Native",
+          "MaxVersion": "1.2.0",
+          "MinVersion": "1.1.0"
+        }
+      ]
+    },
+    {
+      "Id": "FreeRDP-Sharp.Native",
+      "Version": "1.1.1",
+      "Title": "FreeRDP-Sharp Native stable-1.1",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "HtmlAgilityPack",
+      "Version": "1.8.11",
+      "Title": "HtmlAgilityPack",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.CSharp",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.CSharp",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Common",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.Common",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Analyzers",
+          "MaxVersion": null,
+          "MinVersion": "2.9.6"
+        },
+        {
+          "Id": "System.Collections.Immutable",
+          "MaxVersion": null,
+          "MinVersion": "1.5.0"
+        },
+        {
+          "Id": "System.Memory",
+          "MaxVersion": null,
+          "MinVersion": "4.5.3"
+        },
+        {
+          "Id": "System.Reflection.Metadata",
+          "MaxVersion": null,
+          "MinVersion": "1.6.0"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        },
+        {
+          "Id": "System.Text.Encoding.CodePages",
+          "MaxVersion": null,
+          "MinVersion": "4.5.1"
+        },
+        {
+          "Id": "System.Threading.Tasks.Extensions",
+          "MaxVersion": null,
+          "MinVersion": "4.5.3"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Analyzers",
+      "Version": "2.9.6",
+      "Title": "Microsoft.CodeAnalysis.Analyzers",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Collections.Immutable",
+      "Version": "1.5.0",
+      "Title": "System.Collections.Immutable",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Memory",
+      "Version": "4.5.3",
+      "Title": "System.Memory",
+      "InnerDependencies": [
+        {
+          "Id": "System.Buffers",
+          "MaxVersion": null,
+          "MinVersion": "4.4.0"
+        },
+        {
+          "Id": "System.Numerics.Vectors",
+          "MaxVersion": null,
+          "MinVersion": "4.4.0"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        }
+      ]
+    },
+    {
+      "Id": "System.Buffers",
+      "Version": "4.5.1",
+      "Title": "System.Buffers",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Numerics.Vectors",
+      "Version": "4.5.0",
+      "Title": "System.Numerics.Vectors",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Runtime.CompilerServices.Unsafe",
+      "Version": "4.7.1",
+      "Title": "System.Runtime.CompilerServices.Unsafe",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Reflection.Metadata",
+      "Version": "1.6.0",
+      "Title": "System.Reflection.Metadata",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections.Immutable",
+          "MaxVersion": null,
+          "MinVersion": "1.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Text.Encoding.CodePages",
+      "Version": "4.5.1",
+      "Title": "System.Text.Encoding.CodePages",
+      "InnerDependencies": [
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        }
+      ]
+    },
+    {
+      "Id": "System.Threading.Tasks.Extensions",
+      "Version": "4.5.3",
+      "Title": "System.Threading.Tasks.Extensions",
+      "InnerDependencies": [
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.VisualBasic",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.VisualBasic",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Workspaces.Common",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.Workspaces.Common",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "System.Composition",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        }
+      ]
+    },
+    {
+      "Id": "System.Composition",
+      "Version": "1.0.31",
+      "Title": "System.Composition",
+      "InnerDependencies": [
+        {
+          "Id": "System.Composition.AttributedModel",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.Convention",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.Hosting",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.Runtime",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.TypedParts",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        }
+      ]
+    },
+    {
+      "Id": "System.Composition.AttributedModel",
+      "Version": "1.0.31",
+      "Title": "System.Composition.AttributedModel",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Composition.Convention",
+      "Version": "1.0.31",
+      "Title": "System.Composition.Convention",
+      "InnerDependencies": [
+        {
+          "Id": "System.Composition.AttributedModel",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        }
+      ]
+    },
+    {
+      "Id": "System.Composition.Hosting",
+      "Version": "1.0.31",
+      "Title": "System.Composition.Hosting",
+      "InnerDependencies": [
+        {
+          "Id": "System.Composition.Runtime",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        }
+      ]
+    },
+    {
+      "Id": "System.Composition.Runtime",
+      "Version": "1.0.31",
+      "Title": "System.Composition.Runtime",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Composition.TypedParts",
+      "Version": "1.0.31",
+      "Title": "System.Composition.TypedParts",
+      "InnerDependencies": [
+        {
+          "Id": "System.Composition.AttributedModel",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.Hosting",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        },
+        {
+          "Id": "System.Composition.Runtime",
+          "MaxVersion": null,
+          "MinVersion": "1.0.31"
+        }
+      ]
+    },
+    {
+      "Id": "Newtonsoft.Json",
+      "Version": "12.0.3",
+      "Title": "Json.NET",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Panuon.UI.Silver",
+      "Version": "1.0.8.7",
+      "Title": "Panuon.UI.Silver",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "SharpCompress",
+      "Version": "0.24.0",
+      "Title": "SharpCompress",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "SharpZipLib",
+      "Version": "1.0.0",
+      "Title": "SharpZipLib",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.DataBase.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.DataBase.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.DataTableActivity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.DataTable.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "CsvHelper",
+          "MaxVersion": null,
+          "MinVersion": "15.0.5"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.7.1"
+        },
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "CsvHelper",
+      "Version": "15.0.5",
+      "Title": "CsvHelper",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        },
+        {
+          "Id": "System.Threading.Tasks.Extensions",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        },
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CSharp",
+      "Version": "4.7.0",
+      "Title": "Microsoft.CSharp",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.Mail.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.Mail.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "MailKit",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Microsoft.Exchange.WebServices",
+          "MaxVersion": null,
+          "MinVersion": "2.2.0"
+        },
+        {
+          "Id": "Microsoft.Identity.Client",
+          "MaxVersion": null,
+          "MinVersion": "4.48.1"
+        },
+        {
+          "Id": "Microsoft.Office.Interop.Outlook",
+          "MaxVersion": null,
+          "MinVersion": "15.0.4797.1003"
+        }
+      ]
+    },
+    {
+      "Id": "MailKit",
+      "Version": "2.4.1",
+      "Title": "MailKit",
+      "InnerDependencies": [
+        {
+          "Id": "MimeKit",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        }
+      ]
+    },
+    {
+      "Id": "MimeKit",
+      "Version": "2.4.1",
+      "Title": "MimeKit",
+      "InnerDependencies": [
+        {
+          "Id": "BouncyCastle",
+          "MaxVersion": null,
+          "MinVersion": "1.8.5"
+        }
+      ]
+    },
+    {
+      "Id": "BouncyCastle",
+      "Version": "1.8.5",
+      "Title": "Bouncy Castle",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Exchange.WebServices",
+      "Version": "2.2",
+      "Title": "Microsoft Exchange WebServices",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Identity.Client",
+      "Version": "4.48.1",
+      "Title": "Microsoft Authentication Library for .NET",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.IdentityModel.Abstractions",
+          "MaxVersion": null,
+          "MinVersion": "6.22.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.IdentityModel.Abstractions",
+      "Version": "6.22.0",
+      "Title": "Microsoft.IdentityModel.Abstractions",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Office.Interop.Outlook",
+      "Version": "15.0.4797.1003",
+      "Title": "Microsoft.Office.Interop.Outlook",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.Office.Activity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Office.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Editors",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Ribbon",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ClosedXML",
+          "MaxVersion": null,
+          "MinVersion": "0.95.4"
+        },
+        {
+          "Id": "DocumentFormat.OpenXml",
+          "MaxVersion": null,
+          "MinVersion": "2.9.1"
+        },
+        {
+          "Id": "Microsoft.Office.Interop.Excel",
+          "MaxVersion": null,
+          "MinVersion": "15.0.4795.1000"
+        },
+        {
+          "Id": "NPOI",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.Editors",
+      "Version": "20.1.1",
+      "Title": "Actipro Editors (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.Ribbon",
+      "Version": "20.1.1",
+      "Title": "Actipro Ribbon (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "ClosedXML",
+      "Version": "0.95.4",
+      "Title": "ClosedXML",
+      "InnerDependencies": [
+        {
+          "Id": "DocumentFormat.OpenXml",
+          "MaxVersion": null,
+          "MinVersion": "2.7.2"
+        },
+        {
+          "Id": "ExcelNumberFormat",
+          "MaxVersion": null,
+          "MinVersion": "1.0.10"
+        },
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.7.0"
+        }
+      ]
+    },
+    {
+      "Id": "DocumentFormat.OpenXml",
+      "Version": "2.9.1",
+      "Title": "DocumentFormat.OpenXml",
+      "InnerDependencies": [
+        {
+          "Id": "System.IO.Packaging",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.IO.Packaging",
+      "Version": "4.0.0",
+      "Title": "System.IO.Packaging",
+      "InnerDependencies": [
+        {
+          "Id": "System.IO.FileSystem.Primitives",
+          "MaxVersion": null,
+          "MinVersion": "4.0.1"
+        }
+      ]
+    },
+    {
+      "Id": "System.IO.FileSystem.Primitives",
+      "Version": "4.0.1",
+      "Title": "System.IO.FileSystem.Primitives",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "ExcelNumberFormat",
+      "Version": "1.0.10",
+      "Title": "ExcelNumberFormat",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Office.Interop.Excel",
+      "Version": "15.0.4795.1000",
+      "Title": "Microsoft.Office.Interop.Excel",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "NPOI",
+      "Version": "2.4.1",
+      "Title": "NPOI",
+      "InnerDependencies": [
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        }
+      ]
+    },
+    {
+      "Id": "BotTime.WPS.Activity",
+      "Version": "1.4.2301.1",
+      "Title": "BotTime.WPS.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Editors",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Ribbon",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "NPOI",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.Text.Activity",
+      "Version": "2.0.2301.2",
+      "Title": "Encoo.Text.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.CodeTool.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.CodeTool.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "Flurl.Http",
+          "MaxVersion": null,
+          "MinVersion": "3.2.4"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+          "MaxVersion": null,
+          "MinVersion": "1.1.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+      "Version": "20.1.1",
+      "Title": "Actipro SyntaxEditor Python Language Add-on (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl.Http",
+      "Version": "3.2.4",
+      "Title": "Flurl.Http",
+      "InnerDependencies": [
+        {
+          "Id": "Flurl",
+          "MaxVersion": null,
+          "MinVersion": "3.0.6"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.2"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl",
+      "Version": "3.0.6",
+      "Title": "Flurl",
+      "InnerDependencies": [
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.Scripting.Common",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+      "Version": "1.1.0",
+      "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Trigger.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.Trigger.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "MailKit",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Microsoft.Exchange.WebServices",
+          "MaxVersion": null,
+          "MinVersion": "2.2.0"
+        },
+        {
+          "Id": "Microsoft.Identity.Client",
+          "MaxVersion": null,
+          "MinVersion": "4.48.1"
+        },
+        {
+          "Id": "Microsoft.Office.Interop.Outlook",
+          "MaxVersion": null,
+          "MinVersion": "15.0.4797.1003"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.Console.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.Console.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "NamedPipeWrapper",
+          "MaxVersion": null,
+          "MinVersion": "1.5.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "RestSharp",
+          "MaxVersion": null,
+          "MinVersion": "106.6.10"
+        },
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "NamedPipeWrapper",
+      "Version": "1.5.0",
+      "Title": "Named Pipe Wrapper",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "RestSharp",
+      "Version": "106.6.10",
+      "Title": "RestSharp",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Pdf.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.Pdf.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "BitMiracle.Docotic.Pdf",
+          "MaxVersion": null,
+          "MinVersion": "7.5.11645"
+        }
+      ]
+    },
+    {
+      "Id": "BitMiracle.Docotic.Pdf",
+      "Version": "7.5.11645",
+      "Title": "Docotic.Pdf library",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.AIHub.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.AIHub.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "RestSharp",
+          "MaxVersion": null,
+          "MinVersion": "106.6.10"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.Automation.MobileActivity",
+      "Version": "2.0.2301.2",
+      "Title": "Encoo.Automation.MobileActivity Package",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Resource.Activity",
+      "Version": "1.1.2105.3",
+      "Title": "Encoo.Resource.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "Stub.System.Data.SQLite.Core.NetFramework",
+          "MaxVersion": null,
+          "MinVersion": "1.0.113.3"
+        }
+      ]
+    },
+    {
+      "Id": "Stub.System.Data.SQLite.Core.NetFramework",
+      "Version": "1.0.113.3",
+      "Title": "System.Data.SQLite Core for the .NET Framework (x86/x64)",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_电商场景常用",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_电商场景常用",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        },
+        {
+          "Id": "常用组件库V3_即使消息通知",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        },
+        {
+          "Id": "常用组件库V3_Chrome配套",
+          "MaxVersion": null,
+          "MinVersion": "1.0.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_即使消息通知",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_即使消息通知",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_Chrome配套",
+      "Version": "1.0.1",
+      "Title": "常用组件库V3_Chrome配套",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        },
+        {
+          "Id": "常用组件库V3_日志增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    }
+  ],
+  "LastModifyTime": "2023-01-10T15:48:35.5030145+08:00",
+  "ProjectReferences": [],
+  "TerminationHandler": null,
+  "ExceptionHandler": null,
+  "ParallelWorkflows": null,
+  "CreatedStudioVersion": "1.1.2206.34",
+  "LastStudioVersion": "1.1.2206.34"
+}

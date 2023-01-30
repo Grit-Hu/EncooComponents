@@ -1,0 +1,49 @@
+{
+  "ProjectName": "常用组件库V3_键盘增强",
+  "Version": "1.0.0",
+  "SchemaVersion": "4.0",
+  "ProjectType": "Library",
+  "Description": null,
+  "Author": "mailwork.hu",
+  "Company": null,
+  "License": null,
+  "Settings": [
+    {
+      "Key": "UIA",
+      "Value": "UIA3"
+    }
+  ],
+  "ProjectEntryItem": "",
+  "Items": [
+    "Main.xaml"
+  ],
+  "TargetFramework": ".NETFramework,Version=v4.6.2",
+  "ProjectDependencies": [],
+  "ProjectDependencyItems": [
+    {
+      "Id": "AutomationActivity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.DataBase.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.DataBase.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Automation.MobileActivity",
+      "Version": "2.0.2301.2",
+      "Title": "Encoo.Automation.MobileActivity Package",
+      "InnerDependencies": []
+    }
+  ],
+  "LastModifyTime": "0001-01-01T00:00:00",
+  "ProjectReferences": [],
+  "TerminationHandler": null,
+  "ExceptionHandler": null,
+  "ParallelWorkflows": null,
+  "CreatedStudioVersion": null,
+  "LastStudioVersion": null
+}
