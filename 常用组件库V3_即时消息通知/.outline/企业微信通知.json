@@ -1,0 +1,116 @@
+{
+  "Md5CheckSum": "2a501a9c736f2e6fd91ed9b0d849e582",
+  "RootNode": {
+    "RefId": null,
+    "Name": "Activity",
+    "IsActivity": true,
+    "SubItems": [
+      {
+        "RefId": "Sequence_2",
+        "Name": "序列_Root",
+        "IsActivity": true,
+        "SubItems": [
+          {
+            "RefId": "MultipleAssign_1",
+            "Name": "赋值（多个）",
+            "IsActivity": true,
+            "SubItems": [
+              {
+                "RefId": null,
+                "Name": "MultipleAssign.AssignModels",
+                "IsActivity": true,
+                "SubItems": []
+              }
+            ]
+          },
+          {
+            "RefId": "CommentActivity_4",
+            "Name": "注释掉",
+            "IsActivity": true,
+            "SubItems": [
+              {
+                "RefId": "LogActivity_1",
+                "Name": "写入日志",
+                "IsActivity": true,
+                "SubItems": []
+              }
+            ]
+          },
+          {
+            "RefId": "TryCatch_1",
+            "Name": "错误捕获（Try Catch）",
+            "IsActivity": true,
+            "SubItems": [
+              {
+                "RefId": null,
+                "Name": "TryCatch.Try",
+                "IsActivity": true,
+                "SubItems": [
+                  {
+                    "RefId": "Sequence_3",
+                    "Name": "序列",
+                    "IsActivity": true,
+                    "SubItems": [
+                      {
+                        "RefId": "HttpRequestActivity_1",
+                        "Name": "HTTP(S)请求",
+                        "IsActivity": true,
+                        "SubItems": []
+                      },
+                      {
+                        "RefId": "JsonGetNodeStringValueActivity_1",
+                        "Name": "获取节点值(字符串)",
+                        "IsActivity": true,
+                        "SubItems": []
+                      },
+                      {
+                        "RefId": "If_1",
+                        "Name": "条件（If）",
+                        "IsActivity": true,
+                        "SubItems": [
+                          {
+                            "RefId": null,
+                            "Name": "If.Then",
+                            "IsActivity": true,
+                            "SubItems": [
+                              {
+                                "RefId": "Sequence_4",
+                                "Name": "序列",
+                                "IsActivity": true,
+                                "SubItems": [
+                                  {
+                                    "RefId": "Throw_1",
+                                    "Name": "抛出异常",
+                                    "IsActivity": true,
+                                    "SubItems": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "RefId": null,
+                "Name": "TryCatch.Catches",
+                "IsActivity": true,
+                "SubItems": [
+                  {
+                    "RefId": "LogActivity_3",
+                    "Name": "写入日志",
+                    "IsActivity": true,
+                    "SubItems": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

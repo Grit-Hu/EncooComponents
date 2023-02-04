@@ -1,5 +1,5 @@
 {
-  "ProjectName": "常用组件库V3_即使消息通知",
+  "ProjectName": "常用组件库V3_即时消息通知",
   "Version": "1.0.0",
   "SchemaVersion": "4.0",
   "ProjectType": "Library",
@@ -15,35 +15,10 @@
   ],
   "ProjectEntryItem": "",
   "Items": [
-    "钉钉通知.xaml",
-    "企业微信通知.xaml"
+    "Main.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
-    {
-      "Id": "AutomationActivity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.ActivityLibrary",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.DataBase.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.DataTableActivity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
     {
       "Id": "BotTime.Flow.Activities",
       "AutoUpgrade": false,
@@ -51,25 +26,7 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "BotTime.Mail.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.Office.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.WPS.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "1.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Text.Activity",
+      "Id": "BotTime.ActivityLibrary",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
@@ -79,54 +36,30 @@
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Trigger.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Console.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Pdf.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.AIHub.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Automation.MobileActivity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.Resource.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "1.*.*.*",
-      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
     {
-      "Id": "AutomationActivity",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.Automation.Activity",
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2212.1",
+      "Version": "2.0.2301.1",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -573,353 +506,8 @@
       "InnerDependencies": []
     },
     {
-      "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.DataBase.Activity",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.DataTable.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "CsvHelper",
-          "MaxVersion": null,
-          "MinVersion": "15.0.5"
-        },
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        },
-        {
-          "Id": "System.Runtime.CompilerServices.Unsafe",
-          "MaxVersion": null,
-          "MinVersion": "4.7.1"
-        },
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        }
-      ]
-    },
-    {
-      "Id": "CsvHelper",
-      "Version": "15.0.5",
-      "Title": "CsvHelper",
-      "InnerDependencies": [
-        {
-          "Id": "Microsoft.CSharp",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        },
-        {
-          "Id": "System.Threading.Tasks.Extensions",
-          "MaxVersion": null,
-          "MinVersion": "4.5.2"
-        },
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.4.0"
-        }
-      ]
-    },
-    {
-      "Id": "Microsoft.CSharp",
-      "Version": "4.7.0",
-      "Title": "Microsoft.CSharp",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "System.ValueTuple",
-      "Version": "4.5.0",
-      "Title": "System.ValueTuple",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.Flow.Activities",
-      "InnerDependencies": [
-        {
-          "Id": "System.Collections",
-          "MaxVersion": null,
-          "MinVersion": "4.3.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.Collections",
-      "Version": "4.3.0",
-      "Title": "System.Collections",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.Mail.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "MailKit",
-          "MaxVersion": null,
-          "MinVersion": "2.4.1"
-        },
-        {
-          "Id": "Microsoft.Exchange.WebServices",
-          "MaxVersion": null,
-          "MinVersion": "2.2.0"
-        },
-        {
-          "Id": "Microsoft.Office.Interop.Outlook",
-          "MaxVersion": null,
-          "MinVersion": "15.0.4797.1003"
-        }
-      ]
-    },
-    {
-      "Id": "MailKit",
-      "Version": "2.4.1",
-      "Title": "MailKit",
-      "InnerDependencies": [
-        {
-          "Id": "MimeKit",
-          "MaxVersion": null,
-          "MinVersion": "2.4.1"
-        }
-      ]
-    },
-    {
-      "Id": "MimeKit",
-      "Version": "2.4.1",
-      "Title": "MimeKit",
-      "InnerDependencies": [
-        {
-          "Id": "BouncyCastle",
-          "MaxVersion": null,
-          "MinVersion": "1.8.5"
-        }
-      ]
-    },
-    {
-      "Id": "BouncyCastle",
-      "Version": "1.8.5",
-      "Title": "Bouncy Castle",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2",
-      "Title": "Microsoft Exchange WebServices",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Microsoft.Office.Interop.Outlook",
-      "Version": "15.0.4797.1003",
-      "Title": "Microsoft.Office.Interop.Outlook",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "BotTime.Office.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Editors",
-          "MaxVersion": null,
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Ribbon",
-          "MaxVersion": null,
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "ClosedXML",
-          "MaxVersion": null,
-          "MinVersion": "0.95.4"
-        },
-        {
-          "Id": "DocumentFormat.OpenXml",
-          "MaxVersion": null,
-          "MinVersion": "2.9.1"
-        },
-        {
-          "Id": "Microsoft.Office.Interop.Excel",
-          "MaxVersion": null,
-          "MinVersion": "15.0.4795.1000"
-        },
-        {
-          "Id": "NPOI",
-          "MaxVersion": null,
-          "MinVersion": "2.4.1"
-        },
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        },
-        {
-          "Id": "SharpZipLib",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        }
-      ]
-    },
-    {
-      "Id": "ActiproSoftware.Controls.WPF.Editors",
-      "Version": "20.1.1",
-      "Title": "Actipro Editors (for WPF)",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Shared",
-          "MaxVersion": "20.1.1",
-          "MinVersion": "20.1.1"
-        }
-      ]
-    },
-    {
-      "Id": "ActiproSoftware.Controls.WPF.Ribbon",
-      "Version": "20.1.1",
-      "Title": "Actipro Ribbon (for WPF)",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Shared",
-          "MaxVersion": "20.1.1",
-          "MinVersion": "20.1.1"
-        }
-      ]
-    },
-    {
-      "Id": "ClosedXML",
-      "Version": "0.95.4",
-      "Title": "ClosedXML",
-      "InnerDependencies": [
-        {
-          "Id": "DocumentFormat.OpenXml",
-          "MaxVersion": null,
-          "MinVersion": "2.7.2"
-        },
-        {
-          "Id": "ExcelNumberFormat",
-          "MaxVersion": null,
-          "MinVersion": "1.0.10"
-        },
-        {
-          "Id": "Microsoft.CSharp",
-          "MaxVersion": null,
-          "MinVersion": "4.7.0"
-        }
-      ]
-    },
-    {
-      "Id": "DocumentFormat.OpenXml",
-      "Version": "2.9.1",
-      "Title": "DocumentFormat.OpenXml",
-      "InnerDependencies": [
-        {
-          "Id": "System.IO.Packaging",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.IO.Packaging",
-      "Version": "4.0.0",
-      "Title": "System.IO.Packaging",
-      "InnerDependencies": [
-        {
-          "Id": "System.IO.FileSystem.Primitives",
-          "MaxVersion": null,
-          "MinVersion": "4.0.1"
-        }
-      ]
-    },
-    {
-      "Id": "System.IO.FileSystem.Primitives",
-      "Version": "4.0.1",
-      "Title": "System.IO.FileSystem.Primitives",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "ExcelNumberFormat",
-      "Version": "1.0.10",
-      "Title": "ExcelNumberFormat",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Microsoft.Office.Interop.Excel",
-      "Version": "15.0.4795.1000",
-      "Title": "Microsoft.Office.Interop.Excel",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "NPOI",
-      "Version": "2.4.1",
-      "Title": "NPOI",
-      "InnerDependencies": [
-        {
-          "Id": "SharpZipLib",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        }
-      ]
-    },
-    {
-      "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2212.1",
-      "Title": "BotTime.WPS.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Editors",
-          "MaxVersion": null,
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Ribbon",
-          "MaxVersion": null,
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "Newtonsoft.Json",
-          "MaxVersion": null,
-          "MinVersion": "12.0.3"
-        },
-        {
-          "Id": "NPOI",
-          "MaxVersion": null,
-          "MinVersion": "2.4.1"
-        },
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        },
-        {
-          "Id": "SharpZipLib",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        }
-      ]
-    },
-    {
-      "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "Encoo.Text.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        }
-      ]
-    },
-    {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2212.1",
+      "Version": "2.0.2301.1",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1006,6 +594,12 @@
       ]
     },
     {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
+      "InnerDependencies": []
+    },
+    {
       "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
       "Version": "3.4.0",
       "Title": "Microsoft.CodeAnalysis.CSharp.Scripting",
@@ -1045,142 +639,41 @@
       ]
     },
     {
+      "Id": "Microsoft.CSharp",
+      "Version": "4.7.0",
+      "Title": "Microsoft.CSharp",
+      "InnerDependencies": []
+    },
+    {
       "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
       "Version": "1.1.0",
       "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
       "InnerDependencies": []
     },
     {
-      "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "Encoo.Trigger.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "MailKit",
-          "MaxVersion": null,
-          "MinVersion": "2.4.1"
-        },
-        {
-          "Id": "Microsoft.Exchange.WebServices",
-          "MaxVersion": null,
-          "MinVersion": "2.2.0"
-        },
-        {
-          "Id": "Microsoft.Office.Interop.Outlook",
-          "MaxVersion": null,
-          "MinVersion": "15.0.4797.1003"
-        }
-      ]
-    },
-    {
-      "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "Encoo.Console.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "NamedPipeWrapper",
-          "MaxVersion": null,
-          "MinVersion": "1.5.0"
-        },
-        {
-          "Id": "Newtonsoft.Json",
-          "MaxVersion": null,
-          "MinVersion": "12.0.3"
-        },
-        {
-          "Id": "RestSharp",
-          "MaxVersion": null,
-          "MinVersion": "106.6.10"
-        },
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        }
-      ]
-    },
-    {
-      "Id": "NamedPipeWrapper",
-      "Version": "1.5.0",
-      "Title": "Named Pipe Wrapper",
+      "Id": "AutomationActivity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
-      "Id": "RestSharp",
-      "Version": "106.6.10",
-      "Title": "RestSharp",
+      "Id": "BotTime.DataBase.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
-    },
-    {
-      "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "Encoo.Pdf.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "BitMiracle.Docotic.Pdf",
-          "MaxVersion": null,
-          "MinVersion": "7.5.11645"
-        }
-      ]
-    },
-    {
-      "Id": "BitMiracle.Docotic.Pdf",
-      "Version": "7.5.11645",
-      "Title": "Docotic.Pdf library",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2212.1",
-      "Title": "Encoo.AIHub.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "Newtonsoft.Json",
-          "MaxVersion": null,
-          "MinVersion": "12.0.3"
-        },
-        {
-          "Id": "RestSharp",
-          "MaxVersion": null,
-          "MinVersion": "106.6.10"
-        }
-      ]
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2212.1",
+      "Version": "2.0.2301.2",
       "Title": "Encoo.Automation.MobileActivity Package",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2111.1-beta-20211115-084828",
-      "Title": "Encoo.Resource.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        },
-        {
-          "Id": "Stub.System.Data.SQLite.Core.NetFramework",
-          "MaxVersion": null,
-          "MinVersion": "1.0.113.3"
-        }
-      ]
-    },
-    {
-      "Id": "Stub.System.Data.SQLite.Core.NetFramework",
-      "Version": "1.0.113.3",
-      "Title": "System.Data.SQLite Core for the .NET Framework (x86/x64)",
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-01-06T11:53:58.1428063+08:00",
+  "LastModifyTime": "0001-01-01T00:00:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
-  "CreatedStudioVersion": "1.1.2206.28",
-  "LastStudioVersion": "1.1.2206.28"
+  "CreatedStudioVersion": null,
+  "LastStudioVersion": null
 }

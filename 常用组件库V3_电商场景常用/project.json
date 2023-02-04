@@ -23,7 +23,8 @@
     "下载并返回文件全路径.xaml",
     ".code",
     ".code\\鼠标移动轨迹List.json",
-    "获取指定范围随机整数.xaml"
+    "获取指定范围随机整数.xaml",
+    "鼠标拖拽滑块.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -130,7 +131,7 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_即使消息通知",
+      "Id": "常用组件库V3_即时消息通知",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -1201,7 +1202,7 @@
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1261,13 +1262,29 @@
       "InnerDependencies": []
     },
     {
-      "Id": "常用组件库V3_即使消息通知",
+      "Id": "常用组件库V3_即时消息通知",
       "Version": "1.0.0",
-      "Title": "常用组件库V3_即使消息通知",
-      "InnerDependencies": []
+      "Title": "常用组件库V3_即时消息通知",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-01-29T18:38:10.0662263+08:00",
+  "LastModifyTime": "2023-02-04T20:37:02.3317715+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
