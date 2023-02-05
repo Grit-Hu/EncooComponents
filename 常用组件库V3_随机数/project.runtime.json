@@ -1,0 +1,120 @@
+{
+  "ProjectName": "常用组件库V3_随机数",
+  "Version": "1.0.0",
+  "SchemaVersion": "4.0",
+  "ProjectType": "Library",
+  "Description": null,
+  "Author": "小胡哈",
+  "Company": null,
+  "License": null,
+  "Settings": [
+    {
+      "Key": "UIA",
+      "Value": "UIA3"
+    }
+  ],
+  "ProjectEntryItem": "",
+  "Items": [
+    "Main.xaml"
+  ],
+  "TargetFramework": ".NETFramework,Version=v4.6.2",
+  "ProjectDependencies": [
+    {
+      "Id": "BotTime.Flow.Activities",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    }
+  ],
+  "ProjectDependencyItems": [
+    {
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Memory",
+      "Version": "4.5.3",
+      "Title": "System.Memory",
+      "InnerDependencies": [
+        {
+          "Id": "System.Buffers",
+          "MaxVersion": null,
+          "MinVersion": "4.4.0"
+        },
+        {
+          "Id": "System.Numerics.Vectors",
+          "MaxVersion": null,
+          "MinVersion": "4.4.0"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.5.2"
+        }
+      ]
+    },
+    {
+      "Id": "System.Buffers",
+      "Version": "4.5.1",
+      "Title": "System.Buffers",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Numerics.Vectors",
+      "Version": "4.5.0",
+      "Title": "System.Numerics.Vectors",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.Runtime.CompilerServices.Unsafe",
+      "Version": "4.7.1",
+      "Title": "System.Runtime.CompilerServices.Unsafe",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "AutomationActivity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "BotTime.DataBase.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.DataBase.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Automation.MobileActivity",
+      "Version": "2.0.2301.2",
+      "Title": "Encoo.Automation.MobileActivity Package",
+      "InnerDependencies": []
+    }
+  ],
+  "LastModifyTime": "0001-01-01T00:00:00",
+  "ProjectReferences": [],
+  "TerminationHandler": null,
+  "ExceptionHandler": null,
+  "ParallelWorkflows": null,
+  "CreatedStudioVersion": null,
+  "LastStudioVersion": null
+}
