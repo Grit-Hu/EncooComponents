@@ -52,7 +52,7 @@
     <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 鼠标模拟人工横向拖拽滑块" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_5" IsIgnore="False">
       <bfa:InvokeWorkflow.Arguments>
         <InArgument x:TypeArguments="x:Int32" x:Key="totalDistance">
-          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_7" Value="100" />
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_9" Value="300" />
         </InArgument>
       </bfa:InvokeWorkflow.Arguments>
       <bfa:InvokeWorkflow.WorkflowPath>

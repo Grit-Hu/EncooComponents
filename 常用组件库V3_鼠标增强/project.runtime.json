@@ -26,12 +26,6 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_随机数",
-      "AutoUpgrade": true,
-      "UpgradeVersionPattern": "1.0.*",
-      "Type": "ActivityOrCode"
-    },
-    {
       "Id": "BotTime.ActivityLibrary",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -41,6 +35,12 @@
       "Id": "Encoo.CodeTool.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_随机数",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
@@ -114,18 +114,6 @@
       "Version": "4.7.1",
       "Title": "System.Runtime.CompilerServices.Unsafe",
       "InnerDependencies": []
-    },
-    {
-      "Id": "常用组件库V3_随机数",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_随机数",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        }
-      ]
     },
     {
       "Id": "BotTime.ActivityLibrary",
@@ -673,6 +661,18 @@
       "Version": "1.1.0",
       "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
       "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_随机数",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_随机数",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
     },
     {
       "Id": "AutomationActivity",

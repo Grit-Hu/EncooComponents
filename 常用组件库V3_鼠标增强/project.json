@@ -27,7 +27,8 @@
     "鼠标相对当前位置移动.xaml",
     "鼠标左键按下.xaml",
     "鼠标左键单击.xaml",
-    "鼠标左键弹起.xaml"
+    "鼠标左键弹起.xaml",
+    ".test\\test4.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1256,7 +1257,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-02-05T12:55:14.8137687+08:00",
+  "LastModifyTime": "2023-02-05T14:37:16.6173522+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
