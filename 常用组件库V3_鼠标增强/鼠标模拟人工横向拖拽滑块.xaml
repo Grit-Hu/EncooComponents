@@ -89,7 +89,7 @@
       </bfa:InvokeWorkflow.Arguments>
       <bfa:InvokeWorkflow.WorkflowPath>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">.test\生成横向轨迹.xaml</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_9">.code\生成横向轨迹.xaml</Literal>
         </InArgument>
       </bfa:InvokeWorkflow.WorkflowPath>
     </bfa:InvokeWorkflow>
@@ -101,7 +101,7 @@
       </bfa:InvokeWorkflow.Arguments>
       <bfa:InvokeWorkflow.WorkflowPath>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8">.test\根据横向轨迹移动.xaml</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_10">.code\根据横向轨迹移动.xaml</Literal>
         </InArgument>
       </bfa:InvokeWorkflow.WorkflowPath>
     </bfa:InvokeWorkflow>

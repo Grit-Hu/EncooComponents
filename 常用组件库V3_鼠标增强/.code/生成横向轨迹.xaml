@@ -54,12 +54,12 @@
       <Variable x:TypeArguments="x:Double" Name="xMove" />
       <Variable x:TypeArguments="x:Int32" Name="positiveAcceleration">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_60" Value="3" />
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_68" Value="8" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="nagetiveAcceleration">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_61" Value="-12" />
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_69" Value="-32" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Double" Name="midpoint" />

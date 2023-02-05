@@ -19,16 +19,15 @@
     ".code\\CSharp",
     ".code\\CSharp\\傻逼云扩算个数学题都不行.cs",
     ".code\\CSharp\\傻逼云扩运算慢.cs",
-    ".test",
-    ".test\\test3.xaml",
-    ".test\\根据横向轨迹移动.xaml",
-    ".test\\生成横向轨迹.xaml",
     "鼠标模拟人工横向拖拽滑块.xaml",
     "鼠标相对当前位置移动.xaml",
     "鼠标左键按下.xaml",
     "鼠标左键单击.xaml",
     "鼠标左键弹起.xaml",
-    ".test\\test4.xaml"
+    ".code\\test3.xaml",
+    ".code\\test4.xaml",
+    ".code\\根据横向轨迹移动.xaml",
+    ".code\\生成横向轨迹.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1257,7 +1256,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-02-05T14:37:16.6173522+08:00",
+  "LastModifyTime": "2023-02-05T16:35:45.6565112+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
