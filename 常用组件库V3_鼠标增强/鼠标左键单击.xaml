@@ -1,0 +1,83 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="262,288" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ea="clr-namespace:Encootech.AutomationActivity;assembly=AutomationActivity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="8">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Encootech.AutomationActivity</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>AutomationActivity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="222,208" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="xNow" />
+      <Variable x:TypeArguments="x:Int32" Name="yNow" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ea:GetMousePointActivity WaitTimeout="{x:Null}" ActivityName="获取鼠标位置" ContinueOnError="False" DisplayName="获取鼠标位置" Guid="0b0a73de-8548-4874-b333-b73282aa58a5" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetMousePointActivity_1" IsIgnore="False">
+      <ea:GetMousePointActivity.DelayAfter>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_1" />
+        </InArgument>
+      </ea:GetMousePointActivity.DelayAfter>
+      <ea:GetMousePointActivity.DelayBefore>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_2" />
+        </InArgument>
+      </ea:GetMousePointActivity.DelayBefore>
+      <ea:GetMousePointActivity.X>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">xNow</mca:CSharpReference>
+        </OutArgument>
+      </ea:GetMousePointActivity.X>
+      <ea:GetMousePointActivity.Y>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">yNow</mca:CSharpReference>
+        </OutArgument>
+      </ea:GetMousePointActivity.Y>
+    </ea:GetMousePointActivity>
+    <ea:ClickScreenPointActivity WaitTimeout="{x:Null}" ActivityName="坐标点击" ClkType="SingleClick" ContinueOnError="False" DisplayName="坐标点击" Guid="1c4348b6-34a1-4a50-9347-61ad84a2262f" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ClickScreenPointActivity_1" IsIgnore="False" ModifierKey="None" MouseButton="LeftButton">
+      <ea:ClickScreenPointActivity.DelayAfter>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_3" />
+        </InArgument>
+      </ea:ClickScreenPointActivity.DelayAfter>
+      <ea:ClickScreenPointActivity.DelayBefore>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_4" />
+        </InArgument>
+      </ea:ClickScreenPointActivity.DelayBefore>
+      <ea:ClickScreenPointActivity.X>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">xNow</mca:CSharpValue>
+        </InArgument>
+      </ea:ClickScreenPointActivity.X>
+      <ea:ClickScreenPointActivity.Y>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">yNow</mca:CSharpValue>
+        </InArgument>
+      </ea:ClickScreenPointActivity.Y>
+    </ea:ClickScreenPointActivity>
+  </Sequence>
+</Activity>

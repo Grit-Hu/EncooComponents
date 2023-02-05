@@ -1,0 +1,98 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ea="clr-namespace:Encootech.AutomationActivity;assembly=AutomationActivity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <x:Members>
+    <x:Property Name="x" Type="InArgument(x:Int32)" />
+    <x:Property Name="y" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>262,372</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="8">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Encootech.AutomationActivity</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Globalization.Extensions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
+      <AssemblyReference>AutomationActivity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="222,292" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="xNow" />
+      <Variable x:TypeArguments="x:Int32" Name="yNow" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ea:GetMousePointActivity WaitTimeout="{x:Null}" ActivityName="获取鼠标位置" ContinueOnError="False" DisplayName="获取鼠标位置" Guid="0b0a73de-8548-4874-b333-b73282aa58a5" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetMousePointActivity_1" IsIgnore="False">
+      <ea:GetMousePointActivity.DelayAfter>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_1" />
+        </InArgument>
+      </ea:GetMousePointActivity.DelayAfter>
+      <ea:GetMousePointActivity.DelayBefore>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_2" />
+        </InArgument>
+      </ea:GetMousePointActivity.DelayBefore>
+      <ea:GetMousePointActivity.X>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">xNow</mca:CSharpReference>
+        </OutArgument>
+      </ea:GetMousePointActivity.X>
+      <ea:GetMousePointActivity.Y>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">yNow</mca:CSharpReference>
+        </OutArgument>
+      </ea:GetMousePointActivity.Y>
+    </ea:GetMousePointActivity>
+    <ea:MouseMoveActivity ControlElement="{x:Null}" ScreenShoot="{x:Null}" Selector="{x:Null}" Selector2="{x:Null}" SelectorId="{x:Null}" StoreId="{x:Null}" Timeout="{x:Null}" WaitTimeout="{x:Null}" ActivityName="移动鼠标" BringWindowType="Default" ContinueOnError="False" DisplayName="移动鼠标" ElementRect="0, 0, 0, 0" Guid="86903a2c-dd86-4e30-996a-5d19651ddca6" sap:VirtualizedContainerService.HintSize="200,106" sap2010:WorkflowViewState.IdRef="MouseMoveActivity_1" IsIgnore="False" RelPositionType="Default" SelectionRect="0, 0, 0, 0">
+      <ea:MouseMoveActivity.DelayAfter>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_3" />
+        </InArgument>
+      </ea:MouseMoveActivity.DelayAfter>
+      <ea:MouseMoveActivity.DelayBefore>
+        <InArgument x:TypeArguments="s:UInt32">
+          <Literal x:TypeArguments="s:UInt32" sap2010:WorkflowViewState.IdRef="Literal`1_4" />
+        </InArgument>
+      </ea:MouseMoveActivity.DelayBefore>
+      <ea:MouseMoveActivity.X>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">xNow+x</mca:CSharpValue>
+        </InArgument>
+      </ea:MouseMoveActivity.X>
+      <ea:MouseMoveActivity.Y>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">yNow+y</mca:CSharpValue>
+        </InArgument>
+      </ea:MouseMoveActivity.Y>
+    </ea:MouseMoveActivity>
+  </Sequence>
+</Activity>
