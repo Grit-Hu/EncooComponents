@@ -1206,7 +1206,7 @@
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2111.1-beta-20211115-084828",
+      "Version": "1.1.2105.3",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1300,7 +1300,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-02-05T16:45:45.200671+08:00",
+  "LastModifyTime": "2023-02-21T20:13:41.5199648+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

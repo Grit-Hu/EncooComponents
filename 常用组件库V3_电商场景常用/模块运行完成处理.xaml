@@ -30,7 +30,6 @@
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>BotTime.Flow.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -54,7 +53,6 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
       <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
-      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,769" sap2010:WorkflowViewState.IdRef="Sequence_2">

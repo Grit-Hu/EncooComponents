@@ -5,7 +5,7 @@
     <x:Property Name="数值String" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>618,4143</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>618,4454</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="12">
@@ -49,7 +49,7 @@
       <AssemblyReference>ActivityCommon</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="578,4218" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="578,4529" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="是否以万结尾" />
     </Sequence.Variables>
@@ -114,10 +114,10 @@
           </bfa:MultipleAssign>
         </bfa:If.Then>
       </bfa:If>
-      <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="空字符串/null转为0" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,376" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
+      <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="空字符串/null/--转为0" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,376" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
         <bfa:If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
-            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">数值文本=="" || 数值文本.ToLower()=="null"</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">数值文本=="" || 数值文本.ToLower()=="null" || 数值文本=="--"</mca:CSharpValue>
           </InArgument>
         </bfa:If.Condition>
         <sap:WorkflowViewStateService.ViewState>
@@ -144,7 +144,7 @@
           </bfa:MultipleAssign>
         </bfa:If.Then>
       </bfa:If>
-      <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="534,213" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+      <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="534,213" sap2010:WorkflowViewState.IdRef="CommentActivity_10">
         <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
           <baast:LogActivity.LogContent>
             <InArgument x:TypeArguments="x:String">
@@ -154,7 +154,7 @@
         </baast:LogActivity>
       </eae:CommentActivity>
     </Sequence>
-    <Sequence DisplayName="序列-删除货币、逗号符号" sap:VirtualizedContainerService.HintSize="556,845" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="序列-删除货币、逗号符号" sap:VirtualizedContainerService.HintSize="477,845" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,7 +249,7 @@
           </OutArgument>
         </etaa:ReplaceTextActivity.ResultText>
       </etaa:ReplaceTextActivity>
-      <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_3">
+      <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_12">
         <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_3" Level="Info">
           <baast:LogActivity.LogContent>
             <InArgument x:TypeArguments="x:String">
@@ -259,7 +259,7 @@
         </baast:LogActivity>
       </eae:CommentActivity>
     </Sequence>
-    <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以万结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="556,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_1" RegText="-?\d+(\.\d+)?万">
+    <etaa:VerifyTextActivity ActivityName="验证文本有效性" sap2010:Annotation.AnnotationText="w/万结尾" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以万结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="556,83" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_1" RegText="-?\d+(\.\d+)?(万|w|W)">
       <etaa:VerifyTextActivity.OriginText>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Convert.ToString(数值文本)</mca:CSharpValue>
@@ -270,8 +270,13 @@
           <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">是否以万结尾</mca:CSharpReference>
         </OutArgument>
       </etaa:VerifyTextActivity.VerifyResult>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </etaa:VerifyTextActivity>
-    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="556,881" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="556,1167" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
       <bfa:If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">是否以万结尾 == true</mca:CSharpValue>
@@ -284,36 +289,54 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <bfa:If.Then>
-        <Sequence DisplayName="序列-转换万单位" sap:VirtualizedContainerService.HintSize="477,693" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="序列-转换万单位" sap:VirtualizedContainerService.HintSize="477,979" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <etaa:ReplaceTextActivity ActivityName="替换文本" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="替换文本" sap:VirtualizedContainerService.HintSize="455,87" sap2010:WorkflowViewState.IdRef="ReplaceTextActivity_4">
-            <etaa:ReplaceTextActivity.NewText>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8" Value="" />
-              </InArgument>
-            </etaa:ReplaceTextActivity.NewText>
-            <etaa:ReplaceTextActivity.OldText>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">万</Literal>
-              </InArgument>
-            </etaa:ReplaceTextActivity.OldText>
-            <etaa:ReplaceTextActivity.OriginText>
-              <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">System.Convert.ToString(数值文本)</mca:CSharpValue>
-              </InArgument>
-            </etaa:ReplaceTextActivity.OriginText>
-            <etaa:ReplaceTextActivity.ResultText>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">数值文本</mca:CSharpReference>
-              </OutArgument>
-            </etaa:ReplaceTextActivity.ResultText>
-          </etaa:ReplaceTextActivity>
-          <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_4">
+          <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,242" sap2010:WorkflowViewState.IdRef="CommentActivity_9">
+            <etaa:ReplaceTextActivity ActivityName="替换文本" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="替换文本" sap:VirtualizedContainerService.HintSize="349,87" sap2010:WorkflowViewState.IdRef="ReplaceTextActivity_4">
+              <etaa:ReplaceTextActivity.NewText>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8" Value="" />
+                </InArgument>
+              </etaa:ReplaceTextActivity.NewText>
+              <etaa:ReplaceTextActivity.OldText>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">万</Literal>
+                </InArgument>
+              </etaa:ReplaceTextActivity.OldText>
+              <etaa:ReplaceTextActivity.OriginText>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">System.Convert.ToString(数值文本)</mca:CSharpValue>
+                </InArgument>
+              </etaa:ReplaceTextActivity.OriginText>
+              <etaa:ReplaceTextActivity.ResultText>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">数值文本</mca:CSharpReference>
+                </OutArgument>
+              </etaa:ReplaceTextActivity.ResultText>
+            </etaa:ReplaceTextActivity>
+          </eae:CommentActivity>
+          <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="455,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_9" IsIgnore="False" Text="[{&quot;To&quot;:&quot;数值文本&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;数值文本.Replace(\&quot;万\&quot;,\&quot;\&quot;).Replace(\&quot;w\&quot;,\&quot;\&quot;).Replace(\&quot;W\&quot;,\&quot;\&quot;)&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+            <bfa:MultipleAssign.AssignModels>
+              <bfa:AssignModel Index="1" IsNotFirst="False">
+                <bfa:AssignModel.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String">数值文本</mca:CSharpReference>
+                  </OutArgument>
+                </bfa:AssignModel.To>
+                <bfa:AssignModel.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">数值文本.Replace("万","").Replace("w","").Replace("W","")</mca:CSharpValue>
+                  </InArgument>
+                </bfa:AssignModel.Value>
+              </bfa:AssignModel>
+            </bfa:MultipleAssign.AssignModels>
+          </bfa:MultipleAssign>
+          <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_11">
             <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_5" Level="Info">
               <baast:LogActivity.LogContent>
                 <InArgument x:TypeArguments="x:String">
