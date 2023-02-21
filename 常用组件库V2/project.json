@@ -89,7 +89,7 @@
     "字符串处理\\删除字符串空白字符.xaml",
     "字符串处理\\删除字符串文件名禁用字符.xaml",
     "字符串处理\\替换字符串中用户名.xaml",
-    "组件内调用测试.xaml"
+    ".code\\组件内调用测试.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1277,7 +1277,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-01-30T20:34:28.5330984+08:00",
+  "LastModifyTime": "2023-02-21T19:38:15.7699267+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
