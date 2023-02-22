@@ -24,6 +24,7 @@
     ".code\\CSharp\\正则替换空白字符.cs",
     ".code\\CSharp\\执行CSharp代码.cs",
     ".code\\鼠标移动轨迹List.json",
+    ".code\\组件内调用测试.xaml",
     "Chrome配套",
     "Chrome配套\\等待文件出现.xaml",
     "Chrome配套\\关闭Chrome恢复提示框.xaml",
@@ -88,8 +89,7 @@
     "字符串处理\\获取用户桌面路径.xaml",
     "字符串处理\\删除字符串空白字符.xaml",
     "字符串处理\\删除字符串文件名禁用字符.xaml",
-    "字符串处理\\替换字符串中用户名.xaml",
-    ".code\\组件内调用测试.xaml"
+    "字符串处理\\替换字符串中用户名.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1277,7 +1277,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-02-21T19:38:15.7699267+08:00",
+  "LastModifyTime": "2023-02-22T19:45:51.3139982+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

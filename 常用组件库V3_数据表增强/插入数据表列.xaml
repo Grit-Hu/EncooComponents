@@ -24,7 +24,7 @@
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>BotTime.DataTableActivity.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      <x:String>常用组件库V3_字符串增强</x:String>
+      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -48,7 +48,7 @@
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A2%9E%E5%BC%BA</AssemblyReference>
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,306" sap2010:WorkflowViewState.IdRef="Sequence_2">

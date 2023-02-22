@@ -536,15 +536,15 @@
       "InnerDependencies": []
     },
     {
-      "Id": "System.ValueTuple",
-      "Version": "4.5.0",
-      "Title": "System.ValueTuple",
-      "InnerDependencies": []
-    },
-    {
       "Id": "AutomationActivity",
       "Version": "2.0.2301.2",
       "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
       "InnerDependencies": []
     },
     {
