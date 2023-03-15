@@ -28,7 +28,6 @@
       <x:String>Microsoft.CSharp.Activities</x:String>
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
-      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -50,7 +49,6 @@
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>ActivityCommon</AssemblyReference>
-      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="597,5051" sap2010:WorkflowViewState.IdRef="Sequence_2">

@@ -13,7 +13,7 @@
     </InArgument>
   </this:Main.筛选字段List>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>716,7283</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>716,9859</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="15">
@@ -57,7 +57,7 @@
       <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E6%97%A5%E5%BF%97%E5%A2%9E%E5%BC%BA</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="676,7203" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="676,9779" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="where子句" />
       <Variable x:TypeArguments="x:String" Name="查询SQL" />
@@ -69,14 +69,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_24" Level="Info">
       <baast:LogActivity.LogContent>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">=====写入数据库=====</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_36">=====写入数据库_插入SQL语句方式，开始执行=====</Literal>
         </InArgument>
       </baast:LogActivity.LogContent>
     </baast:LogActivity>
-    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="654,432" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_25" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_37">----判断数据表是否为空----</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="654,536" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
       <bfa:If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">数据表.Rows.Count==0</mca:CSharpValue>
@@ -100,7 +107,14 @@
         </Sequence>
       </bfa:If.Then>
     </bfa:If>
-    <bfa:TryCatch ActivityName="错误捕获（Try Catch）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Try Catch-遍历修改每个单元格" sap:VirtualizedContainerService.HintSize="654,2028" sap2010:WorkflowViewState.IdRef="TryCatch_1" IsIgnore="False">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_26" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_38">----遍历修改每个单元格----</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:TryCatch ActivityName="错误捕获（Try Catch）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Try Catch-遍历修改每个单元格" sap:VirtualizedContainerService.HintSize="654,2453" sap2010:WorkflowViewState.IdRef="TryCatch_1" IsIgnore="False">
       <bfa:TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="列名" />
         <Variable x:TypeArguments="x:String" Name="字段类型" />
@@ -109,14 +123,14 @@
         <Variable x:TypeArguments="x:String" Name="temp" />
       </bfa:TryCatch.Variables>
       <bfa:TryCatch.Try>
-        <Sequence DisplayName="序列-遍历修改每个单元格" sap:VirtualizedContainerService.HintSize="636,1791" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="序列-遍历修改每个单元格" sap:VirtualizedContainerService.HintSize="636,2216" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <bda:ForEach ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行" sap:VirtualizedContainerService.HintSize="614,1605" sap2010:WorkflowViewState.IdRef="ForEach_1">
+          <bda:ForEach ActivityName="遍历行" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="遍历行" sap:VirtualizedContainerService.HintSize="614,2030" sap2010:WorkflowViewState.IdRef="ForEach_1">
             <bda:ForEach.CurrentIndex>
               <OutArgument x:TypeArguments="x:Int32">
                 <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">rowIndex</mca:CSharpReference>
@@ -137,13 +151,13 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="598,1490" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="598,1915" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="576,318" sap2010:WorkflowViewState.IdRef="If_2" IsIgnore="False">
+                <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="576,422" sap2010:WorkflowViewState.IdRef="If_2" IsIgnore="False">
                   <bfa:If.Condition>
                     <InArgument x:TypeArguments="x:Boolean">
                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">rowIndex % 50 ==0 &amp;&amp; rowIndex!=0</mca:CSharpValue>
@@ -165,7 +179,7 @@
                     </baast:LogActivity>
                   </bfa:If.Then>
                 </bfa:If>
-                <bfa:ForPro ActivityName="重复操作" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="重复操作" sap:VirtualizedContainerService.HintSize="576,1008" sap2010:WorkflowViewState.IdRef="ForPro_1" IsIgnore="False">
+                <bfa:ForPro ActivityName="重复操作" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="重复操作" sap:VirtualizedContainerService.HintSize="576,1329" sap2010:WorkflowViewState.IdRef="ForPro_1" IsIgnore="False">
                   <bfa:ForPro.CurrentNumber>
                     <OutArgument x:TypeArguments="x:Int32">
                       <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">columnIndex</mca:CSharpReference>
@@ -182,7 +196,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="556,896" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="556,1217" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -252,7 +266,7 @@
                         </bfa:AssignModel>
                       </bfa:MultipleAssign.AssignModels>
                     </bfa:MultipleAssign>
-                    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,248" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
+                    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,569" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
                       <bfa:If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">字段类型 == "varchar" || 字段类型 == "datetime"</mca:CSharpValue>
@@ -390,118 +404,163 @@
         </bfa:Catch>
       </bfa:TryCatch.Catches>
     </bfa:TryCatch>
-    <Sequence DisplayName="序列-构建where子句" sap:VirtualizedContainerService.HintSize="654,506" sap2010:WorkflowViewState.IdRef="Sequence_8">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="scg:List(x:String)" Name="筛选条件List">
-          <Variable.Default>
-            <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">new List&lt;String&gt;{}</mca:CSharpValue>
-          </Variable.Default>
-        </Variable>
-      </Sequence.Variables>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_27" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_39">----处理筛选字段----</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="654,1473" sap2010:WorkflowViewState.IdRef="If_4" IsIgnore="False">
+      <bfa:If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_202">筛选字段List.Count==0</mca:CSharpValue>
+        </InArgument>
+      </bfa:If.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <bfa:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" ActivityName="循环操作（For Each）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="循环操作（For Each）-构建筛选条件" sap:VirtualizedContainerService.HintSize="450,251" sap2010:WorkflowViewState.IdRef="ForEach`1_1" IsIgnore="False">
-        <bfa:ForEach.Values>
-          <InArgument x:TypeArguments="scg:List(x:String)">
-            <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">筛选字段List</mca:CSharpValue>
-          </InArgument>
-        </bfa:ForEach.Values>
-        <ActivityAction x:TypeArguments="x:String">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:String" Name="字段名称" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="222,146" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <bfa:If.Then>
+        <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_31" Level="Info">
+          <baast:LogActivity.LogContent>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_43">筛选字段List.Count==0，不创建查询和删除SQL。</Literal>
+            </InArgument>
+          </baast:LogActivity.LogContent>
+        </baast:LogActivity>
+      </bfa:If.Then>
+      <bfa:If.Else>
+        <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="494,1111" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="序列-构建where子句" sap:VirtualizedContainerService.HintSize="472,506" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:List(x:String)" Name="筛选条件List">
+                <Variable.Default>
+                  <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_203">new List&lt;String&gt;{}</mca:CSharpValue>
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ecaac:AddToCollectionActivity ActivityName="添加对象" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加对象" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollectionActivity_1">
-              <ecaac:AddToCollectionActivity.Collection>
-                <InOutArgument x:TypeArguments="scg:List(x:String)">
-                  <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">筛选条件List</mca:CSharpReference>
-                </InOutArgument>
-              </ecaac:AddToCollectionActivity.Collection>
-              <ecaac:AddToCollectionActivity.Item>
-                <InArgument x:TypeArguments="x:String">
-                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">[数据表字段配置映射一层字典[模块名称][字段名称]["数据库表字段名称"]+"="+"\""+数据表.Rows[0][字段名称]+"\""]</mca:CSharpValue>
+            <bfa:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" ActivityName="循环操作（For Each）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="循环操作（For Each）-构建筛选条件" sap:VirtualizedContainerService.HintSize="450,251" sap2010:WorkflowViewState.IdRef="ForEach`1_14" IsIgnore="False">
+              <bfa:ForEach.Values>
+                <InArgument x:TypeArguments="scg:List(x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_204">筛选字段List</mca:CSharpValue>
                 </InArgument>
-              </ecaac:AddToCollectionActivity.Item>
-            </ecaac:AddToCollectionActivity>
+              </bfa:ForEach.Values>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="字段名称" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="222,146" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ecaac:AddToCollectionActivity ActivityName="添加对象" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="添加对象" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollectionActivity_2">
+                    <ecaac:AddToCollectionActivity.Collection>
+                      <InOutArgument x:TypeArguments="scg:List(x:String)">
+                        <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_150">筛选条件List</mca:CSharpReference>
+                      </InOutArgument>
+                    </ecaac:AddToCollectionActivity.Collection>
+                    <ecaac:AddToCollectionActivity.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_210">[数据表字段配置映射一层字典[模块名称][字段名称]["数据库表字段名称"]+"="+"\""+数据表.Rows[0][字段名称]+"\""]</mca:CSharpValue>
+                      </InArgument>
+                    </ecaac:AddToCollectionActivity.Item>
+                  </ecaac:AddToCollectionActivity>
+                </Sequence>
+              </ActivityAction>
+            </bfa:ForEach>
+            <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）-拼接筛选条件" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_22" IsIgnore="False" Text="[{&quot;To&quot;:&quot;where子句&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot; WHERE \&quot;+String.Join(\&quot; AND \&quot;,筛选条件List)+\&quot;;\&quot;&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+              <bfa:MultipleAssign.AssignModels>
+                <bfa:AssignModel Index="1" IsNotFirst="False">
+                  <bfa:AssignModel.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_147">where子句</mca:CSharpReference>
+                    </OutArgument>
+                  </bfa:AssignModel.To>
+                  <bfa:AssignModel.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_207">" WHERE "+String.Join(" AND ",筛选条件List)+";"</mca:CSharpValue>
+                    </InArgument>
+                  </bfa:AssignModel.Value>
+                </bfa:AssignModel>
+              </bfa:MultipleAssign.AssignModels>
+            </bfa:MultipleAssign>
           </Sequence>
-        </ActivityAction>
-      </bfa:ForEach>
-      <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）-拼接筛选条件" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_8" IsIgnore="False" Text="[{&quot;To&quot;:&quot;where子句&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot; WHERE \&quot;+String.Join(\&quot; AND \&quot;,筛选条件List)+\&quot;;\&quot;&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
-        <bfa:MultipleAssign.AssignModels>
-          <bfa:AssignModel Index="1" IsNotFirst="False">
-            <bfa:AssignModel.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String">where子句</mca:CSharpReference>
-              </OutArgument>
-            </bfa:AssignModel.To>
-            <bfa:AssignModel.Value>
-              <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String">" WHERE "+String.Join(" AND ",筛选条件List)+";"</mca:CSharpValue>
-              </InArgument>
-            </bfa:AssignModel.Value>
-          </bfa:AssignModel>
-        </bfa:MultipleAssign.AssignModels>
-      </bfa:MultipleAssign>
-    </Sequence>
-    <Sequence DisplayName="序列-构建查询、删除SQL" sap:VirtualizedContainerService.HintSize="654,441" sap2010:WorkflowViewState.IdRef="Sequence_9">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="360,121" sap2010:WorkflowViewState.IdRef="MultipleAssign_9" IsIgnore="False" Text="[{&quot;To&quot;:&quot;查询SQL&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot;SELECT * FROM \&quot;+模块与对应数据表名称字典[模块名称]+\&quot; \&quot;+where子句&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;},{&quot;To&quot;:&quot;删除SQL&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot;DELETE FROM \&quot;+模块与对应数据表名称字典[模块名称]+\&quot; \&quot;+where子句&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
-        <bfa:MultipleAssign.AssignModels>
-          <bfa:AssignModel Index="1" IsNotFirst="False">
-            <bfa:AssignModel.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String">查询SQL</mca:CSharpReference>
-              </OutArgument>
-            </bfa:AssignModel.To>
-            <bfa:AssignModel.Value>
-              <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String">"SELECT * FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
-              </InArgument>
-            </bfa:AssignModel.Value>
-          </bfa:AssignModel>
-          <bfa:AssignModel Index="2" IsNotFirst="True">
-            <bfa:AssignModel.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String">删除SQL</mca:CSharpReference>
-              </OutArgument>
-            </bfa:AssignModel.To>
-            <bfa:AssignModel.Value>
-              <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String">"DELETE FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
-              </InArgument>
-            </bfa:AssignModel.Value>
-          </bfa:AssignModel>
-        </bfa:MultipleAssign.AssignModels>
-      </bfa:MultipleAssign>
-      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="360,58" sap2010:WorkflowViewState.IdRef="LogActivity_6" Level="Info">
-        <baast:LogActivity.LogContent>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">System.Convert.ToString("查询SQL="+查询SQL)</mca:CSharpValue>
-          </InArgument>
-        </baast:LogActivity.LogContent>
-      </baast:LogActivity>
-      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="360,58" sap2010:WorkflowViewState.IdRef="LogActivity_7" Level="Info">
-        <baast:LogActivity.LogContent>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">System.Convert.ToString("删除SQL="+删除SQL)</mca:CSharpValue>
-          </InArgument>
-        </baast:LogActivity.LogContent>
-      </baast:LogActivity>
-    </Sequence>
+          <Sequence DisplayName="序列-构建查询、删除SQL" sap:VirtualizedContainerService.HintSize="472,441" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="360,121" sap2010:WorkflowViewState.IdRef="MultipleAssign_23" IsIgnore="False" Text="[{&quot;To&quot;:&quot;查询SQL&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot;SELECT * FROM \&quot;+模块与对应数据表名称字典[模块名称]+\&quot; \&quot;+where子句&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;},{&quot;To&quot;:&quot;删除SQL&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot;DELETE FROM \&quot;+模块与对应数据表名称字典[模块名称]+\&quot; \&quot;+where子句&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+              <bfa:MultipleAssign.AssignModels>
+                <bfa:AssignModel Index="1" IsNotFirst="False">
+                  <bfa:AssignModel.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_148">查询SQL</mca:CSharpReference>
+                    </OutArgument>
+                  </bfa:AssignModel.To>
+                  <bfa:AssignModel.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_208">"SELECT * FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
+                    </InArgument>
+                  </bfa:AssignModel.Value>
+                </bfa:AssignModel>
+                <bfa:AssignModel Index="2" IsNotFirst="True">
+                  <bfa:AssignModel.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_149">删除SQL</mca:CSharpReference>
+                    </OutArgument>
+                  </bfa:AssignModel.To>
+                  <bfa:AssignModel.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_209">"DELETE FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
+                    </InArgument>
+                  </bfa:AssignModel.Value>
+                </bfa:AssignModel>
+              </bfa:MultipleAssign.AssignModels>
+            </bfa:MultipleAssign>
+            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="360,58" sap2010:WorkflowViewState.IdRef="LogActivity_32" Level="Info">
+              <baast:LogActivity.LogContent>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_205">System.Convert.ToString("查询SQL="+查询SQL)</mca:CSharpValue>
+                </InArgument>
+              </baast:LogActivity.LogContent>
+            </baast:LogActivity>
+            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="360,58" sap2010:WorkflowViewState.IdRef="LogActivity_33" Level="Info">
+              <baast:LogActivity.LogContent>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_206">System.Convert.ToString("删除SQL="+删除SQL)</mca:CSharpValue>
+                </InArgument>
+              </baast:LogActivity.LogContent>
+            </baast:LogActivity>
+          </Sequence>
+        </Sequence>
+      </bfa:If.Else>
+    </bfa:If>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_28" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_40">----构建插入数据表----</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
     <Sequence DisplayName="序列-构建插入数据表" sap:VirtualizedContainerService.HintSize="654,697" sap2010:WorkflowViewState.IdRef="Sequence_18">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="columnIndex" />
@@ -574,7 +633,14 @@
         </InArgument>
       </常1:打印数据表.数据表名称>
     </常1:打印数据表>
-    <Sequence DisplayName="序列-数据库操作" sap:VirtualizedContainerService.HintSize="654,2517" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_29" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_41">----数据库操作----</Literal>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <Sequence DisplayName="序列-数据库操作" sap:VirtualizedContainerService.HintSize="654,3588" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="outputDataTable" />
       </Sequence.Variables>
@@ -584,13 +650,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <bda1:DatabaseConnectActivity ActivityName="连接数据库" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="连接数据库" sap:VirtualizedContainerService.HintSize="582,2393" sap2010:WorkflowViewState.IdRef="DatabaseConnectActivity_1" ProviderName="MySql">
+      <bda1:DatabaseConnectActivity ActivityName="连接数据库" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="连接数据库" sap:VirtualizedContainerService.HintSize="606,3464" sap2010:WorkflowViewState.IdRef="DatabaseConnectActivity_1" ProviderName="MySql">
         <bda1:DatabaseConnectActivity.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="DataBaseScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="序列-数据库事务" sap:VirtualizedContainerService.HintSize="568,2285" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="序列-数据库事务" sap:VirtualizedContainerService.HintSize="592,3356" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="affectedRows" />
               </Sequence.Variables>
@@ -599,72 +665,171 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <bda1:ExecuteTransactionActivity ActivityName="执行事务" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行事务" sap:VirtualizedContainerService.HintSize="546,2161" sap2010:WorkflowViewState.IdRef="ExecuteTransactionActivity_1">
+              <bda1:ExecuteTransactionActivity ActivityName="执行事务" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行事务" sap:VirtualizedContainerService.HintSize="570,3232" sap2010:WorkflowViewState.IdRef="ExecuteTransactionActivity_1">
                 <bda1:ExecuteTransactionActivity.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="DataBaseTransactionScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="序列-事务" sap:VirtualizedContainerService.HintSize="532,2075" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="序列-事务" sap:VirtualizedContainerService.HintSize="556,3146" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <bda1:QueryTableActivity ActivityName="查询语句" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="查询语句-查询已存在数据" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="QueryTableActivity_1">
-                        <bda1:QueryTableActivity.DataTable>
-                          <OutArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">outputDataTable</mca:CSharpReference>
-                          </OutArgument>
-                        </bda1:QueryTableActivity.DataTable>
-                        <bda1:QueryTableActivity.ExecuteTimeOut>
-                          <InArgument x:TypeArguments="x:TimeSpan">
-                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_9" Value="00:00:30" />
+                      <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,1315" sap2010:WorkflowViewState.IdRef="If_5" IsIgnore="False">
+                        <bfa:If.Condition>
+                          <InArgument x:TypeArguments="x:Boolean">
+                            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">筛选字段List.Count==0</mca:CSharpValue>
                           </InArgument>
-                        </bda1:QueryTableActivity.ExecuteTimeOut>
-                        <bda1:QueryTableActivity.Sql>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">查询SQL</mca:CSharpValue>
-                          </InArgument>
-                        </bda1:QueryTableActivity.Sql>
-                      </bda1:QueryTableActivity>
-                      <常1:打印数据表 sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="打印数据表_3" Level="Info">
-                        <常1:打印数据表.传入的数据表>
-                          <InArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_185">outputDataTable</mca:CSharpValue>
-                          </InArgument>
-                        </常1:打印数据表.传入的数据表>
-                        <常1:打印数据表.数据表名称>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_34">已存在数据</Literal>
-                          </InArgument>
-                        </常1:打印数据表.数据表名称>
-                      </常1:打印数据表>
-                      <bda1:ExecuteSqlActivity ActivityName="执行语句" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行语句-删除已存在数据" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="ExecuteSqlActivity_1">
-                        <bda1:ExecuteSqlActivity.AffectedRows>
-                          <OutArgument x:TypeArguments="x:Int32">
-                            <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">affectedRows</mca:CSharpReference>
-                          </OutArgument>
-                        </bda1:ExecuteSqlActivity.AffectedRows>
-                        <bda1:ExecuteSqlActivity.ExecuteTimeOut>
-                          <InArgument x:TypeArguments="x:TimeSpan">
-                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_11" Value="00:00:30" />
-                          </InArgument>
-                        </bda1:ExecuteSqlActivity.ExecuteTimeOut>
-                        <bda1:ExecuteSqlActivity.Sql>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">删除SQL</mca:CSharpValue>
-                          </InArgument>
-                        </bda1:ExecuteSqlActivity.Sql>
-                      </bda1:ExecuteSqlActivity>
-                      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="510,58" sap2010:WorkflowViewState.IdRef="LogActivity_11" Level="Info">
-                        <baast:LogActivity.LogContent>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">System.Convert.ToString("删除行数="+affectedRows)</mca:CSharpValue>
-                          </InArgument>
-                        </baast:LogActivity.LogContent>
-                      </baast:LogActivity>
-                      <Sequence DisplayName="序列-遍历添加来创建结构" sap:VirtualizedContainerService.HintSize="510,1409" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        </bfa:If.Condition>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <bfa:If.Then>
+                          <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="477,715" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="455,58" sap2010:WorkflowViewState.IdRef="LogActivity_34" Level="Info">
+                              <baast:LogActivity.LogContent>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_44">筛选字段List.Count==0，查询全表获取数据结构以便搭建插入数据表。</Literal>
+                                </InArgument>
+                              </baast:LogActivity.LogContent>
+                            </baast:LogActivity>
+                            <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="455,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_24" IsIgnore="False" Text="[{&quot;To&quot;:&quot;查询SQL&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;\&quot;SELECT * FROM \&quot;+模块与对应数据表名称字典[模块名称]+\&quot;;\&quot;&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+                              <bfa:MultipleAssign.AssignModels>
+                                <bfa:AssignModel Index="1" IsNotFirst="False">
+                                  <bfa:AssignModel.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_154">查询SQL</mca:CSharpReference>
+                                    </OutArgument>
+                                  </bfa:AssignModel.To>
+                                  <bfa:AssignModel.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">"SELECT * FROM "+模块与对应数据表名称字典[模块名称]+";"</mca:CSharpValue>
+                                    </InArgument>
+                                  </bfa:AssignModel.Value>
+                                </bfa:AssignModel>
+                              </bfa:MultipleAssign.AssignModels>
+                            </bfa:MultipleAssign>
+                            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="455,58" sap2010:WorkflowViewState.IdRef="LogActivity_35" Level="Info">
+                              <baast:LogActivity.LogContent>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_212">System.Convert.ToString("查询SQL="+查询SQL)</mca:CSharpValue>
+                                </InArgument>
+                              </baast:LogActivity.LogContent>
+                            </baast:LogActivity>
+                            <bda1:QueryTableActivity ActivityName="查询语句" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="查询语句-查询已存在数据" sap:VirtualizedContainerService.HintSize="455,22" sap2010:WorkflowViewState.IdRef="QueryTableActivity_2">
+                              <bda1:QueryTableActivity.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_151">outputDataTable</mca:CSharpReference>
+                                </OutArgument>
+                              </bda1:QueryTableActivity.DataTable>
+                              <bda1:QueryTableActivity.ExecuteTimeOut>
+                                <InArgument x:TypeArguments="x:TimeSpan">
+                                  <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_45" Value="00:00:30" />
+                                </InArgument>
+                              </bda1:QueryTableActivity.ExecuteTimeOut>
+                              <bda1:QueryTableActivity.Sql>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_213">查询SQL</mca:CSharpValue>
+                                </InArgument>
+                              </bda1:QueryTableActivity.Sql>
+                            </bda1:QueryTableActivity>
+                            <eae:CommentActivity sap2010:Annotation.AnnotationText="查询全表可能数据量很大，不打印了。" DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,202" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <常1:打印数据表 sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="打印数据表_5" Level="Info">
+                                <常1:打印数据表.传入的数据表>
+                                  <InArgument x:TypeArguments="sd:DataTable">
+                                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_217">outputDataTable</mca:CSharpValue>
+                                  </InArgument>
+                                </常1:打印数据表.传入的数据表>
+                                <常1:打印数据表.数据表名称>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_48">已存在数据</Literal>
+                                  </InArgument>
+                                </常1:打印数据表.数据表名称>
+                              </常1:打印数据表>
+                            </eae:CommentActivity>
+                          </Sequence>
+                        </bfa:If.Then>
+                        <bfa:If.Else>
+                          <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="371,368" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <bda1:QueryTableActivity ActivityName="查询语句" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="查询语句-查询已存在数据" sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="QueryTableActivity_3">
+                              <bda1:QueryTableActivity.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_152">outputDataTable</mca:CSharpReference>
+                                </OutArgument>
+                              </bda1:QueryTableActivity.DataTable>
+                              <bda1:QueryTableActivity.ExecuteTimeOut>
+                                <InArgument x:TypeArguments="x:TimeSpan">
+                                  <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_46" Value="00:00:30" />
+                                </InArgument>
+                              </bda1:QueryTableActivity.ExecuteTimeOut>
+                              <bda1:QueryTableActivity.Sql>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_214">查询SQL</mca:CSharpValue>
+                                </InArgument>
+                              </bda1:QueryTableActivity.Sql>
+                            </bda1:QueryTableActivity>
+                            <常1:打印数据表 sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="打印数据表_3" Level="Info">
+                              <常1:打印数据表.传入的数据表>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_185">outputDataTable</mca:CSharpValue>
+                                </InArgument>
+                              </常1:打印数据表.传入的数据表>
+                              <常1:打印数据表.数据表名称>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_34">已存在数据</Literal>
+                                </InArgument>
+                              </常1:打印数据表.数据表名称>
+                            </常1:打印数据表>
+                            <bda1:ExecuteSqlActivity ActivityName="执行语句" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行语句-删除已存在数据" sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="ExecuteSqlActivity_2">
+                              <bda1:ExecuteSqlActivity.AffectedRows>
+                                <OutArgument x:TypeArguments="x:Int32">
+                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_153">affectedRows</mca:CSharpReference>
+                                </OutArgument>
+                              </bda1:ExecuteSqlActivity.AffectedRows>
+                              <bda1:ExecuteSqlActivity.ExecuteTimeOut>
+                                <InArgument x:TypeArguments="x:TimeSpan">
+                                  <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_47" Value="00:00:30" />
+                                </InArgument>
+                              </bda1:ExecuteSqlActivity.ExecuteTimeOut>
+                              <bda1:ExecuteSqlActivity.Sql>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_215">删除SQL</mca:CSharpValue>
+                                </InArgument>
+                              </bda1:ExecuteSqlActivity.Sql>
+                            </bda1:ExecuteSqlActivity>
+                            <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_36" Level="Info">
+                              <baast:LogActivity.LogContent>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_216">System.Convert.ToString("删除行数="+affectedRows)</mca:CSharpValue>
+                                </InArgument>
+                              </baast:LogActivity.LogContent>
+                            </baast:LogActivity>
+                          </Sequence>
+                        </bfa:If.Else>
+                      </bfa:If>
+                      <Sequence DisplayName="序列-遍历添加来创建结构" sap:VirtualizedContainerService.HintSize="534,1409" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="rowNew" />
                           <Variable x:TypeArguments="x:Int32" Name="columnIndex" />
@@ -826,7 +991,7 @@
                           </bfa:MultipleAssign.AssignModels>
                         </bfa:MultipleAssign>
                       </Sequence>
-                      <常1:打印数据表 sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="打印数据表_4" Level="Info">
+                      <常1:打印数据表 sap:VirtualizedContainerService.HintSize="534,22" sap2010:WorkflowViewState.IdRef="打印数据表_4" Level="Info">
                         <常1:打印数据表.传入的数据表>
                           <InArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_186">数据表</mca:CSharpValue>
@@ -838,7 +1003,7 @@
                           </InArgument>
                         </常1:打印数据表.数据表名称>
                       </常1:打印数据表>
-                      <bda1:DatabaseInsertDataActivity ActivityName="插入数据" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="插入数据" sap:VirtualizedContainerService.HintSize="510,58" sap2010:WorkflowViewState.IdRef="DatabaseInsertDataActivity_1">
+                      <bda1:DatabaseInsertDataActivity ActivityName="插入数据" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="插入数据" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="DatabaseInsertDataActivity_1">
                         <bda1:DatabaseInsertDataActivity.AffectedRows>
                           <OutArgument x:TypeArguments="x:Int32">
                             <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">affectedRows</mca:CSharpReference>
@@ -860,7 +1025,7 @@
                           </InArgument>
                         </bda1:DatabaseInsertDataActivity.TableName>
                       </bda1:DatabaseInsertDataActivity>
-                      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="510,58" sap2010:WorkflowViewState.IdRef="LogActivity_12" Level="Info">
+                      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="LogActivity_12" Level="Info">
                         <baast:LogActivity.LogContent>
                           <InArgument x:TypeArguments="x:String">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">System.Convert.ToString("插入行数="+affectedRows)</mca:CSharpValue>
@@ -881,10 +1046,10 @@
         </bda1:DatabaseConnectActivity.ConnectionString>
       </bda1:DatabaseConnectActivity>
     </Sequence>
-    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_13" Level="Info">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="654,58" sap2010:WorkflowViewState.IdRef="LogActivity_30" Level="Info">
       <baast:LogActivity.LogContent>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_13">=====写入数据库完成=====</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_42">=====写入数据库_插入数据表方式，执行结束=====</Literal>
         </InArgument>
       </baast:LogActivity.LogContent>
     </baast:LogActivity>

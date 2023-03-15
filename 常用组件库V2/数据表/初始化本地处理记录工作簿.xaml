@@ -50,7 +50,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
       <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="770,4293" sap2010:WorkflowViewState.IdRef="Sequence_2">

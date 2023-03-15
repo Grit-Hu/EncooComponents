@@ -16,7 +16,9 @@
   "ProjectEntryItem": "",
   "Items": [
     "获取数据表字段配置映射.xaml",
-    "写入数据库_插入数据表方式.xaml"
+    "写入数据库_插入数据表方式.xaml",
+    "写入数据库_插入SQL语句方式.xaml",
+    ".code"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1217,13 +1219,24 @@
     },
     {
       "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.0",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": []
+      "InnerDependencies": [
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
     },
     {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.0",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
@@ -1242,14 +1255,19 @@
           "MinVersion": "2.0.2301.2"
         },
         {
-          "Id": "常用组件库V3_即使消息通知",
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        },
+        {
+          "Id": "常用组件库V3_即时消息通知",
           "MaxVersion": null,
           "MinVersion": "1.0.0"
         },
         {
-          "Id": "Encoo.Text.Activity",
+          "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2301.1"
         },
         {
           "Id": "常用组件库V3_Chrome配套",
@@ -1257,9 +1275,9 @@
           "MinVersion": "1.0.1"
         },
         {
-          "Id": "Encoo.CodeTool.Activity",
+          "Id": "常用组件库V3_随机数",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "1.0.0"
         }
       ]
     },
@@ -1300,9 +1318,43 @@
           "MinVersion": "2.0.2301.2"
         }
       ]
+    },
+    {
+      "Id": "常用组件库V3_即时消息通知",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_即时消息通知",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_随机数",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_随机数",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-01-10T15:48:35.5030145+08:00",
+  "LastModifyTime": "2023-03-15T20:26:00.0252456+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
