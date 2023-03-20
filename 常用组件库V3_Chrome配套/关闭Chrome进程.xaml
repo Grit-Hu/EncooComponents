@@ -9,7 +9,6 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>BotTime.ActivityLibrary.Activities.System</x:String>
       <x:String>BotTime.Flow.Activities</x:String>
-      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -24,7 +23,6 @@
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
-      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,519" sap2010:WorkflowViewState.IdRef="Sequence_2">

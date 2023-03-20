@@ -1203,9 +1203,20 @@
     },
     {
       "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.0",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": []
+      "InnerDependencies": [
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
     },
     {
       "Id": "Microsoft.Identity.Client",
@@ -1226,7 +1237,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-01-10T15:27:57.1668849+08:00",
+  "LastModifyTime": "2023-03-20T16:05:57.6604776+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

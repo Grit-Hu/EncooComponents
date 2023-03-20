@@ -44,6 +44,12 @@
       "Type": "ActivityOrCode"
     },
     {
+      "Id": "Encoo.CodeTool.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "Encoo.Text.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -531,8 +537,158 @@
     },
     {
       "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.0",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": [
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.CodeTool.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "Encoo.CodeTool.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "Flurl.Http",
+          "MaxVersion": null,
+          "MinVersion": "3.2.4"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+          "MaxVersion": null,
+          "MinVersion": "1.1.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+      "Version": "20.1.1",
+      "Title": "Actipro SyntaxEditor Python Language Add-on (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl.Http",
+      "Version": "3.2.4",
+      "Title": "Flurl.Http",
+      "InnerDependencies": [
+        {
+          "Id": "Flurl",
+          "MaxVersion": null,
+          "MinVersion": "3.0.6"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.2"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl",
+      "Version": "3.0.6",
+      "Title": "Flurl",
+      "InnerDependencies": [
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.Scripting.Common",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CSharp",
+      "Version": "4.7.0",
+      "Title": "Microsoft.CSharp",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+      "Version": "1.1.0",
+      "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
       "InnerDependencies": []
     },
     {
