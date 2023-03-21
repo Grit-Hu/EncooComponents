@@ -20,6 +20,12 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
+      "Id": "AutomationActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "BotTime.Flow.Activities",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -32,21 +38,9 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "AutomationActivity",
+      "Id": "BotTime.Mail.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "常用组件库V3_随机数",
-      "AutoUpgrade": true,
-      "UpgradeVersionPattern": "1.0.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "常用组件库V3_日志增强",
-      "AutoUpgrade": true,
-      "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
@@ -56,7 +50,19 @@
       "Type": "ActivityOrCode"
     },
     {
+      "Id": "常用组件库V3_日志增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "常用组件库V3_即时消息通知",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_随机数",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -87,6 +93,12 @@
     }
   ],
   "ProjectDependencyItems": [
+    {
+      "Id": "AutomationActivity",
+      "Version": "2.0.2301.2",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
     {
       "Id": "BotTime.Flow.Activities",
       "Version": "2.0.2301.1",
@@ -554,39 +566,91 @@
       "InnerDependencies": []
     },
     {
-      "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
-      "Title": "BotTime.Automation.Activity",
+      "Id": "BotTime.Mail.Activity",
+      "Version": "2.0.2301.1",
+      "Title": "BotTime.Mail.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "MailKit",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Microsoft.Exchange.WebServices",
+          "MaxVersion": null,
+          "MinVersion": "2.2.0"
+        },
+        {
+          "Id": "Microsoft.Identity.Client",
+          "MaxVersion": null,
+          "MinVersion": "4.48.1"
+        },
+        {
+          "Id": "Microsoft.Office.Interop.Outlook",
+          "MaxVersion": null,
+          "MinVersion": "15.0.4797.1003"
+        }
+      ]
+    },
+    {
+      "Id": "MailKit",
+      "Version": "2.4.1",
+      "Title": "MailKit",
+      "InnerDependencies": [
+        {
+          "Id": "MimeKit",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        }
+      ]
+    },
+    {
+      "Id": "MimeKit",
+      "Version": "2.4.1",
+      "Title": "MimeKit",
+      "InnerDependencies": [
+        {
+          "Id": "BouncyCastle",
+          "MaxVersion": null,
+          "MinVersion": "1.8.5"
+        }
+      ]
+    },
+    {
+      "Id": "BouncyCastle",
+      "Version": "1.8.5",
+      "Title": "Bouncy Castle",
       "InnerDependencies": []
     },
     {
-      "Id": "常用组件库V3_随机数",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_随机数",
+      "Id": "Microsoft.Exchange.WebServices",
+      "Version": "2.2",
+      "Title": "Microsoft Exchange WebServices",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Identity.Client",
+      "Version": "4.48.1",
+      "Title": "Microsoft Authentication Library for .NET",
       "InnerDependencies": [
         {
-          "Id": "BotTime.Flow.Activities",
+          "Id": "Microsoft.IdentityModel.Abstractions",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "6.22.0"
         }
       ]
     },
     {
-      "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.2",
-      "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": [
-        {
-          "Id": "Encoo.CodeTool.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "BotTime.ActivityLibrary",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        }
-      ]
+      "Id": "Microsoft.IdentityModel.Abstractions",
+      "Version": "6.22.0",
+      "Title": "Microsoft.IdentityModel.Abstractions",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Office.Interop.Outlook",
+      "Version": "15.0.4797.1003",
+      "Title": "Microsoft.Office.Interop.Outlook",
+      "InnerDependencies": []
     },
     {
       "Id": "Encoo.CodeTool.Activity",
@@ -734,6 +798,23 @@
       "InnerDependencies": []
     },
     {
+      "Id": "常用组件库V3_日志增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": [
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
       "Id": "常用组件库V3_即时消息通知",
       "Version": "1.0.0",
       "Title": "常用组件库V3_即时消息通知",
@@ -750,6 +831,18 @@
         },
         {
           "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_随机数",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_随机数",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
           "MinVersion": "2.0.2301.1"
         }

@@ -30,9 +30,9 @@
       <x:String>Encoo.DataType</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
       <x:String>常用组件库V3_随机数</x:String>
-      
-      
-      
+      <x:String>常用组件库V3_日志增强</x:String>
+      <x:String>常用组件库V3_即时消息通知</x:String>
+      <x:String>常用组件库V3_键盘增强</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,9 +53,9 @@
       <AssemblyReference>Encoo.DataType</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%9A%8F%E6%9C%BA%E6%95%B0</AssemblyReference>
-      
-      
-      
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E6%97%A5%E5%BF%97%E5%A2%9E%E5%BC%BA</AssemblyReference>
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%8D%B3%E6%97%B6%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5</AssemblyReference>
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%94%AE%E7%9B%98%E5%A2%9E%E5%BC%BA</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="620,3439" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -74,7 +74,7 @@
     <常:提示并写入日志 sap:VirtualizedContainerService.HintSize="598,22" sap2010:WorkflowViewState.IdRef="提示并写入日志_1" Level="Info">
       <常:提示并写入日志.提示信息>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_42">==打开浏览器==</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_83">==登录帐号==</Literal>
         </InArgument>
       </常:提示并写入日志.提示信息>
       <常:提示并写入日志.提示时长>
@@ -711,12 +711,12 @@
                         <bfa:AssignModel Index="1" IsNotFirst="False">
                           <bfa:AssignModel.To>
                             <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String">提示信息</mca:CSharpReference>
+                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">提示信息</mca:CSharpReference>
                             </OutArgument>
                           </bfa:AssignModel.To>
                           <bfa:AssignModel.Value>
                             <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String">店铺名称+"没有出现退出按钮，登录生意参谋失败。"</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">店铺名称+"没有出现退出按钮，登录生意参谋失败。"</mca:CSharpValue>
                             </InArgument>
                           </bfa:AssignModel.Value>
                         </bfa:AssignModel>

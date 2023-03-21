@@ -17,18 +17,21 @@
   "Items": [
     ".code",
     ".code\\ToDelete",
-    ".code\\ToDelete\\登录大快消-参考.xaml",
     ".code\\鼠标移动轨迹List.json",
     "登录电商平台",
-    "登录电商平台\\登录生意参谋.xaml",
+    "登录电商平台\\登录抖店帐号.xaml",
+    "登录电商平台\\登录生意参谋帐号.xaml",
     "滑块验证",
+    "滑块验证\\抖店滑块验证.xaml",
     "滑块验证\\生意参谋滑块验证.xaml",
     "另存为窗口指定路径.xaml",
     "模块运行错误处理.xaml",
     "模块运行完成处理.xaml",
     "鼠标按轨迹移动.xaml",
     "数值单位标准化.xaml",
-    "下载并返回文件全路径.xaml"
+    "下载并返回文件全路径.xaml",
+    ".code\\Python",
+    ".code\\Python\\下载验证码图片计算偏移.py"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1378,7 +1381,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-03-21T13:59:46.3759011+08:00",
+  "LastModifyTime": "2023-03-21T15:37:35.5174851+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
