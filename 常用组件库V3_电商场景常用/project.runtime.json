@@ -38,13 +38,13 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "Encoo.Text.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
+      "Id": "常用组件库V3_随机数",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_即时消息通知",
+      "Id": "常用组件库V3_日志增强",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -56,13 +56,31 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_Chrome配套",
+      "Id": "常用组件库V3_即时消息通知",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_随机数",
+      "Id": "常用组件库V3_键盘增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_鼠标增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Text.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_Chrome配套",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -542,34 +560,29 @@
       "InnerDependencies": []
     },
     {
-      "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
-      "Title": "Encoo.Text.Activity",
-      "InnerDependencies": [
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        }
-      ]
-    },
-    {
-      "Id": "常用组件库V3_即时消息通知",
+      "Id": "常用组件库V3_随机数",
       "Version": "1.0.0",
-      "Title": "常用组件库V3_即时消息通知",
+      "Title": "常用组件库V3_随机数",
       "InnerDependencies": [
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
           "MinVersion": "2.0.2301.1"
-        },
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": [
         {
-          "Id": "BotTime.ActivityLibrary",
+          "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
           "MinVersion": "2.0.2301.1"
         },
         {
-          "Id": "Encoo.CodeTool.Activity",
+          "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
           "MinVersion": "2.0.2301.1"
         }
@@ -721,8 +734,80 @@
       "InnerDependencies": []
     },
     {
+      "Id": "常用组件库V3_即时消息通知",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_即时消息通知",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_键盘增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_键盘增强",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_鼠标增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_鼠标增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "常用组件库V3_随机数",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    },
+    {
+      "Id": "Encoo.Text.Activity",
+      "Version": "2.0.2301.2",
+      "Title": "Encoo.Text.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
+    },
+    {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
@@ -743,30 +828,17 @@
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.0"
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
           "MinVersion": "2.0.2301.2"
-        }
-      ]
-    },
-    {
-      "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "常用组件库V3_随机数",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_随机数",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
         }
       ]
     },

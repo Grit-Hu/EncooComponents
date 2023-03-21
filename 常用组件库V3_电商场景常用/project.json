@@ -15,14 +15,20 @@
   ],
   "ProjectEntryItem": "",
   "Items": [
+    ".code",
+    ".code\\ToDelete",
+    ".code\\ToDelete\\登录大快消-参考.xaml",
+    ".code\\鼠标移动轨迹List.json",
+    "登录电商平台",
+    "登录电商平台\\登录生意参谋.xaml",
+    "滑块验证",
+    "滑块验证\\生意参谋滑块验证.xaml",
     "另存为窗口指定路径.xaml",
     "模块运行错误处理.xaml",
     "模块运行完成处理.xaml",
     "鼠标按轨迹移动.xaml",
     "数值单位标准化.xaml",
-    "下载并返回文件全路径.xaml",
-    ".code",
-    ".code\\鼠标移动轨迹List.json"
+    "下载并返回文件全路径.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -136,6 +142,24 @@
     },
     {
       "Id": "常用组件库V3_随机数",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_键盘增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_鼠标增强",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -1229,7 +1253,7 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
@@ -1250,7 +1274,12 @@
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.0"
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
         },
         {
           "Id": "Encoo.Text.Activity",
@@ -1258,12 +1287,6 @@
           "MinVersion": "2.0.2301.2"
         }
       ]
-    },
-    {
-      "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": []
     },
     {
       "Id": "常用组件库V3_即时消息通知",
@@ -1298,9 +1321,64 @@
           "MinVersion": "2.0.2301.1"
         }
       ]
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": [
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_键盘增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_键盘增强",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_鼠标增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_鼠标增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "常用组件库V3_随机数",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-03-06T11:17:17.2772442+08:00",
+  "LastModifyTime": "2023-03-21T13:59:46.3759011+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
