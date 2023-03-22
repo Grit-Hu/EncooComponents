@@ -12,10 +12,10 @@
       <x:String>Encootech.AutomationActivity</x:String>
       <x:String>Encoo.DataType</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      
       <x:String>常用组件库V3_随机数</x:String>
       <x:String>常用组件库V3_鼠标增强</x:String>
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>常用组件库V3_日志增强</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -33,10 +33,10 @@
       <AssemblyReference>AutomationActivity</AssemblyReference>
       <AssemblyReference>Encoo.DataType</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      
       <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%9A%8F%E6%9C%BA%E6%95%B0</AssemblyReference>
       <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%BC%A0%E6%A0%87%E5%A2%9E%E5%BC%BA</AssemblyReference>
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E6%97%A5%E5%BF%97%E5%A2%9E%E5%BC%BA</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列-滑块验证处理" sap:VirtualizedContainerService.HintSize="556,1196" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -164,7 +164,7 @@
               </InArgument>
             </常2:鼠标相对当前位置移动.y>
           </常2:鼠标相对当前位置移动>
-          <常2:鼠标模拟人工横向拖拽滑块 sap2010:Annotation.AnnotationText="100%缩放下长度为230，直接用这个值。" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="鼠标模拟人工横向拖拽滑块_1" Level="Info">
+          <常2:鼠标模拟人工横向拖拽滑块 sap2010:Annotation.AnnotationText="100%缩放下长度固定，直接用这个值。" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="鼠标模拟人工横向拖拽滑块_1" Level="Info">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -172,7 +172,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <常2:鼠标模拟人工横向拖拽滑块.totalDistance>
               <InArgument x:TypeArguments="x:Int32">
-                <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_8" Value="230" />
+                <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_13" Value="240" />
               </InArgument>
             </常2:鼠标模拟人工横向拖拽滑块.totalDistance>
           </常2:鼠标模拟人工横向拖拽滑块>
