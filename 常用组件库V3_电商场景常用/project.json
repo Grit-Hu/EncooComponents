@@ -16,10 +16,11 @@
   "ProjectEntryItem": "",
   "Items": [
     ".code",
+    ".code\\Python",
+    ".code\\Python\\下载验证码图片计算偏移.py",
     ".code\\ToDelete",
     ".code\\鼠标移动轨迹List.json",
     "登录电商平台",
-    "登录电商平台\\登录抖店帐号.xaml",
     "登录电商平台\\登录生意参谋帐号.xaml",
     "滑块验证",
     "滑块验证\\抖店滑块验证.xaml",
@@ -29,9 +30,7 @@
     "模块运行完成处理.xaml",
     "鼠标按轨迹移动.xaml",
     "数值单位标准化.xaml",
-    "下载并返回文件全路径.xaml",
-    ".code\\Python",
-    ".code\\Python\\下载验证码图片计算偏移.py"
+    "下载并返回文件全路径.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -171,13 +170,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -625,13 +624,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -692,7 +691,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -710,7 +709,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -767,7 +766,7 @@
     },
     {
       "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2",
+      "Version": "2.2.0",
       "Title": "Microsoft Exchange WebServices",
       "InnerDependencies": []
     },
@@ -797,7 +796,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -944,7 +943,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2301.1",
+      "Version": "1.4.2303.2",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -981,7 +980,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -993,7 +992,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1126,7 +1125,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1153,7 +1152,7 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
         {
@@ -1192,7 +1191,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1210,7 +1209,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1227,13 +1226,13 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1381,11 +1380,11 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-03-21T15:37:35.5174851+08:00",
+  "LastModifyTime": "2023-04-23T17:23:05.2968365+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2206.34"
+  "LastStudioVersion": "1.1.2303.6"
 }

@@ -5,7 +5,7 @@
     <x:Property Name="数值String" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>618,4454</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>618,4609</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="12">
@@ -117,7 +117,7 @@
       <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="空字符串/null/--转为0" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,376" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
         <bfa:If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
-            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">数值文本=="" || 数值文本.ToLower()=="null" || 数值文本=="--"</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">数值文本=="" || 数值文本.ToLower()=="null" || 数值文本=="--" ||数值文本=="NaN"</mca:CSharpValue>
           </InArgument>
         </bfa:If.Condition>
         <sap:WorkflowViewStateService.ViewState>
@@ -325,12 +325,12 @@
               <bfa:AssignModel Index="1" IsNotFirst="False">
                 <bfa:AssignModel.To>
                   <OutArgument x:TypeArguments="x:String">
-                    <mca:CSharpReference x:TypeArguments="x:String">数值文本</mca:CSharpReference>
+                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">数值文本</mca:CSharpReference>
                   </OutArgument>
                 </bfa:AssignModel.To>
                 <bfa:AssignModel.Value>
                   <InArgument x:TypeArguments="x:String">
-                    <mca:CSharpValue x:TypeArguments="x:String">数值文本.Replace("万","").Replace("w","").Replace("W","")</mca:CSharpValue>
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">数值文本.Replace("万","").Replace("w","").Replace("W","")</mca:CSharpValue>
                   </InArgument>
                 </bfa:AssignModel.Value>
               </bfa:AssignModel>
@@ -362,12 +362,12 @@
               <bfa:AssignModel Index="1" IsNotFirst="False">
                 <bfa:AssignModel.To>
                   <OutArgument x:TypeArguments="x:Double">
-                    <mca:CSharpReference x:TypeArguments="x:Double">数值Double</mca:CSharpReference>
+                    <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">数值Double</mca:CSharpReference>
                   </OutArgument>
                 </bfa:AssignModel.To>
                 <bfa:AssignModel.Value>
                   <InArgument x:TypeArguments="x:Double">
-                    <mca:CSharpValue x:TypeArguments="x:Double">数值Double*10000</mca:CSharpValue>
+                    <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">数值Double*10000</mca:CSharpValue>
                   </InArgument>
                 </bfa:AssignModel.Value>
               </bfa:AssignModel>
@@ -489,12 +489,12 @@
           <bfa:AssignModel Index="1" IsNotFirst="False">
             <bfa:AssignModel.To>
               <OutArgument x:TypeArguments="x:Double">
-                <mca:CSharpReference x:TypeArguments="x:Double">数值Double</mca:CSharpReference>
+                <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">数值Double</mca:CSharpReference>
               </OutArgument>
             </bfa:AssignModel.To>
             <bfa:AssignModel.Value>
               <InArgument x:TypeArguments="x:Double">
-                <mca:CSharpValue x:TypeArguments="x:Double">Math.Round(数值Double,8)</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">Math.Round(数值Double,8)</mca:CSharpValue>
               </InArgument>
             </bfa:AssignModel.Value>
           </bfa:AssignModel>
@@ -511,12 +511,12 @@
         <bfa:AssignModel Index="1" IsNotFirst="False">
           <bfa:AssignModel.To>
             <OutArgument x:TypeArguments="x:String">
-              <mca:CSharpReference x:TypeArguments="x:String">数值String</mca:CSharpReference>
+              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">数值String</mca:CSharpReference>
             </OutArgument>
           </bfa:AssignModel.To>
           <bfa:AssignModel.Value>
             <InArgument x:TypeArguments="x:String">
-              <mca:CSharpValue x:TypeArguments="x:String">数值Double.ToString("0.########")</mca:CSharpValue>
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">数值Double.ToString("0.########")</mca:CSharpValue>
             </InArgument>
           </bfa:AssignModel.Value>
         </bfa:AssignModel>
