@@ -1,0 +1,84 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="422,529" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ecaad="clr-namespace:Encoo.CodeTool.Activity.Activities.Dictionary;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="9">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Dictionary</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="382,449" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" Name="配置表嵌套字典" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="tempDict" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取Excel配置字典_批量" sap:VirtualizedContainerService.HintSize="360,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="配置表路径">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">C:\Users\huhar\Desktop\配置表_西凤_抖店相关平台报表抓取落库.xlsx</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" x:Key="配置表嵌套字典">
+          <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">配置表嵌套字典</mca:CSharpReference>
+        </OutArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="排除工作表列表">
+          <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new List&lt;String&gt;{"数据表字段配置映射","Other"};</mca:CSharpValue>
+        </InArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">获取Excel配置字典_批量.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="360,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;tempDict&quot;,&quot;ToTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;配置表嵌套字典[\&quot;本地中间工作簿路径\&quot;]&quot;,&quot;ValTypeName&quot;:&quot;System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+              <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)">tempDict</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)">配置表嵌套字典["本地中间工作簿路径"]</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <ecaad:PrintDictionaryActivity ActivityName="打印字典" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="打印字典" sap:VirtualizedContainerService.HintSize="360,58" sap2010:WorkflowViewState.IdRef="PrintDictionaryActivity_1">
+      <ecaad:PrintDictionaryActivity.Dictionary>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+          <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tempDict</mca:CSharpValue>
+        </InArgument>
+      </ecaad:PrintDictionaryActivity.Dictionary>
+    </ecaad:PrintDictionaryActivity>
+  </Sequence>
+</Activity>

@@ -20,7 +20,11 @@
     "读取用户文档中DictStrBoolJSON.xaml",
     "读取用户文档中ListStrJSON.xaml",
     "获取Excel配置字典.xaml",
-    "获取Excel配置字典_无依赖.xaml"
+    "获取Excel配置字典_批量.xaml",
+    "获取Excel配置字典_无依赖.xaml",
+    ".code",
+    ".code\\UnitTest",
+    ".code\\UnitTest\\test.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1208,7 +1212,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-04-27T11:58:20.4469671+08:00",
+  "LastModifyTime": "2023-05-07T13:20:35.7579423+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
