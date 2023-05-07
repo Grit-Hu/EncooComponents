@@ -30,7 +30,8 @@
     "模块运行完成处理.xaml",
     "鼠标按轨迹移动.xaml",
     "数值单位标准化.xaml",
-    "下载并返回文件全路径.xaml"
+    "下载并返回文件全路径.xaml",
+    ".code\\ToDelete\\test.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1380,7 +1381,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-04-23T17:23:05.2968365+08:00",
+  "LastModifyTime": "2023-04-30T16:52:25.9191855+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
