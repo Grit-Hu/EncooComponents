@@ -8,7 +8,7 @@
   </x:Members>
   <this:Main.是否钉钉通知>
     <InArgument x:TypeArguments="x:Boolean">
-      <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="True" />
+      <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_3" />
     </InArgument>
   </this:Main.是否钉钉通知>
   <this:Main.通知前缀>
@@ -17,7 +17,7 @@
     </InArgument>
   </this:Main.通知前缀>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>596,849</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>596,745</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="10">
@@ -30,6 +30,7 @@
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>BotTime.Flow.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>常用组件库V3_即时消息通知</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,9 +54,10 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
       <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%8D%B3%E6%97%B6%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,769" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,665" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="运行完成提示文本" />
     </Sequence.Variables>
@@ -99,7 +101,7 @@
         </InArgument>
       </baast:LogActivity.LogContent>
     </baast:LogActivity>
-    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,386" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,282" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
       <bfa:If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">是否钉钉通知==true</mca:CSharpValue>
