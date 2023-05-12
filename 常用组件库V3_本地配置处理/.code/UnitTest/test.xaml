@@ -39,21 +39,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取Excel配置字典_批量" sap:VirtualizedContainerService.HintSize="360,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 读取用户文档中DictStrBoolJSON" sap:VirtualizedContainerService.HintSize="360,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_2" IsIgnore="False">
       <bfa:InvokeWorkflow.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="配置表路径">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">C:\Users\huhar\Desktop\配置表_西凤_抖店相关平台报表抓取落库.xlsx</Literal>
-        </InArgument>
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" x:Key="配置表嵌套字典">
-          <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">配置表嵌套字典</mca:CSharpReference>
-        </OutArgument>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="排除工作表列表">
-          <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new List&lt;String&gt;{"数据表字段配置映射","Other"};</mca:CSharpValue>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="文件名称" />
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Boolean)" x:Key="Dict对象" />
       </bfa:InvokeWorkflow.Arguments>
       <bfa:InvokeWorkflow.WorkflowPath>
         <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">获取Excel配置字典_批量.xaml</Literal>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">读取用户文档中DictStrBoolJSON.xaml</Literal>
         </InArgument>
       </bfa:InvokeWorkflow.WorkflowPath>
     </bfa:InvokeWorkflow>

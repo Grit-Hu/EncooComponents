@@ -32,7 +32,19 @@
       "Type": "ActivityOrCode"
     },
     {
+      "Id": "常用组件库V3_字符串增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "BotTime.ActivityLibrary",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.Text.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
@@ -404,6 +416,33 @@
       "InnerDependencies": []
     },
     {
+      "Id": "常用组件库V3_字符串增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_字符串增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    },
+    {
       "Id": "BotTime.ActivityLibrary",
       "Version": "2.0.2303.2",
       "Title": "BotTime.ActivityLibrary",
@@ -661,6 +700,18 @@
       "Version": "1.0.0",
       "Title": "SharpZipLib",
       "InnerDependencies": []
+    },
+    {
+      "Id": "Encoo.Text.Activity",
+      "Version": "2.0.2303.2",
+      "Title": "Encoo.Text.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
     },
     {
       "Id": "BotTime.Office.Activity",

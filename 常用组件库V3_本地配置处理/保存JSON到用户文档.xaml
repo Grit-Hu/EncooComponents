@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasf="clr-namespace:BotTime.ActivityLibrary.Activities.System.File;assembly=BotTime.ActivityLibrary" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ecaaj="clr-namespace:Encoo.CodeTool.Activity.Activities.Json;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baasf="clr-namespace:BotTime.ActivityLibrary.Activities.System.File;assembly=BotTime.ActivityLibrary" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:ecaaj="clr-namespace:Encoo.CodeTool.Activity.Activities.Json;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:常="clr-namespace:常用组件库V3_字符串增强;assembly=%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A2%9E%E5%BC%BA" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
   <x:Members>
     <x:Property Name="对象" Type="InArgument(x:Object)" />
     <x:Property Name="文件名称" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
     </InArgument>
   </this:Main.文件名称>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>411,585</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>411,511</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="11">
@@ -22,7 +22,7 @@
       <x:String>Microsoft.CSharp.Activities</x:String>
       <x:String>BotTime.ActivityLibrary.Activities.System.File</x:String>
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
-      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>常用组件库V3_字符串增强</x:String>
       <x:String>Encoo.CodeTool.Activity.Activities.Json</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
@@ -46,11 +46,11 @@
       <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
-      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
       <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A2%9E%E5%BC%BA</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,505" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,431" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="文档路径" />
       <Variable x:TypeArguments="x:String" Name="result" />
@@ -60,18 +60,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 获取用户文档路径" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
-      <bfa:InvokeWorkflow.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="文档路径">
-          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">文档路径</mca:CSharpReference>
+    <常:获取用户文档路径 sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="获取用户文档路径_1" Level="Info">
+      <常:获取用户文档路径.文档路径>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">文档路径</mca:CSharpReference>
         </OutArgument>
-      </bfa:InvokeWorkflow.Arguments>
-      <bfa:InvokeWorkflow.WorkflowPath>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">字符串处理\获取用户文档路径.xaml</Literal>
-        </InArgument>
-      </bfa:InvokeWorkflow.WorkflowPath>
-    </bfa:InvokeWorkflow>
+      </常:获取用户文档路径.文档路径>
+    </常:获取用户文档路径>
     <ecaaj:SerializeObjectActivity ActivityName="序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="序列化" sap:VirtualizedContainerService.HintSize="349,22" sap2010:WorkflowViewState.IdRef="SerializeObjectActivity_1">
       <ecaaj:SerializeObjectActivity.Object>
         <InArgument x:TypeArguments="x:Object">

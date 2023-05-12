@@ -122,6 +122,12 @@
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "1.*.*.*",
       "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_字符串增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
@@ -1189,7 +1195,7 @@
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1209,9 +1215,36 @@
       "Version": "1.0.113.3",
       "Title": "System.Data.SQLite Core for the .NET Framework (x86/x64)",
       "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_字符串增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_字符串增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-05-07T13:37:04.5043586+08:00",
+  "LastModifyTime": "2023-05-12T10:24:22.4082038+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
