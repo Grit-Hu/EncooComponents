@@ -17,8 +17,7 @@
   "Items": [
     "获取数据表字段配置映射.xaml",
     "写入数据库_插入数据表方式.xaml",
-    "写入数据库_插入SQL语句方式.xaml",
-    ".code"
+    "写入数据库_插入SQL语句方式.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -119,13 +118,13 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_日志增强",
+      "Id": "常用组件库V3_电商场景常用",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_电商场景常用",
+      "Id": "常用组件库V3_日志增强",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -134,13 +133,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -588,13 +587,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -655,7 +654,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -673,7 +672,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -730,7 +729,7 @@
     },
     {
       "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2",
+      "Version": "2.2.0",
       "Title": "Microsoft Exchange WebServices",
       "InnerDependencies": []
     },
@@ -760,7 +759,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -907,7 +906,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2301.1",
+      "Version": "1.4.2303.2",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -944,7 +943,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -956,7 +955,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1089,7 +1088,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1116,7 +1115,7 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
         {
@@ -1155,7 +1154,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1173,7 +1172,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1190,13 +1189,13 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1218,46 +1217,34 @@
       "InnerDependencies": []
     },
     {
-      "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.2",
-      "Title": "常用组件库V3_日志增强",
-      "InnerDependencies": [
-        {
-          "Id": "Encoo.CodeTool.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "BotTime.ActivityLibrary",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        }
-      ]
-    },
-    {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.3",
+      "Version": "1.0.8",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "常用组件库V3_随机数",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "常用组件库V3_日志增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
-        },
-        {
-          "Id": "Encoo.Text.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "常用组件库V3_即时消息通知",
@@ -1265,19 +1252,29 @@
           "MinVersion": "1.0.0"
         },
         {
-          "Id": "Encoo.CodeTool.Activity",
+          "Id": "常用组件库V3_键盘增强",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
+        },
+        {
+          "Id": "常用组件库V3_鼠标增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "常用组件库V3_Chrome配套",
           "MaxVersion": null,
-          "MinVersion": "1.0.1"
-        },
-        {
-          "Id": "常用组件库V3_随机数",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
+          "MinVersion": "1.0.2"
         }
       ]
     },
@@ -1289,7 +1286,7 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
@@ -1310,7 +1307,12 @@
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.0"
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
         },
         {
           "Id": "Encoo.Text.Activity",
@@ -1352,13 +1354,73 @@
           "MinVersion": "2.0.2301.1"
         }
       ]
+    },
+    {
+      "Id": "常用组件库V3_键盘增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_键盘增强",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_鼠标增强",
+      "Version": "1.0.2",
+      "Title": "常用组件库V3_鼠标增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "常用组件库V3_随机数",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    },
+    {
+      "Id": "常用组件库V3_日志增强",
+      "Version": "1.0.3",
+      "Title": "常用组件库V3_日志增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-03-15T20:26:00.0252456+08:00",
+  "LastModifyTime": "2023-05-15T15:13:08.5295368+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2206.34"
+  "LastStudioVersion": "1.1.2303.6"
 }
