@@ -207,12 +207,12 @@
                         <bfa:AssignModel Index="1" IsNotFirst="False">
                           <bfa:AssignModel.To>
                             <OutArgument x:TypeArguments="x:Int32">
-                              <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_156">columnIndex</mca:CSharpReference>
+                              <mca:CSharpReference x:TypeArguments="x:Int32">columnIndex</mca:CSharpReference>
                             </OutArgument>
                           </bfa:AssignModel.To>
                           <bfa:AssignModel.Value>
                             <InArgument x:TypeArguments="x:Int32">
-                              <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_220">columnIndex-1</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:Int32">columnIndex-1</mca:CSharpValue>
                             </InArgument>
                           </bfa:AssignModel.Value>
                         </bfa:AssignModel>
@@ -223,12 +223,12 @@
                         <bfa:AssignModel Index="1" IsNotFirst="False">
                           <bfa:AssignModel.To>
                             <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_157">temp</mca:CSharpReference>
+                              <mca:CSharpReference x:TypeArguments="x:String">temp</mca:CSharpReference>
                             </OutArgument>
                           </bfa:AssignModel.To>
                           <bfa:AssignModel.Value>
                             <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_221">row[columnIndex].ToString()</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:String">row[columnIndex].ToString()</mca:CSharpValue>
                             </InArgument>
                           </bfa:AssignModel.Value>
                         </bfa:AssignModel>
@@ -239,12 +239,12 @@
                         <bfa:AssignModel Index="1" IsNotFirst="False">
                           <bfa:AssignModel.To>
                             <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_158">列名</mca:CSharpReference>
+                              <mca:CSharpReference x:TypeArguments="x:String">列名</mca:CSharpReference>
                             </OutArgument>
                           </bfa:AssignModel.To>
                           <bfa:AssignModel.Value>
                             <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_222">数据表.Columns[columnIndex].ToString()</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:String">数据表.Columns[columnIndex].ToString()</mca:CSharpValue>
                             </InArgument>
                           </bfa:AssignModel.Value>
                         </bfa:AssignModel>
@@ -255,12 +255,12 @@
                         <bfa:AssignModel Index="1" IsNotFirst="False">
                           <bfa:AssignModel.To>
                             <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_159">字段类型</mca:CSharpReference>
+                              <mca:CSharpReference x:TypeArguments="x:String">字段类型</mca:CSharpReference>
                             </OutArgument>
                           </bfa:AssignModel.To>
                           <bfa:AssignModel.Value>
                             <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_223">数据表字段配置映射一层字典[模块名称][列名]["字段类型"]</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:String">数据表字段配置映射一层字典[模块名称][列名]["字段类型"]</mca:CSharpValue>
                             </InArgument>
                           </bfa:AssignModel.Value>
                         </bfa:AssignModel>
@@ -269,7 +269,7 @@
                     <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,569" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
                       <bfa:If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">字段类型 == "varchar" || 字段类型 == "datetime"</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_230">字段类型 == "varchar" || 字段类型 == "datetime" || 字段类型 == "date"</mca:CSharpValue>
                         </InArgument>
                       </bfa:If.Condition>
                       <sap:WorkflowViewStateService.ViewState>
@@ -310,12 +310,12 @@
                               <bfa:AssignModel Index="1" IsNotFirst="False">
                                 <bfa:AssignModel.To>
                                   <OutArgument x:TypeArguments="x:Object">
-                                    <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_162">数据表.Rows[rowIndex][columnIndex]</mca:CSharpReference>
+                                    <mca:CSharpReference x:TypeArguments="x:Object">数据表.Rows[rowIndex][columnIndex]</mca:CSharpReference>
                                   </OutArgument>
                                 </bfa:AssignModel.To>
                                 <bfa:AssignModel.Value>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_226">temp</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String">temp</mca:CSharpValue>
                                   </InArgument>
                                 </bfa:AssignModel.Value>
                               </bfa:AssignModel>
