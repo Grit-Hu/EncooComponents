@@ -130,13 +130,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -584,13 +584,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -651,7 +651,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -669,7 +669,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -726,7 +726,7 @@
     },
     {
       "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2",
+      "Version": "2.2.0",
       "Title": "Microsoft Exchange WebServices",
       "InnerDependencies": []
     },
@@ -756,7 +756,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -903,7 +903,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2301.1",
+      "Version": "1.4.2303.2",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -940,7 +940,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -952,7 +952,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1085,7 +1085,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1112,7 +1112,7 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
         {
@@ -1151,7 +1151,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1169,7 +1169,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1186,13 +1186,13 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1241,11 +1241,11 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-02-22T19:50:15.3238227+08:00",
+  "LastModifyTime": "2023-05-12T17:52:54.7287032+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2206.34"
+  "LastStudioVersion": "1.1.2303.6"
 }

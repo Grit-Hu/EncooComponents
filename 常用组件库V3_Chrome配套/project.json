@@ -26,7 +26,10 @@
     "自动绑定后操作\\当前页跳转.xaml",
     "自动绑定后操作\\关闭标签页.xaml",
     "自动绑定后操作\\关闭浏览器.xaml",
-    "自动绑定后操作\\刷新浏览器.xaml"
+    "自动绑定后操作\\刷新浏览器.xaml",
+    ".code",
+    ".code\\UnitTest",
+    ".code\\UnitTest\\test.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -136,13 +139,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -590,13 +593,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -657,7 +660,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -675,7 +678,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -744,7 +747,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -891,7 +894,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2301.1",
+      "Version": "1.4.2303.2",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -928,7 +931,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -940,7 +943,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1073,7 +1076,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1100,7 +1103,7 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
         {
@@ -1139,7 +1142,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1157,7 +1160,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2303.2",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1174,13 +1177,13 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2303.3",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1237,11 +1240,11 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-03-20T16:05:57.6604776+08:00",
+  "LastModifyTime": "2023-05-08T11:33:26.391567+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.28",
-  "LastStudioVersion": "1.1.2206.34"
+  "LastStudioVersion": "1.1.2303.6"
 }

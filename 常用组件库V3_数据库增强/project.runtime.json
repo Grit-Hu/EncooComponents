@@ -918,7 +918,7 @@
     },
     {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.8",
+      "Version": "1.0.12",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
@@ -927,9 +927,14 @@
           "MinVersion": "2.0.2303.2"
         },
         {
-          "Id": "常用组件库V3_随机数",
+          "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "1.0.0"
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
         },
         {
           "Id": "常用组件库V3_日志增强",
@@ -942,12 +947,12 @@
           "MinVersion": "2.0.2303.2"
         },
         {
-          "Id": "BotTime.ActivityLibrary",
+          "Id": "常用组件库V3_即时消息通知",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "1.0.0"
         },
         {
-          "Id": "常用组件库V3_即时消息通知",
+          "Id": "常用组件库V3_随机数",
           "MaxVersion": null,
           "MinVersion": "1.0.0"
         },
@@ -955,11 +960,6 @@
           "Id": "常用组件库V3_键盘增强",
           "MaxVersion": null,
           "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.3"
         },
         {
           "Id": "常用组件库V3_鼠标增强",
@@ -979,16 +979,10 @@
       ]
     },
     {
-      "Id": "常用组件库V3_随机数",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_随机数",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        }
-      ]
+      "Id": "AutomationActivity",
+      "Version": "2.0.2303.3",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
     },
     {
       "Id": "常用组件库V3_即时消息通知",
@@ -1013,15 +1007,21 @@
       ]
     },
     {
+      "Id": "常用组件库V3_随机数",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_随机数",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        }
+      ]
+    },
+    {
       "Id": "常用组件库V3_键盘增强",
       "Version": "1.0.0",
       "Title": "常用组件库V3_键盘增强",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "AutomationActivity",
-      "Version": "2.0.2303.3",
-      "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {

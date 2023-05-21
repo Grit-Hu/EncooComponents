@@ -118,13 +118,13 @@
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_电商场景常用",
+      "Id": "常用组件库V3_日志增强",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
-      "Id": "常用组件库V3_日志增强",
+      "Id": "常用组件库V3_电商场景常用",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
@@ -1217,68 +1217,6 @@
       "InnerDependencies": []
     },
     {
-      "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.8",
-      "Title": "常用组件库V3_电商场景常用",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
-        },
-        {
-          "Id": "常用组件库V3_随机数",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "常用组件库V3_日志增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.2"
-        },
-        {
-          "Id": "Encoo.CodeTool.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
-        },
-        {
-          "Id": "BotTime.ActivityLibrary",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
-        },
-        {
-          "Id": "常用组件库V3_即时消息通知",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "常用组件库V3_键盘增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.3"
-        },
-        {
-          "Id": "常用组件库V3_鼠标增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.2"
-        },
-        {
-          "Id": "Encoo.Text.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
-        },
-        {
-          "Id": "常用组件库V3_Chrome配套",
-          "MaxVersion": null,
-          "MinVersion": "1.0.2"
-        }
-      ]
-    },
-    {
       "Id": "常用组件库V3_即使消息通知",
       "Version": "1.0.0",
       "Title": "常用组件库V3_即使消息通知",
@@ -1414,9 +1352,71 @@
           "MinVersion": "2.0.2303.2"
         }
       ]
+    },
+    {
+      "Id": "常用组件库V3_电商场景常用",
+      "Version": "1.0.12",
+      "Title": "常用组件库V3_电商场景常用",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
+        },
+        {
+          "Id": "常用组件库V3_日志增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "常用组件库V3_即时消息通知",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "常用组件库V3_随机数",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "常用组件库V3_键盘增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "常用组件库V3_鼠标增强",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
+          "Id": "常用组件库V3_Chrome配套",
+          "MaxVersion": null,
+          "MinVersion": "1.0.2"
+        }
+      ]
     }
   ],
-  "LastModifyTime": "2023-05-18T11:05:42.3847383+08:00",
+  "LastModifyTime": "2023-05-19T13:13:24.0746738+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

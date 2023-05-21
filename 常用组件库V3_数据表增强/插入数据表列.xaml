@@ -24,7 +24,6 @@
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>BotTime.DataTableActivity.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -48,7 +47,6 @@
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="371,306" sap2010:WorkflowViewState.IdRef="Sequence_2">
