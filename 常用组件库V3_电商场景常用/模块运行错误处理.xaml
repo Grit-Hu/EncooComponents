@@ -23,7 +23,7 @@
     </InArgument>
   </this:Main.是否刷新浏览器>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>596,1280</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>596,1488</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="13">
@@ -69,7 +69,7 @@
       <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_Chrome%E9%85%8D%E5%A5%97</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,1200" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,1408" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="错误提示文本" />
     </Sequence.Variables>
@@ -94,7 +94,7 @@
         </bfa:AssignModel>
       </bfa:MultipleAssign.AssignModels>
     </bfa:MultipleAssign>
-    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Error">
       <baast:LogActivity.LogContent>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(错误提示文本)</mca:CSharpValue>
@@ -113,7 +113,7 @@
         </OutArgument>
       </etaa:ExtractTextActivity.ResultText>
     </etaa:ExtractTextActivity>
-    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,282" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,386" sap2010:WorkflowViewState.IdRef="If_1" IsIgnore="False">
       <bfa:If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">是否钉钉通知==true</mca:CSharpValue>
@@ -140,7 +140,7 @@
         </常:钉钉通知>
       </bfa:If.Then>
     </bfa:If>
-    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,427" sap2010:WorkflowViewState.IdRef="If_2" IsIgnore="False">
+    <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,531" sap2010:WorkflowViewState.IdRef="If_2" IsIgnore="False">
       <bfa:If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">是否刷新浏览器 == true</mca:CSharpValue>

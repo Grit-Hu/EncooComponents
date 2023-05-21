@@ -29,10 +29,10 @@
       <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
       <x:String>Encoo.DataType</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      <x:String>常用组件库V3_随机数</x:String>
-      <x:String>常用组件库V3_日志增强</x:String>
-      <x:String>常用组件库V3_即时消息通知</x:String>
-      <x:String>常用组件库V3_键盘增强</x:String>
+      
+      
+      
+      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -52,10 +52,10 @@
       <AssemblyReference>ActivityCommon</AssemblyReference>
       <AssemblyReference>Encoo.DataType</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%9A%8F%E6%9C%BA%E6%95%B0</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E6%97%A5%E5%BF%97%E5%A2%9E%E5%BC%BA</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%8D%B3%E6%97%B6%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%94%AE%E7%9B%98%E5%A2%9E%E5%BC%BA</AssemblyReference>
+      
+      
+      
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="620,3439" sap2010:WorkflowViewState.IdRef="Sequence_3">
