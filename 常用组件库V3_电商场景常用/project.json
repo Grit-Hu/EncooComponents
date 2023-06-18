@@ -1233,7 +1233,7 @@
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1256,23 +1256,23 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
+        },
+        {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "常用组件库V3_日志增强",
@@ -1282,12 +1282,12 @@
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         }
       ]
     },
@@ -1327,18 +1327,23 @@
     },
     {
       "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_日志增强",
       "InnerDependencies": [
         {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         }
       ]
     },
@@ -1381,7 +1386,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-05-21T20:25:25.4635338+08:00",
+  "LastModifyTime": "2023-05-29T15:20:53.7427709+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

@@ -53,7 +53,7 @@
   "ProjectDependencyItems": [
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -71,7 +71,7 @@
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -525,13 +525,13 @@
     },
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.5",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -682,13 +682,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     }

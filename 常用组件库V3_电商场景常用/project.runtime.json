@@ -561,18 +561,23 @@
     },
     {
       "Id": "常用组件库V3_日志增强",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_日志增强",
       "InnerDependencies": [
         {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.2"
+        },
+        {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         }
       ]
     },
@@ -807,23 +812,23 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
+        },
+        {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "常用组件库V3_日志增强",
@@ -833,12 +838,12 @@
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         }
       ]
     },
