@@ -15,9 +15,11 @@
   ],
   "ProjectEntryItem": "",
   "Items": [
+    ".code",
+    ".code\\数据表每一行对应列数值标准化.xaml",
     "获取数据表字段配置映射.xaml",
-    "写入数据库_插入数据表方式.xaml",
-    "写入数据库_插入SQL语句方式.xaml"
+    "写入数据库_插入SQL语句方式.xaml",
+    "写入数据库_插入数据表方式.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -133,13 +135,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.5",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -587,13 +589,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -654,7 +656,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -672,7 +674,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -759,7 +761,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.7",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -906,7 +908,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2303.2",
+      "Version": "1.4.2305.6",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -943,7 +945,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -955,7 +957,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1088,7 +1090,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1115,9 +1117,14 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
+        {
+          "Id": "Flurl.Http",
+          "MaxVersion": null,
+          "MinVersion": "3.2.4"
+        },
         {
           "Id": "NamedPipeWrapper",
           "MaxVersion": null,
@@ -1132,11 +1139,6 @@
           "Id": "RestSharp",
           "MaxVersion": null,
           "MinVersion": "106.6.10"
-        },
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
         }
       ]
     },
@@ -1154,7 +1156,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1172,7 +1174,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1189,7 +1191,7 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
@@ -1416,11 +1418,11 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-05-19T13:13:24.0746738+08:00",
+  "LastModifyTime": "2023-06-19T15:28:13.1567978+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2303.6"
+  "LastStudioVersion": "1.1.2305.7"
 }
