@@ -6,7 +6,7 @@
     <x:Property Name="resultText" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>517,906</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>517,1004</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="12">
@@ -40,12 +40,21 @@
       <AssemblyReference>ActivityCommon</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="477,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="477,1079" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_2" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">----OCR on server----</Literal>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </eae:CommentActivity>
     <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="455,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
       <ecaap:PythonScopeActivity.Body>
         <ActivityAction x:TypeArguments="x:Object">

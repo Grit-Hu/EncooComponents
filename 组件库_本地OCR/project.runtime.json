@@ -20,6 +20,12 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
+      "Id": "BotTime.Flow.Activities",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "BotTime.ActivityLibrary",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -30,15 +36,27 @@
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.Flow.Activities",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
+    {
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2305.6",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
+      "InnerDependencies": []
+    },
     {
       "Id": "BotTime.ActivityLibrary",
       "Version": "2.0.2305.6",
@@ -630,24 +648,6 @@
       "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
       "Version": "1.1.0",
       "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2305.6",
-      "Title": "BotTime.Flow.Activities",
-      "InnerDependencies": [
-        {
-          "Id": "System.Collections",
-          "MaxVersion": null,
-          "MinVersion": "4.3.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.Collections",
-      "Version": "4.3.0",
-      "Title": "System.Collections",
       "InnerDependencies": []
     },
     {

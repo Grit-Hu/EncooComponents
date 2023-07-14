@@ -20,6 +20,7 @@ def ocr():
 
 if __name__ == "__main__":
     language=sys.argv[1]
+    print("====Creat model start.====")
     PPobject = PaddleOCR(use_angle_cls=True, lang=language,
                          show_log=False, enable_mkldnn=True)
     print("====Creat model done.====")

@@ -17,17 +17,17 @@
   "Items": [
     ".code",
     ".code\\CSharp",
+    ".code\\CSharp\\text拼接换行.cs",
     ".code\\Python",
     ".code\\Python\\启动OCR服务器.py",
     ".code\\Python\\通用文字识别.py",
     ".code\\Python\\执行Python代码.py",
+    ".code\\unittest1.xaml",
+    ".code\\unittest2.xaml",
     "关闭Python进程.xaml",
     "启动OCR服务器.xaml",
-    ".code\\OCR识别.xaml",
-    "通用文字识别_独立运行组件.xaml",
     "通用文字识别_调用服务器.xaml",
-    ".code\\CSharp\\text拼接换行.cs",
-    ".code\\test.xaml"
+    "通用文字识别_独立运行组件.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1215,7 +1215,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-07-11T16:12:23.1575084+08:00",
+  "LastModifyTime": "2023-07-14T14:40:11.7367153+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
