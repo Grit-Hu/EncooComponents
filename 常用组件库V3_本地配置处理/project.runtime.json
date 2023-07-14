@@ -20,25 +20,25 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
-      "Id": "BotTime.Flow.Activities",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "Encoo.CodeTool.Activity",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
       "Id": "常用组件库V3_字符串增强",
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
     },
     {
+      "Id": "BotTime.Flow.Activities",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "BotTime.ActivityLibrary",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "Encoo.CodeTool.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
@@ -64,8 +64,35 @@
   ],
   "ProjectDependencyItems": [
     {
+      "Id": "常用组件库V3_字符串增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_字符串增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    },
+    {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -82,9 +109,9 @@
       "InnerDependencies": []
     },
     {
-      "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2303.2",
-      "Title": "Encoo.CodeTool.Activity",
+      "Id": "BotTime.ActivityLibrary",
+      "Version": "2.0.2305.6",
+      "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
           "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
@@ -92,24 +119,44 @@
           "MinVersion": "20.1.1"
         },
         {
-          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+          "Id": "CredentialManagement",
           "MaxVersion": null,
-          "MinVersion": "20.1.1"
+          "MinVersion": "1.0.2"
         },
         {
-          "Id": "Flurl.Http",
+          "Id": "DotNetZip",
           "MaxVersion": null,
-          "MinVersion": "3.2.4"
+          "MinVersion": "1.14.0"
         },
         {
-          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+          "Id": "FreeRDP-Sharp",
+          "MaxVersion": null,
+          "MinVersion": "0.1.0"
+        },
+        {
+          "Id": "FreeRDP-Sharp.Native",
+          "MaxVersion": null,
+          "MinVersion": "1.1.1"
+        },
+        {
+          "Id": "HtmlAgilityPack",
+          "MaxVersion": null,
+          "MinVersion": "1.8.11"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp",
           "MaxVersion": null,
           "MinVersion": "3.4.0"
         },
         {
-          "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+          "Id": "Microsoft.CodeAnalysis.VisualBasic",
           "MaxVersion": null,
-          "MinVersion": "1.1.0"
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.Workspaces.Common",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
         },
         {
           "Id": "Newtonsoft.Json",
@@ -120,6 +167,36 @@
           "Id": "Panuon.UI.Silver",
           "MaxVersion": null,
           "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "SharpCompress",
+          "MaxVersion": null,
+          "MinVersion": "0.24.0"
+        },
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        },
+        {
+          "Id": "System.Buffers",
+          "MaxVersion": null,
+          "MinVersion": "4.5.1"
+        },
+        {
+          "Id": "System.Numerics.Vectors",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        },
+        {
+          "Id": "System.Runtime.CompilerServices.Unsafe",
+          "MaxVersion": null,
+          "MinVersion": "4.7.1"
+        },
+        {
+          "Id": "System.Text.Encoding.CodePages",
+          "MaxVersion": null,
+          "MinVersion": "4.5.1"
         }
       ]
     },
@@ -159,87 +236,50 @@
       ]
     },
     {
-      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
-      "Version": "20.1.1",
-      "Title": "Actipro SyntaxEditor Python Language Add-on (for WPF)",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.Shared",
-          "MaxVersion": "20.1.1",
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
-          "MaxVersion": "20.1.1",
-          "MinVersion": "20.1.1"
-        }
-      ]
-    },
-    {
-      "Id": "Flurl.Http",
-      "Version": "3.2.4",
-      "Title": "Flurl.Http",
-      "InnerDependencies": [
-        {
-          "Id": "Flurl",
-          "MaxVersion": null,
-          "MinVersion": "3.0.6"
-        },
-        {
-          "Id": "Newtonsoft.Json",
-          "MaxVersion": null,
-          "MinVersion": "12.0.2"
-        }
-      ]
-    },
-    {
-      "Id": "Flurl",
-      "Version": "3.0.6",
-      "Title": "Flurl",
-      "InnerDependencies": [
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.ValueTuple",
-      "Version": "4.5.0",
-      "Title": "System.ValueTuple",
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
+      "Title": "CredentialManagement",
       "InnerDependencies": []
     },
     {
-      "Id": "Newtonsoft.Json",
-      "Version": "12.0.3",
-      "Title": "Json.NET",
+      "Id": "DotNetZip",
+      "Version": "1.14.0",
+      "Title": "DotNetZip",
       "InnerDependencies": []
     },
     {
-      "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "Id": "FreeRDP-Sharp",
+      "Version": "0.1.0",
+      "Title": "FreeRDP-Sharp",
+      "InnerDependencies": [
+        {
+          "Id": "FreeRDP-Sharp.Native",
+          "MaxVersion": "1.2.0",
+          "MinVersion": "1.1.0"
+        }
+      ]
+    },
+    {
+      "Id": "FreeRDP-Sharp.Native",
+      "Version": "1.1.1",
+      "Title": "FreeRDP-Sharp Native stable-1.1",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "HtmlAgilityPack",
+      "Version": "1.8.11",
+      "Title": "HtmlAgilityPack",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.CSharp",
       "Version": "3.4.0",
-      "Title": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "Title": "Microsoft.CodeAnalysis.CSharp",
       "InnerDependencies": [
         {
           "Id": "Microsoft.CodeAnalysis.Common",
           "MaxVersion": "3.4.0",
           "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Microsoft.CodeAnalysis.CSharp",
-          "MaxVersion": "3.4.0",
-          "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Microsoft.CodeAnalysis.Scripting.Common",
-          "MaxVersion": "3.4.0",
-          "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Microsoft.CSharp",
-          "MaxVersion": null,
-          "MinVersion": "4.3.0"
         }
       ]
     },
@@ -374,203 +414,6 @@
       ]
     },
     {
-      "Id": "Microsoft.CodeAnalysis.CSharp",
-      "Version": "3.4.0",
-      "Title": "Microsoft.CodeAnalysis.CSharp",
-      "InnerDependencies": [
-        {
-          "Id": "Microsoft.CodeAnalysis.Common",
-          "MaxVersion": "3.4.0",
-          "MinVersion": "3.4.0"
-        }
-      ]
-    },
-    {
-      "Id": "Microsoft.CodeAnalysis.Scripting.Common",
-      "Version": "3.4.0",
-      "Title": "Microsoft.CodeAnalysis.Scripting.Common",
-      "InnerDependencies": [
-        {
-          "Id": "Microsoft.CodeAnalysis.Common",
-          "MaxVersion": "3.4.0",
-          "MinVersion": "3.4.0"
-        }
-      ]
-    },
-    {
-      "Id": "Microsoft.CSharp",
-      "Version": "4.7.0",
-      "Title": "Microsoft.CSharp",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
-      "Version": "1.1.0",
-      "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "Panuon.UI.Silver",
-      "Version": "1.0.8.7",
-      "Title": "Panuon.UI.Silver",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "常用组件库V3_字符串增强",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_字符串增强",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "BotTime.ActivityLibrary",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "Encoo.CodeTool.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "Encoo.Text.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
-        }
-      ]
-    },
-    {
-      "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2303.2",
-      "Title": "BotTime.ActivityLibrary",
-      "InnerDependencies": [
-        {
-          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
-          "MaxVersion": null,
-          "MinVersion": "20.1.1"
-        },
-        {
-          "Id": "CredentialManagement",
-          "MaxVersion": null,
-          "MinVersion": "1.0.2"
-        },
-        {
-          "Id": "DotNetZip",
-          "MaxVersion": null,
-          "MinVersion": "1.14.0"
-        },
-        {
-          "Id": "FreeRDP-Sharp",
-          "MaxVersion": null,
-          "MinVersion": "0.1.0"
-        },
-        {
-          "Id": "FreeRDP-Sharp.Native",
-          "MaxVersion": null,
-          "MinVersion": "1.1.1"
-        },
-        {
-          "Id": "HtmlAgilityPack",
-          "MaxVersion": null,
-          "MinVersion": "1.8.11"
-        },
-        {
-          "Id": "Microsoft.CodeAnalysis.CSharp",
-          "MaxVersion": null,
-          "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Microsoft.CodeAnalysis.VisualBasic",
-          "MaxVersion": null,
-          "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Microsoft.CodeAnalysis.Workspaces.Common",
-          "MaxVersion": null,
-          "MinVersion": "3.4.0"
-        },
-        {
-          "Id": "Newtonsoft.Json",
-          "MaxVersion": null,
-          "MinVersion": "12.0.3"
-        },
-        {
-          "Id": "Panuon.UI.Silver",
-          "MaxVersion": null,
-          "MinVersion": "1.0.8.7"
-        },
-        {
-          "Id": "SharpCompress",
-          "MaxVersion": null,
-          "MinVersion": "0.24.0"
-        },
-        {
-          "Id": "SharpZipLib",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "System.Buffers",
-          "MaxVersion": null,
-          "MinVersion": "4.5.1"
-        },
-        {
-          "Id": "System.Numerics.Vectors",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
-        },
-        {
-          "Id": "System.Runtime.CompilerServices.Unsafe",
-          "MaxVersion": null,
-          "MinVersion": "4.7.1"
-        },
-        {
-          "Id": "System.Text.Encoding.CodePages",
-          "MaxVersion": null,
-          "MinVersion": "4.5.1"
-        }
-      ]
-    },
-    {
-      "Id": "CredentialManagement",
-      "Version": "1.0.2",
-      "Title": "CredentialManagement",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "DotNetZip",
-      "Version": "1.14.0",
-      "Title": "DotNetZip",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "FreeRDP-Sharp",
-      "Version": "0.1.0",
-      "Title": "FreeRDP-Sharp",
-      "InnerDependencies": [
-        {
-          "Id": "FreeRDP-Sharp.Native",
-          "MaxVersion": "1.2.0",
-          "MinVersion": "1.1.0"
-        }
-      ]
-    },
-    {
-      "Id": "FreeRDP-Sharp.Native",
-      "Version": "1.1.1",
-      "Title": "FreeRDP-Sharp Native stable-1.1",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "HtmlAgilityPack",
-      "Version": "1.8.11",
-      "Title": "HtmlAgilityPack",
-      "InnerDependencies": []
-    },
-    {
       "Id": "Microsoft.CodeAnalysis.VisualBasic",
       "Version": "3.4.0",
       "Title": "Microsoft.CodeAnalysis.VisualBasic",
@@ -690,6 +533,18 @@
       ]
     },
     {
+      "Id": "Newtonsoft.Json",
+      "Version": "12.0.3",
+      "Title": "Json.NET",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Panuon.UI.Silver",
+      "Version": "1.0.8.7",
+      "Title": "Panuon.UI.Silver",
+      "InnerDependencies": []
+    },
+    {
       "Id": "SharpCompress",
       "Version": "0.24.0",
       "Title": "SharpCompress",
@@ -702,8 +557,153 @@
       "InnerDependencies": []
     },
     {
+      "Id": "Encoo.CodeTool.Activity",
+      "Version": "2.0.2305.6",
+      "Title": "Encoo.CodeTool.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.DotNet",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "Flurl.Http",
+          "MaxVersion": null,
+          "MinVersion": "3.2.4"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+          "MaxVersion": null,
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+          "MaxVersion": null,
+          "MinVersion": "1.1.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.3"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor.Addons.Python",
+      "Version": "20.1.1",
+      "Title": "Actipro SyntaxEditor Python Language Add-on (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.SyntaxEditor",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl.Http",
+      "Version": "3.2.4",
+      "Title": "Flurl.Http",
+      "InnerDependencies": [
+        {
+          "Id": "Flurl",
+          "MaxVersion": null,
+          "MinVersion": "3.0.6"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "MaxVersion": null,
+          "MinVersion": "12.0.2"
+        }
+      ]
+    },
+    {
+      "Id": "Flurl",
+      "Version": "3.0.6",
+      "Title": "Flurl",
+      "InnerDependencies": [
+        {
+          "Id": "System.ValueTuple",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.CSharp.Scripting",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.CSharp",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        },
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CodeAnalysis.Scripting.Common",
+      "Version": "3.4.0",
+      "Title": "Microsoft.CodeAnalysis.Scripting.Common",
+      "InnerDependencies": [
+        {
+          "Id": "Microsoft.CodeAnalysis.Common",
+          "MaxVersion": "3.4.0",
+          "MinVersion": "3.4.0"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.CSharp",
+      "Version": "4.7.0",
+      "Title": "Microsoft.CSharp",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
+      "Version": "1.1.0",
+      "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
+      "InnerDependencies": []
+    },
+    {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -715,7 +715,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.7",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -862,7 +862,7 @@
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -911,19 +911,19 @@
     },
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.5",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     }
