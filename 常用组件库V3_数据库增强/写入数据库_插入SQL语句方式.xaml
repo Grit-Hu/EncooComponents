@@ -183,12 +183,12 @@
                     <bfa:AssignModel Index="1" IsNotFirst="False">
                       <bfa:AssignModel.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <mca:CSharpReference x:TypeArguments="x:String">字段类型</mca:CSharpReference>
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_137">字段类型</mca:CSharpReference>
                         </OutArgument>
                       </bfa:AssignModel.To>
                       <bfa:AssignModel.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <mca:CSharpValue x:TypeArguments="x:String">数据表字段配置映射一层字典[模块名称][列名]["字段类型"]</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_197">数据表字段配置映射一层字典[模块名称][列名]["字段类型"]</mca:CSharpValue>
                         </InArgument>
                       </bfa:AssignModel.Value>
                     </bfa:AssignModel>
@@ -297,12 +297,12 @@
                                       <bfa:AssignModel Index="1" IsNotFirst="False">
                                         <bfa:AssignModel.To>
                                           <OutArgument x:TypeArguments="x:Object">
-                                            <mca:CSharpReference x:TypeArguments="x:Object">数据表.Rows[intRowIndex][intColumnIndex]</mca:CSharpReference>
+                                            <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_138">数据表.Rows[intRowIndex][intColumnIndex]</mca:CSharpReference>
                                           </OutArgument>
                                         </bfa:AssignModel.To>
                                         <bfa:AssignModel.Value>
                                           <InArgument x:TypeArguments="x:String">
-                                            <mca:CSharpValue x:TypeArguments="x:String">["\""+数据表.Rows[intRowIndex][intColumnIndex].ToString()+"\""]</mca:CSharpValue>
+                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">["\""+数据表.Rows[intRowIndex][intColumnIndex].ToString()+"\""]</mca:CSharpValue>
                                           </InArgument>
                                         </bfa:AssignModel.Value>
                                       </bfa:AssignModel>
@@ -384,12 +384,12 @@
                     <bfa:AssignModel Index="1" IsNotFirst="False">
                       <bfa:AssignModel.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <mca:CSharpReference x:TypeArguments="x:String">列名</mca:CSharpReference>
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_136">列名</mca:CSharpReference>
                         </OutArgument>
                       </bfa:AssignModel.To>
                       <bfa:AssignModel.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <mca:CSharpValue x:TypeArguments="x:String">数据表.Columns[intColumnIndex].ToString()</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">数据表.Columns[intColumnIndex].ToString()</mca:CSharpValue>
                         </InArgument>
                       </bfa:AssignModel.Value>
                     </bfa:AssignModel>
@@ -417,12 +417,12 @@
                     <bfa:AssignModel Index="1" IsNotFirst="False">
                       <bfa:AssignModel.To>
                         <OutArgument x:TypeArguments="x:Int32">
-                          <mca:CSharpReference x:TypeArguments="x:Int32">intColumnIndex</mca:CSharpReference>
+                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_134">intColumnIndex</mca:CSharpReference>
                         </OutArgument>
                       </bfa:AssignModel.To>
                       <bfa:AssignModel.Value>
                         <InArgument x:TypeArguments="x:Int32">
-                          <mca:CSharpValue x:TypeArguments="x:Int32">intColumnIndex-1</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_194">intColumnIndex-1</mca:CSharpValue>
                         </InArgument>
                       </bfa:AssignModel.Value>
                     </bfa:AssignModel>
@@ -610,12 +610,12 @@
                 <bfa:AssignModel Index="1" IsNotFirst="False">
                   <bfa:AssignModel.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <mca:CSharpReference x:TypeArguments="x:String">where子句</mca:CSharpReference>
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_131">where子句</mca:CSharpReference>
                     </OutArgument>
                   </bfa:AssignModel.To>
                   <bfa:AssignModel.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String">" WHERE "+String.Join(" AND ",筛选条件List)+";"</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_191">" WHERE "+String.Join(" AND ",筛选条件List)+";"</mca:CSharpValue>
                     </InArgument>
                   </bfa:AssignModel.Value>
                 </bfa:AssignModel>
@@ -640,24 +640,24 @@
                 <bfa:AssignModel Index="1" IsNotFirst="False">
                   <bfa:AssignModel.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <mca:CSharpReference x:TypeArguments="x:String">查询SQL</mca:CSharpReference>
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_132">查询SQL</mca:CSharpReference>
                     </OutArgument>
                   </bfa:AssignModel.To>
                   <bfa:AssignModel.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String">"SELECT * FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_192">"SELECT * FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
                     </InArgument>
                   </bfa:AssignModel.Value>
                 </bfa:AssignModel>
                 <bfa:AssignModel Index="2" IsNotFirst="True">
                   <bfa:AssignModel.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <mca:CSharpReference x:TypeArguments="x:String">删除SQL</mca:CSharpReference>
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_133">删除SQL</mca:CSharpReference>
                     </OutArgument>
                   </bfa:AssignModel.To>
                   <bfa:AssignModel.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String">"DELETE FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_193">"DELETE FROM "+模块与对应数据表名称字典[模块名称]+" "+where子句</mca:CSharpValue>
                     </InArgument>
                   </bfa:AssignModel.Value>
                 </bfa:AssignModel>
@@ -963,7 +963,7 @@
                         </bda1:ExecuteSqlActivity.AffectedRows>
                         <bda1:ExecuteSqlActivity.ExecuteTimeOut>
                           <InArgument x:TypeArguments="x:TimeSpan">
-                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_12" Value="00:00:30" />
+                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_37" Value="00:02:00" />
                           </InArgument>
                         </bda1:ExecuteSqlActivity.ExecuteTimeOut>
                         <bda1:ExecuteSqlActivity.Sql>
