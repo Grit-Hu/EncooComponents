@@ -890,7 +890,7 @@
                         </bda1:ExecuteSqlActivity.AffectedRows>
                         <bda1:ExecuteSqlActivity.ExecuteTimeOut>
                           <InArgument x:TypeArguments="x:TimeSpan">
-                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_12" Value="00:00:30" />
+                            <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_32" Value="00:01:00" />
                           </InArgument>
                         </bda1:ExecuteSqlActivity.ExecuteTimeOut>
                         <bda1:ExecuteSqlActivity.Sql>
