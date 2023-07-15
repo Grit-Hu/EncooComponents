@@ -18,7 +18,7 @@
       <x:String>BotTime.DataTableActivity.Activities</x:String>
       <x:String>BotTime.Flow.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      <x:String>常用组件库V3_电商场景常用</x:String>
+      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -44,7 +44,7 @@
       <AssemblyReference>BotTime.DataTableActivity</AssemblyReference>
       <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E7%94%B5%E5%95%86%E5%9C%BA%E6%99%AF%E5%B8%B8%E7%94%A8</AssemblyReference>
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="472,634" sap2010:WorkflowViewState.IdRef="Sequence_2">

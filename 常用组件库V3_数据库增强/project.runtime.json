@@ -101,33 +101,33 @@
     },
     {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.12",
+      "Version": "1.0.13",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "AutomationActivity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.3"
+          "MinVersion": "2.0.2305.5"
         },
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.2"
+          "MinVersion": "1.0.3"
         },
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_即时消息通知",
@@ -152,12 +152,12 @@
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_Chrome配套",
           "MaxVersion": null,
-          "MinVersion": "1.0.2"
+          "MinVersion": "1.0.3"
         }
       ]
     },
@@ -868,23 +868,23 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2303.3"
+        },
+        {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "常用组件库V3_日志增强",
@@ -894,12 +894,12 @@
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2303.2"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
+          "MinVersion": "2.0.2303.2"
         }
       ]
     },
