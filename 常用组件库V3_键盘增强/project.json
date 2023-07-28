@@ -125,13 +125,13 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.5",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -579,13 +579,13 @@
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataTableActivity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataTable.Activity",
       "InnerDependencies": [
         {
@@ -646,7 +646,7 @@
     },
     {
       "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Flow.Activities",
       "InnerDependencies": [
         {
@@ -664,7 +664,7 @@
     },
     {
       "Id": "BotTime.Mail.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.Mail.Activity",
       "InnerDependencies": [
         {
@@ -721,7 +721,7 @@
     },
     {
       "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2",
+      "Version": "2.2.0",
       "Title": "Microsoft Exchange WebServices",
       "InnerDependencies": []
     },
@@ -751,7 +751,7 @@
     },
     {
       "Id": "BotTime.Office.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.7",
       "Title": "BotTime.Office.Activity",
       "InnerDependencies": [
         {
@@ -898,7 +898,7 @@
     },
     {
       "Id": "BotTime.WPS.Activity",
-      "Version": "1.4.2301.1",
+      "Version": "1.4.2305.6",
       "Title": "BotTime.WPS.Activity",
       "InnerDependencies": [
         {
@@ -935,7 +935,7 @@
     },
     {
       "Id": "Encoo.Text.Activity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Text.Activity",
       "InnerDependencies": [
         {
@@ -947,7 +947,7 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -1080,7 +1080,7 @@
     },
     {
       "Id": "Encoo.Trigger.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Trigger.Activity",
       "InnerDependencies": [
         {
@@ -1107,9 +1107,14 @@
     },
     {
       "Id": "Encoo.Console.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Console.Activity",
       "InnerDependencies": [
+        {
+          "Id": "Flurl.Http",
+          "MaxVersion": null,
+          "MinVersion": "3.2.4"
+        },
         {
           "Id": "NamedPipeWrapper",
           "MaxVersion": null,
@@ -1124,11 +1129,6 @@
           "Id": "RestSharp",
           "MaxVersion": null,
           "MinVersion": "106.6.10"
-        },
-        {
-          "Id": "System.ValueTuple",
-          "MaxVersion": null,
-          "MinVersion": "4.5.0"
         }
       ]
     },
@@ -1146,7 +1146,7 @@
     },
     {
       "Id": "Encoo.Pdf.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Pdf.Activity",
       "InnerDependencies": [
         {
@@ -1164,7 +1164,7 @@
     },
     {
       "Id": "Encoo.AIHub.Activity",
-      "Version": "2.0.2301.1",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.AIHub.Activity",
       "InnerDependencies": [
         {
@@ -1181,13 +1181,13 @@
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2301.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Resource.Activity",
-      "Version": "1.1.2105.3",
+      "Version": "1.1.2111.1-beta-20211115-084828",
       "Title": "Encoo.Resource.Activity",
       "InnerDependencies": [
         {
@@ -1209,11 +1209,11 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-01-10T15:26:44.1612352+08:00",
+  "LastModifyTime": "2023-07-26T11:46:20.4667718+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2206.34"
+  "LastStudioVersion": "1.1.2305.7"
 }

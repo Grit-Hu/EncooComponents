@@ -20,18 +20,6 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
-      "Id": "常用组件库V3_字符串增强",
-      "AutoUpgrade": true,
-      "UpgradeVersionPattern": "1.0.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "BotTime.Flow.Activities",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
       "Id": "BotTime.ActivityLibrary",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -39,6 +27,18 @@
     },
     {
       "Id": "Encoo.CodeTool.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "常用组件库V3_字符串增强",
+      "AutoUpgrade": true,
+      "UpgradeVersionPattern": "1.0.*",
+      "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Flow.Activities",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
@@ -63,51 +63,6 @@
     }
   ],
   "ProjectDependencyItems": [
-    {
-      "Id": "常用组件库V3_字符串增强",
-      "Version": "1.0.0",
-      "Title": "常用组件库V3_字符串增强",
-      "InnerDependencies": [
-        {
-          "Id": "BotTime.Flow.Activities",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "BotTime.ActivityLibrary",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "Encoo.CodeTool.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
-        },
-        {
-          "Id": "Encoo.Text.Activity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
-        }
-      ]
-    },
-    {
-      "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2305.6",
-      "Title": "BotTime.Flow.Activities",
-      "InnerDependencies": [
-        {
-          "Id": "System.Collections",
-          "MaxVersion": null,
-          "MinVersion": "4.3.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.Collections",
-      "Version": "4.3.0",
-      "Title": "System.Collections",
-      "InnerDependencies": []
-    },
     {
       "Id": "BotTime.ActivityLibrary",
       "Version": "2.0.2305.6",
@@ -699,6 +654,51 @@
       "Id": "Microsoft.PowerShell.5.ReferenceAssemblies",
       "Version": "1.1.0",
       "Title": "Microsoft PowerShell Version 5 Reference Assemblies",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "常用组件库V3_字符串增强",
+      "Version": "1.0.0",
+      "Title": "常用组件库V3_字符串增强",
+      "InnerDependencies": [
+        {
+          "Id": "BotTime.Flow.Activities",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.CodeTool.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.1"
+        },
+        {
+          "Id": "Encoo.Text.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2301.2"
+        }
+      ]
+    },
+    {
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2305.6",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
       "InnerDependencies": []
     },
     {

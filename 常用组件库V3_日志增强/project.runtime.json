@@ -20,12 +20,6 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
-      "Id": "BotTime.Flow.Activities",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
       "Id": "Encoo.CodeTool.Activity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -36,30 +30,18 @@
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Flow.Activities",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
     {
-      "Id": "BotTime.Flow.Activities",
-      "Version": "2.0.2303.2",
-      "Title": "BotTime.Flow.Activities",
-      "InnerDependencies": [
-        {
-          "Id": "System.Collections",
-          "MaxVersion": null,
-          "MinVersion": "4.3.0"
-        }
-      ]
-    },
-    {
-      "Id": "System.Collections",
-      "Version": "4.3.0",
-      "Title": "System.Collections",
-      "InnerDependencies": []
-    },
-    {
       "Id": "Encoo.CodeTool.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.CodeTool.Activity",
       "InnerDependencies": [
         {
@@ -393,7 +375,7 @@
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.ActivityLibrary",
       "InnerDependencies": [
         {
@@ -651,20 +633,38 @@
       "InnerDependencies": []
     },
     {
+      "Id": "BotTime.Flow.Activities",
+      "Version": "2.0.2305.6",
+      "Title": "BotTime.Flow.Activities",
+      "InnerDependencies": [
+        {
+          "Id": "System.Collections",
+          "MaxVersion": null,
+          "MinVersion": "4.3.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.Collections",
+      "Version": "4.3.0",
+      "Title": "System.Collections",
+      "InnerDependencies": []
+    },
+    {
       "Id": "AutomationActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.5",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "BotTime.DataBase.Activity",
-      "Version": "2.0.2303.2",
+      "Version": "2.0.2305.6",
       "Title": "BotTime.DataBase.Activity",
       "InnerDependencies": []
     },
     {
       "Id": "Encoo.Automation.MobileActivity",
-      "Version": "2.0.2303.3",
+      "Version": "2.0.2305.6",
       "Title": "Encoo.Automation.MobileActivity Package",
       "InnerDependencies": []
     }

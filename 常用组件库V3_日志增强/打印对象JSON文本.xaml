@@ -42,7 +42,7 @@
       <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>ParallelExtensionsExtras</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>

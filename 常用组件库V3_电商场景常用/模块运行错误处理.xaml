@@ -38,8 +38,6 @@
       <x:String>Encoo.Text.Activity.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
       <x:String>BotTimeUI.Common.Control.Interface</x:String>
-      <x:String>常用组件库V3_即时消息通知</x:String>
-      <x:String>常用组件库V3_Chrome配套自动绑定后操作</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,8 +63,6 @@
       <AssemblyReference>Encoo.Text.Activity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>BotTimeUI.Common</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E5%8D%B3%E6%97%B6%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_Chrome%E9%85%8D%E5%A5%97</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="556,1408" sap2010:WorkflowViewState.IdRef="Sequence_2">

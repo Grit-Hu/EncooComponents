@@ -15,7 +15,7 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>BotTime.Flow.Activities</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      <x:String>常用组件库V3_随机数</x:String>
+      
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -30,7 +30,7 @@
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E9%9A%8F%E6%9C%BA%E6%95%B0</AssemblyReference>
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="594,1043" sap2010:WorkflowViewState.IdRef="Sequence_2">
