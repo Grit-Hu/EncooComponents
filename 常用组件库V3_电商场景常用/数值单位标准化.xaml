@@ -5,7 +5,7 @@
     <x:Property Name="数值String" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>618,4354</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>618,4250</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="12">
@@ -49,7 +49,7 @@
       <AssemblyReference>ActivityCommon</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="578,4274" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="578,5260" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="是否以万结尾" />
     </Sequence.Variables>
@@ -67,7 +67,7 @@
         </baast:LogActivity.LogContent>
       </baast:LogActivity>
     </eae:CommentActivity>
-    <Sequence DisplayName="序列-将默认单独符号替换为0" sap:VirtualizedContainerService.HintSize="556,1239" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="序列-将默认单独符号替换为0" sap:VirtualizedContainerService.HintSize="556,1433" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="数值是否为单个非数字形式" />
         <Variable x:TypeArguments="x:Boolean" Name="数值是否包含NaN" />
@@ -78,7 +78,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-单个非数值文本" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_3" RegText="[^\d]">
+      <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-单个非数值文本" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_3" RegText="^[^\d]$">
         <etaa:VerifyTextActivity.OriginText>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">System.Convert.ToString(数值文本)</mca:CSharpValue>
@@ -121,7 +121,7 @@
           </bfa:MultipleAssign>
         </bfa:If.Then>
       </bfa:If>
-      <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-包含NaN" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_4" RegText=".*NaN.*">
+      <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-包含NaN" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_4" RegText="^.*NaN.*$">
         <etaa:VerifyTextActivity.OriginText>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">System.Convert.ToString(数值文本)</mca:CSharpValue>
@@ -133,7 +133,7 @@
           </OutArgument>
         </etaa:VerifyTextActivity.VerifyResult>
       </etaa:VerifyTextActivity>
-      <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,53" sap2010:WorkflowViewState.IdRef="If_5" IsIgnore="False">
+      <bfa:If ActivityName="条件（If）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,351" sap2010:WorkflowViewState.IdRef="If_5" IsIgnore="False">
         <bfa:If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">数值是否包含NaN==true</mca:CSharpValue>
@@ -141,7 +141,7 @@
         </bfa:If.Condition>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -164,7 +164,7 @@
           </bfa:MultipleAssign>
         </bfa:If.Then>
       </bfa:If>
-      <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="空字符串/null/--转为0" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,480" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
+      <bfa:If ActivityName="条件（If）" sap2010:Annotation.AnnotationText="空字符串/null/--转为0" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="条件（If）" sap:VirtualizedContainerService.HintSize="534,376" sap2010:WorkflowViewState.IdRef="If_3" IsIgnore="False">
         <bfa:If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">数值文本=="" || 数值文本.ToLower()=="null" || 数值文本=="--"</mca:CSharpValue>
@@ -227,12 +227,12 @@
               <bfa:AssignModel Index="1" IsNotFirst="False">
                 <bfa:AssignModel.To>
                   <OutArgument x:TypeArguments="x:String">
-                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">数值文本</mca:CSharpReference>
+                    <mca:CSharpReference x:TypeArguments="x:String">数值文本</mca:CSharpReference>
                   </OutArgument>
                 </bfa:AssignModel.To>
                 <bfa:AssignModel.Value>
                   <InArgument x:TypeArguments="x:String">
-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">"0"</mca:CSharpValue>
+                    <mca:CSharpValue x:TypeArguments="x:String">"0"</mca:CSharpValue>
                   </InArgument>
                 </bfa:AssignModel.Value>
               </bfa:AssignModel>
@@ -241,10 +241,10 @@
         </bfa:If.Then>
       </bfa:If>
     </Sequence>
-    <Sequence DisplayName="序列-删除货币、逗号符号" sap:VirtualizedContainerService.HintSize="556,53" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="序列-删除货币、逗号符号" sap:VirtualizedContainerService.HintSize="556,845" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -346,7 +346,7 @@
         </baast:LogActivity>
       </eae:CommentActivity>
     </Sequence>
-    <etaa:VerifyTextActivity ActivityName="验证文本有效性" sap2010:Annotation.AnnotationText="w/万结尾" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以万结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="556,83" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_1" RegText="-?\d+(\.\d+)?(万|w|W)">
+    <etaa:VerifyTextActivity ActivityName="验证文本有效性" sap2010:Annotation.AnnotationText="w/万结尾" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以万结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="556,83" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_1" RegText="^\d+(\.\d+)?(万|w|W)$">
       <etaa:VerifyTextActivity.OriginText>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Convert.ToString(数值文本)</mca:CSharpValue>
@@ -449,12 +449,12 @@
               <bfa:AssignModel Index="1" IsNotFirst="False">
                 <bfa:AssignModel.To>
                   <OutArgument x:TypeArguments="x:Double">
-                    <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">数值Double</mca:CSharpReference>
+                    <mca:CSharpReference x:TypeArguments="x:Double">数值Double</mca:CSharpReference>
                   </OutArgument>
                 </bfa:AssignModel.To>
                 <bfa:AssignModel.Value>
                   <InArgument x:TypeArguments="x:Double">
-                    <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">数值Double*10000</mca:CSharpValue>
+                    <mca:CSharpValue x:TypeArguments="x:Double">数值Double*10000</mca:CSharpValue>
                   </InArgument>
                 </bfa:AssignModel.Value>
               </bfa:AssignModel>
@@ -472,7 +472,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以百分号结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_2" RegText="-?\d+(\.\d+)?%">
+          <etaa:VerifyTextActivity ActivityName="验证文本有效性" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="验证文本有效性-是否以百分号结尾" FormatType="Custom" sap:VirtualizedContainerService.HintSize="534,58" sap2010:WorkflowViewState.IdRef="VerifyTextActivity_2" RegText="^\d+(\.\d+)?%$">
             <etaa:VerifyTextActivity.OriginText>
               <InArgument x:TypeArguments="x:String">
                 <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">System.Convert.ToString(数值文本)</mca:CSharpValue>
@@ -502,12 +502,12 @@
                     <bfa:AssignModel Index="1" IsNotFirst="False">
                       <bfa:AssignModel.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">数值文本</mca:CSharpReference>
+                          <mca:CSharpReference x:TypeArguments="x:String">数值文本</mca:CSharpReference>
                         </OutArgument>
                       </bfa:AssignModel.To>
                       <bfa:AssignModel.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">数值文本.Replace("%","")</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:String">数值文本.Replace("%","")</mca:CSharpValue>
                         </InArgument>
                       </bfa:AssignModel.Value>
                     </bfa:AssignModel>
@@ -539,12 +539,12 @@
                     <bfa:AssignModel Index="1" IsNotFirst="False">
                       <bfa:AssignModel.To>
                         <OutArgument x:TypeArguments="x:Double">
-                          <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">数值Double</mca:CSharpReference>
+                          <mca:CSharpReference x:TypeArguments="x:Double">数值Double</mca:CSharpReference>
                         </OutArgument>
                       </bfa:AssignModel.To>
                       <bfa:AssignModel.Value>
                         <InArgument x:TypeArguments="x:Double">
-                          <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">数值Double/100</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:Double">数值Double/100</mca:CSharpValue>
                         </InArgument>
                       </bfa:AssignModel.Value>
                     </bfa:AssignModel>
@@ -576,12 +576,12 @@
           <bfa:AssignModel Index="1" IsNotFirst="False">
             <bfa:AssignModel.To>
               <OutArgument x:TypeArguments="x:Double">
-                <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">数值Double</mca:CSharpReference>
+                <mca:CSharpReference x:TypeArguments="x:Double">数值Double</mca:CSharpReference>
               </OutArgument>
             </bfa:AssignModel.To>
             <bfa:AssignModel.Value>
               <InArgument x:TypeArguments="x:Double">
-                <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">Math.Round(数值Double,8)</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:Double">Math.Round(数值Double,8)</mca:CSharpValue>
               </InArgument>
             </bfa:AssignModel.Value>
           </bfa:AssignModel>
@@ -598,12 +598,12 @@
         <bfa:AssignModel Index="1" IsNotFirst="False">
           <bfa:AssignModel.To>
             <OutArgument x:TypeArguments="x:String">
-              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">数值String</mca:CSharpReference>
+              <mca:CSharpReference x:TypeArguments="x:String">数值String</mca:CSharpReference>
             </OutArgument>
           </bfa:AssignModel.To>
           <bfa:AssignModel.Value>
             <InArgument x:TypeArguments="x:String">
-              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">数值Double.ToString("0.########")</mca:CSharpValue>
+              <mca:CSharpValue x:TypeArguments="x:String">数值Double.ToString("0.########")</mca:CSharpValue>
             </InArgument>
           </bfa:AssignModel.Value>
         </bfa:AssignModel>
