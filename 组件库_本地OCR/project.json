@@ -19,15 +19,21 @@
     ".code\\CSharp",
     ".code\\CSharp\\text拼接换行.cs",
     ".code\\Python",
+    ".code\\Python\\get_ocr_coordinate_and_text.py",
+    ".code\\Python\\独立识别 - 副本.py",
+    ".code\\Python\\独立识别.py",
     ".code\\Python\\启动OCR服务器.py",
     ".code\\Python\\通用文字识别.py",
-    ".code\\Python\\执行Python代码.py",
-    ".code\\unittest1.xaml",
-    ".code\\unittest2.xaml",
+    ".unittest",
+    ".unittest\\OCRTest.xaml",
+    ".unittest\\unittest1.xaml",
+    ".unittest\\unittest2.xaml",
+    ".unittest\\通用文字识别_独立运行组件2.xaml",
     "关闭Python进程.xaml",
     "启动OCR服务器.xaml",
     "通用文字识别_调用服务器.xaml",
-    "通用文字识别_独立运行组件.xaml"
+    "通用文字识别_独立运行组件.xaml",
+    "文字坐标识别_调用服务器.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1215,7 +1221,7 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-07-14T14:47:50.7735552+08:00",
+  "LastModifyTime": "2023-08-19T17:47:32.8672118+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

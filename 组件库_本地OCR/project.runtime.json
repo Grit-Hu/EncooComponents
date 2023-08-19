@@ -36,6 +36,12 @@
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "AutomationActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
@@ -55,6 +61,12 @@
       "Id": "System.Collections",
       "Version": "4.3.0",
       "Title": "System.Collections",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Newtonsoft.Json",
+      "Version": "12.0.3",
+      "Title": "Json.NET",
       "InnerDependencies": []
     },
     {
@@ -480,12 +492,6 @@
           "MinVersion": "1.0.31"
         }
       ]
-    },
-    {
-      "Id": "Newtonsoft.Json",
-      "Version": "12.0.3",
-      "Title": "Json.NET",
-      "InnerDependencies": []
     },
     {
       "Id": "Panuon.UI.Silver",

@@ -1,0 +1,171 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="517,1557" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ea="clr-namespace:Encootech.AutomationActivity;assembly=AutomationActivity" xmlns:eae="clr-namespace:Encootech.ActivityCommon.EncooCommonActivity;assembly=ActivityCommon" xmlns:ed="clr-namespace:Encoo.DataType;assembly=Encoo.DataType" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="12">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>Encootech.AutomationActivity</x:String>
+      <x:String>Encoo.DataType</x:String>
+      <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>AutomationActivity</AssemblyReference>
+      <AssemblyReference>Encoo.DataType</AssemblyReference>
+      <AssemblyReference>ActivityCommon</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="477,1477" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="filePath" />
+      <Variable x:TypeArguments="x:String" Name="resultText" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="resultList" />
+      <Variable x:TypeArguments="x:String" Name="pythonPath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,221" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+      <ea:ScreenshotActivity ControlElement="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Image="{x:Null}" ImgHeight="{x:Null}" ImgWidth="{x:Null}" Selector="{x:Null}" SelectorId="{x:Null}" StoreId="{x:Null}" Timeout="{x:Null}" WaitTimeout="{x:Null}" X="{x:Null}" XRate="{x:Null}" Y="{x:Null}" YRate="{x:Null}" ActivityName="截屏" BringWindowType="Default" ContinueOnError="False" DisplayName="截屏" ElementRect="0, 0, 0, 0" Guid="083404b9-da9b-460a-bc93-316ecec9e481" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="ScreenshotActivity_1" IsIgnore="False" Overwrite="True" ScreenShoot="601cdc49-bd94-4dc3-826d-8869e50984d2.jpg" SelectionRect="0, 0, 0, 0">
+        <ea:ScreenshotActivity.SavePath>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_11">C:\Users\huhar\Desktop\华润Temp\华润重庆\temp.png</Literal>
+          </InArgument>
+        </ea:ScreenshotActivity.SavePath>
+        <ea:ScreenshotActivity.Selector2>
+          <InArgument x:TypeArguments="ed:Selector">
+            <mca:CSharpValue x:TypeArguments="ed:Selector" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTE2Ij8+CjxBcHBsaWNhdGlvbiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczp4c2Q9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIj4KPEF1dG9tYXRpb25UeXBlPlVJQTM8L0F1dG9tYXRpb25UeXBlPgo8UHJvY2Vzc05hbWU+U21hcnRWaWV3IENsaWVudCAzMDAwPC9Qcm9jZXNzTmFtZT4KPEZpbGVQYXRoPlNtYXJ0VmlldyBDbGllbnQgMzAwMC5leGU8L0ZpbGVQYXRoPgo8VmVyc2lvbj4xLjM8L1ZlcnNpb24+CjxDaGlsZENvbnRyb2xzPgo8Q29udHJvbE1ldGFEYXRhPgo8SWRlbnRpZmllcj4KPE5hbWU+U21hcnRWaWV3IENsaWVudCAzMDAwIC0gKjwvTmFtZT4KPFJvbGU+V2luZG93PC9Sb2xlPgo8SXNEaXJlY3RDaGlsZD50cnVlPC9Jc0RpcmVjdENoaWxkPgo8L0lkZW50aWZpZXI+CjxDaGlsZENvbnRyb2xzPgo8Q29udHJvbE1ldGFEYXRhPgo8SWRlbnRpZmllcj4KPENsYXNzTmFtZT5NRElDbGllbnQ8L0NsYXNzTmFtZT4KPFJvbGU+UGFuZTwvUm9sZT4KPElzRGlyZWN0Q2hpbGQ+dHJ1ZTwvSXNEaXJlY3RDaGlsZD4KPEF1dG9tYXRpb25JZD41OTY0ODwvQXV0b21hdGlvbklkPgo8L0lkZW50aWZpZXI+CjxDaGlsZENvbnRyb2xzPgo8Q29udHJvbE1ldGFEYXRhPgo8SWRlbnRpZmllcj4KPFJvbGU+V2luZG93PC9Sb2xlPgo8SXNEaXJlY3RDaGlsZD50cnVlPC9Jc0RpcmVjdENoaWxkPgo8L0lkZW50aWZpZXI+CjxDaGlsZENvbnRyb2xzPgo8Q29udHJvbE1ldGFEYXRhPgo8SWRlbnRpZmllcj4KPFJvbGU+UGFuZTwvUm9sZT4KPElzRGlyZWN0Q2hpbGQ+dHJ1ZTwvSXNEaXJlY3RDaGlsZD4KPC9JZGVudGlmaWVyPgo8Q2hpbGRDb250cm9scz4KPENvbnRyb2xNZXRhRGF0YT4KPElkZW50aWZpZXI+CjxDbGFzc05hbWU+U3RhdGljPC9DbGFzc05hbWU+CjxSb2xlPkltYWdlPC9Sb2xlPgo8SXNEaXJlY3RDaGlsZD50cnVlPC9Jc0RpcmVjdENoaWxkPgo8L0lkZW50aWZpZXI+CjxBY2Nlc3NLZXkgLz4KPENvbXBvbmVudD48L0NvbXBvbmVudD4KPC9Db250cm9sTWV0YURhdGE+CjwvQ2hpbGRDb250cm9scz4KPEFjY2Vzc0tleSAvPgo8Q29tcG9uZW50PjwvQ29tcG9uZW50Pgo8L0NvbnRyb2xNZXRhRGF0YT4KPC9DaGlsZENvbnRyb2xzPgo8QWNjZXNzS2V5IC8+CjxDb21wb25lbnQ+PC9Db21wb25lbnQ+CjwvQ29udHJvbE1ldGFEYXRhPgo8L0NoaWxkQ29udHJvbHM+CjxBY2Nlc3NLZXkgLz4KPENvbXBvbmVudD48L0NvbXBvbmVudD4KPC9Db250cm9sTWV0YURhdGE+CjwvQ2hpbGRDb250cm9scz4KPEFjY2Vzc0tleSAvPgo8Q29tcG9uZW50PjwvQ29tcG9uZW50Pgo8L0NvbnRyb2xNZXRhRGF0YT4KPC9DaGlsZENvbnRyb2xzPgo8L0FwcGxpY2F0aW9uPgo="</mca:CSharpValue>
+          </InArgument>
+        </ea:ScreenshotActivity.Selector2>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ea:ScreenshotActivity>
+    </eae:CommentActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="455,121" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;filePath&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;[\&quot;C:\\\\Users\\\\huhar\\\\Desktop\\\\华润Temp\\\\华润重庆\\\\20230731_153506_5959.png\&quot;]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;},{&quot;To&quot;:&quot;pythonPath&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;[\&quot;C:\\\\software\\\\anaconda3\\\\envs\\\\paddleocr\&quot;]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">filePath</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">["C:\\Users\\huhar\\Desktop\\华润Temp\\华润重庆\\20230731_153506_5959.png"]</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+        <bfa:AssignModel Index="2" IsNotFirst="True">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">pythonPath</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">["C:\\software\\anaconda3\\envs\\paddleocr"]</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,251" sap2010:WorkflowViewState.IdRef="CommentActivity_8">
+      <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程:" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_1" IsIgnore="False">
+        <bfa:InvokeWorkflow.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="imagePath">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">System.Convert.ToString(filePath)</mca:CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="language">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_18">en</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Python环境路径">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">System.Convert.ToString(pythonPath)</mca:CSharpValue>
+          </InArgument>
+          <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="resultList">
+            <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">resultList</mca:CSharpReference>
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="resultText">
+            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">resultText</mca:CSharpReference>
+          </OutArgument>
+        </bfa:InvokeWorkflow.Arguments>
+        <bfa:InvokeWorkflow.WorkflowPath>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_19">.unittest\通用文字识别_独立运行组件2.xaml</Literal>
+          </InArgument>
+        </bfa:InvokeWorkflow.WorkflowPath>
+      </bfa:InvokeWorkflow>
+    </eae:CommentActivity>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,251" sap2010:WorkflowViewState.IdRef="CommentActivity_6">
+      <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 文字坐标识别_调用服务器" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_3" IsIgnore="False">
+        <bfa:InvokeWorkflow.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="inStrImagePath">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">System.Convert.ToString(filePath)</mca:CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="inStrPythonPath">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">System.Convert.ToString(pythonPath)</mca:CSharpValue>
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="outStrOCRResultJSON">
+            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">resultText</mca:CSharpReference>
+          </OutArgument>
+        </bfa:InvokeWorkflow.Arguments>
+        <bfa:InvokeWorkflow.WorkflowPath>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_17">文字坐标识别_调用服务器.xaml</Literal>
+          </InArgument>
+        </bfa:InvokeWorkflow.WorkflowPath>
+      </bfa:InvokeWorkflow>
+    </eae:CommentActivity>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 通用文字识别_调用服务器" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_2" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="imagePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">System.Convert.ToString(filePath)</mca:CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Python环境路径">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">System.Convert.ToString(pythonPath)</mca:CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="resultList" />
+        <OutArgument x:TypeArguments="x:String" x:Key="resultText">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">resultText</mca:CSharpReference>
+        </OutArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_15">通用文字识别_调用服务器.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_5">
+      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+        <baast:LogActivity.LogContent>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">resultText</mca:CSharpValue>
+          </InArgument>
+        </baast:LogActivity.LogContent>
+      </baast:LogActivity>
+    </eae:CommentActivity>
+  </Sequence>
+</Activity>
