@@ -11,7 +11,7 @@
       <x:String>BotTime.Flow.Activities</x:String>
       <x:String>Encootech.AutomationActivity.WebAction</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
-      
+      <x:String>常用组件库V3_日志增强</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -28,7 +28,7 @@
       <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
       <AssemblyReference>AutomationActivity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      
+      <AssemblyReference>%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93V3_%E6%97%A5%E5%BF%97%E5%A2%9E%E5%BC%BA</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="471,783" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -76,7 +76,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <eaw:BrowserRefresh DelayAfter="{x:Null}" DelayBefore="{x:Null}" TimeOut="{x:Null}" WaitTimeout="{x:Null}" ActivityName="BrowserRefresh" ContinueOnError="False" DisplayName="刷新浏览器" Guid="3ba6a5db-3f51-4bbf-8d8b-59af752b8a63" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="BrowserRefresh_1" IsIgnore="False" IsReady="True" />
+            <eaw:BrowserRefresh DelayAfter="{x:Null}" DelayBefore="{x:Null}" TimeOut="{x:Null}" ActivityName="BrowserRefresh" ContinueOnError="False" DisplayName="刷新浏览器" Guid="3ba6a5db-3f51-4bbf-8d8b-59af752b8a63" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="BrowserRefresh_1" IsIgnore="False" IsReady="True">
+              <eaw:BrowserRefresh.WaitTimeout>
+                <InArgument x:TypeArguments="x:Int32">
+                  <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_15" Value="30000" />
+                </InArgument>
+              </eaw:BrowserRefresh.WaitTimeout>
+            </eaw:BrowserRefresh>
             <常:提示并写入日志 sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="提示并写入日志_2" Level="Info">
               <常:提示并写入日志.提示信息>
                 <InArgument x:TypeArguments="x:String">

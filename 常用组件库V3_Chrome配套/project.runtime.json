@@ -20,6 +20,12 @@
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
     {
+      "Id": "AutomationActivity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
+    },
+    {
       "Id": "BotTime.Flow.Activities",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
@@ -27,12 +33,6 @@
     },
     {
       "Id": "BotTime.ActivityLibrary",
-      "AutoUpgrade": false,
-      "UpgradeVersionPattern": "2.*.*.*",
-      "Type": "ActivityOrCode"
-    },
-    {
-      "Id": "AutomationActivity",
       "AutoUpgrade": false,
       "UpgradeVersionPattern": "2.*.*.*",
       "Type": "ActivityOrCode"
@@ -57,6 +57,12 @@
     }
   ],
   "ProjectDependencyItems": [
+    {
+      "Id": "AutomationActivity",
+      "Version": "2.0.2305.5",
+      "Title": "BotTime.Automation.Activity",
+      "InnerDependencies": []
+    },
     {
       "Id": "BotTime.Flow.Activities",
       "Version": "2.0.2305.6",
@@ -527,12 +533,6 @@
       "Id": "System.ValueTuple",
       "Version": "4.5.0",
       "Title": "System.ValueTuple",
-      "InnerDependencies": []
-    },
-    {
-      "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
-      "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
     {
