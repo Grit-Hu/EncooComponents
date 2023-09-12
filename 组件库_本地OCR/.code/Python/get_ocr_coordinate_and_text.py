@@ -5,9 +5,10 @@ import requests
 
 if __name__ == "__main__":
     inStrImagePath=sys.argv[1]
+    inStrlanguage=sys.argv[2]
 
 r = requests.post("http://127.0.0.1:5000/ocr", headers={
-    "Content-Type": "application/json"},data=json.dumps({"imgPath": inStrImagePath}))
+    "Content-Type": "application/json"},data=json.dumps({"imgPath": inStrImagePath,"language": inStrlanguage}))
 # print(r)
 tempArray = []
 for arrayElement in json.loads(r.text)[0]:

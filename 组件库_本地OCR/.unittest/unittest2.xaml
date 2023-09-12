@@ -1,13 +1,18 @@
-<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="240,181" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bcci="clr-namespace:BotTimeUI.Common.Control.Interface;assembly=BotTimeUI.Common" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="511,1245" sap2010:WorkflowViewState.IdRef="EncooWorkflow.defaultWorkflowSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:eae="clr-namespace:Encootech.ActivityCommon.EncooCommonActivity;assembly=ActivityCommon" xmlns:ecaaj="clr-namespace:Encoo.CodeTool.Activity.Activities.Json;assembly=Encoo.CodeTool.Activity" xmlns:ecaap="clr-namespace:Encoo.CodeTool.Activity.Activities.Python;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="7">
+    <scg:List x:TypeArguments="x:String" Capacity="12">
       <x:String>System</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>BotTimeUI.Common.Control.Interface</x:String>
+      <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
+      <x:String>Encootech.ActivityCommon.EncooCommonActivity</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Json</x:String>
+      <x:String>Encoo.CodeTool.Activity.Activities.Python</x:String>
+      <x:String>Microsoft.CSharp.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -20,20 +25,155 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
-      <AssemblyReference>BotTimeUI.Common</AssemblyReference>
+      <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
+      <AssemblyReference>ActivityCommon</AssemblyReference>
+      <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="200,101" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="491,1475" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="filePath" />
-      <Variable x:TypeArguments="x:String" Name="resultText" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="resultList" />
-      <Variable x:TypeArguments="bcci:IUiObject" Name="controlObject" />
+      <Variable x:TypeArguments="x:String" Name="strImagePath" />
+      <Variable x:TypeArguments="x:String" Name="outStrOCRResultJSON" />
+      <Variable x:TypeArguments="x:String" Name="strPythonPath" />
+      <Variable x:TypeArguments="scg:List(scg:Dictionary(x:String, scg:List(x:String)))" Name="listOCRResult" />
+      <Variable x:TypeArguments="s:DateTime" Name="time1" />
+      <Variable x:TypeArguments="x:String" Name="strTemp" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值-strImagePath" sap:VirtualizedContainerService.HintSize="469,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;strImagePath&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;[\&quot;C:\\\\Users\\\\huhar\\\\Desktop\\\\虚拟机交换区\\\\getImage.png\&quot;]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">strImagePath</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">["C:\\Users\\huhar\\Desktop\\虚拟机交换区\\getImage.png"]</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="469,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">System.Convert.ToString("strImagePath="+strImagePath)</mca:CSharpValue>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="469,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_2" IsIgnore="False" Text="[{&quot;To&quot;:&quot;strPythonPath&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;[\&quot;C:\\\\software\\\\Anaconda3\\\\envs\\\\paddleocr\&quot;]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">strPythonPath</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">["C:\\software\\Anaconda3\\envs\\paddleocr"]</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="469,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_3" IsIgnore="False" Text="[{&quot;To&quot;:&quot;time1&quot;,&quot;ToTypeName&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;DateTime.Now&quot;,&quot;ValTypeName&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+      <bfa:MultipleAssign.AssignModels>
+        <bfa:AssignModel Index="1" IsNotFirst="False">
+          <bfa:AssignModel.To>
+            <OutArgument x:TypeArguments="s:DateTime">
+              <mca:CSharpReference x:TypeArguments="s:DateTime">time1</mca:CSharpReference>
+            </OutArgument>
+          </bfa:AssignModel.To>
+          <bfa:AssignModel.Value>
+            <InArgument x:TypeArguments="s:DateTime">
+              <mca:CSharpValue x:TypeArguments="s:DateTime">DateTime.Now</mca:CSharpValue>
+            </InArgument>
+          </bfa:AssignModel.Value>
+        </bfa:AssignModel>
+      </bfa:MultipleAssign.AssignModels>
+    </bfa:MultipleAssign>
+    <bfa:InvokeWorkflow ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="调用子流程: 通用文字识别_独立运行组件" sap:VirtualizedContainerService.HintSize="469,96" sap2010:WorkflowViewState.IdRef="InvokeWorkflow_2" IsIgnore="False">
+      <bfa:InvokeWorkflow.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="imagePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(strImagePath)</mca:CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="language">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_5">ch</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Python环境路径">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">System.Convert.ToString(strPythonPath)</mca:CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="resultList" />
+        <OutArgument x:TypeArguments="x:String" x:Key="resultText">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">strTemp</mca:CSharpReference>
+        </OutArgument>
+      </bfa:InvokeWorkflow.Arguments>
+      <bfa:InvokeWorkflow.WorkflowPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">通用文字识别_独立运行组件.xaml</Literal>
+        </InArgument>
+      </bfa:InvokeWorkflow.WorkflowPath>
+    </bfa:InvokeWorkflow>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="469,409" sap2010:WorkflowViewState.IdRef="CommentActivity_1">
+      <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="449,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
+        <ecaap:PythonScopeActivity.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="PythonScope" />
+            </ActivityAction.Argument>
+            <ecaap:PythonExecuteFileActivity ActivityName="执行Python代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行Python代码: get_ocr_coordinate_and_text.py" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="PythonExecuteFileActivity_1">
+              <ecaap:PythonExecuteFileActivity.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="strImagePath">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">strImagePath</mca:CSharpValue>
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="outStrOCRResultJSON">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">outStrOCRResultJSON</mca:CSharpReference>
+                </OutArgument>
+              </ecaap:PythonExecuteFileActivity.Arguments>
+              <ecaap:PythonExecuteFileActivity.PythonFilePath>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">.code\Python\get_ocr_coordinate_and_text.py</Literal>
+                </InArgument>
+              </ecaap:PythonExecuteFileActivity.PythonFilePath>
+            </ecaap:PythonExecuteFileActivity>
+          </ActivityAction>
+        </ecaap:PythonScopeActivity.Body>
+        <ecaap:PythonScopeActivity.PythonHomePath>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">System.Convert.ToString(strPythonPath)</mca:CSharpValue>
+          </InArgument>
+        </ecaap:PythonScopeActivity.PythonHomePath>
+      </ecaap:PythonScopeActivity>
+    </eae:CommentActivity>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="469,58" sap2010:WorkflowViewState.IdRef="LogActivity_2" Level="Info">
+      <baast:LogActivity.LogContent>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Convert.ToString((DateTime.Now-time1).ToString())</mca:CSharpValue>
+        </InArgument>
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="469,177" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
+      <ecaaj:DeserializeObjectActivity ActivityName="反序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="反序列化" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DeserializeObjectActivity_1">
+        <ecaaj:DeserializeObjectActivity.JsonString>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">outStrOCRResultJSON</mca:CSharpValue>
+          </InArgument>
+        </ecaaj:DeserializeObjectActivity.JsonString>
+        <ecaaj:DeserializeObjectActivity.Result>
+          <OutArgument x:TypeArguments="scg:List(scg:Dictionary(x:String, scg:List(x:String)))">
+            <mca:CSharpReference x:TypeArguments="scg:List(scg:Dictionary(x:String, scg:List(x:String)))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">listOCRResult</mca:CSharpReference>
+          </OutArgument>
+        </ecaaj:DeserializeObjectActivity.Result>
+      </ecaaj:DeserializeObjectActivity>
+    </eae:CommentActivity>
   </Sequence>
 </Activity>
