@@ -13,7 +13,7 @@
     </InArgument>
   </this:Main.language>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>517,1290</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>531,1290</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="13">
@@ -49,54 +49,71 @@
       <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="477,1210" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="491,1210" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_2">
-      <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_2" Level="Info">
-        <baast:LogActivity.LogContent>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">----OCR on server----</Literal>
-          </InArgument>
-        </baast:LogActivity.LogContent>
-      </baast:LogActivity>
-    </eae:CommentActivity>
-    <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="455,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
-      <ecaap:PythonScopeActivity.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="PythonScope" />
-          </ActivityAction.Argument>
-          <ecaap:PythonExecuteFileActivity ActivityName="执行Python代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行Python代码" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="PythonExecuteFileActivity_1">
-            <ecaap:PythonExecuteFileActivity.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="imagePath">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">System.Convert.ToString(imagePath)</mca:CSharpValue>
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="language">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">language</mca:CSharpValue>
-              </InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="resultText">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">resultText</mca:CSharpReference>
-              </OutArgument>
-            </ecaap:PythonExecuteFileActivity.Arguments>
-            <ecaap:PythonExecuteFileActivity.PythonFilePath>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">.code\Python\通用文字识别.py</Literal>
-              </InArgument>
-            </ecaap:PythonExecuteFileActivity.PythonFilePath>
-          </ecaap:PythonExecuteFileActivity>
-        </ActivityAction>
-      </ecaap:PythonScopeActivity.Body>
-      <ecaap:PythonScopeActivity.PythonHomePath>
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="469,58" sap2010:WorkflowViewState.IdRef="LogActivity_3" Level="Info">
+      <baast:LogActivity.LogContent>
         <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(Python环境路径)</mca:CSharpValue>
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8">通用文字识别_调用服务器.xaml</Literal>
         </InArgument>
-      </ecaap:PythonScopeActivity.PythonHomePath>
-    </ecaap:PythonScopeActivity>
-    <ecaaj:DeserializeObjectActivity ActivityName="反序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="反序列化" sap:VirtualizedContainerService.HintSize="455,22" sap2010:WorkflowViewState.IdRef="DeserializeObjectActivity_1">
+      </baast:LogActivity.LogContent>
+    </baast:LogActivity>
+    <bfa:Retry ActivityName="重试" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="重试" sap:VirtualizedContainerService.HintSize="469,409" sap2010:WorkflowViewState.IdRef="Retry_1" IsIgnore="False">
+      <bfa:Retry.RetryCount>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="1" />
+        </InArgument>
+      </bfa:Retry.RetryCount>
+      <bfa:Retry.RetryTimeSpan>
+        <InArgument x:TypeArguments="x:TimeSpan">
+          <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="00:00:01" />
+        </InArgument>
+      </bfa:Retry.RetryTimeSpan>
+      <bfa:Retry.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_7" Value="True" />
+        </InArgument>
+      </bfa:Retry.Condition>
+      <bfa:Retry.Body>
+        <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="449,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
+          <ecaap:PythonScopeActivity.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="PythonScope" />
+              </ActivityAction.Argument>
+              <ecaap:PythonExecuteFileActivity ActivityName="执行Python代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行Python代码" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="PythonExecuteFileActivity_1">
+                <ecaap:PythonExecuteFileActivity.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="imagePath">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">System.Convert.ToString(imagePath)</mca:CSharpValue>
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="language">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">language</mca:CSharpValue>
+                  </InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="resultText">
+                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">resultText</mca:CSharpReference>
+                  </OutArgument>
+                </ecaap:PythonExecuteFileActivity.Arguments>
+                <ecaap:PythonExecuteFileActivity.PythonFilePath>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">.code\Python\通用文字识别.py</Literal>
+                  </InArgument>
+                </ecaap:PythonExecuteFileActivity.PythonFilePath>
+              </ecaap:PythonExecuteFileActivity>
+            </ActivityAction>
+          </ecaap:PythonScopeActivity.Body>
+          <ecaap:PythonScopeActivity.PythonHomePath>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(Python环境路径)</mca:CSharpValue>
+            </InArgument>
+          </ecaap:PythonScopeActivity.PythonHomePath>
+        </ecaap:PythonScopeActivity>
+      </bfa:Retry.Body>
+    </bfa:Retry>
+    <ecaaj:DeserializeObjectActivity ActivityName="反序列化" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="反序列化" sap:VirtualizedContainerService.HintSize="469,22" sap2010:WorkflowViewState.IdRef="DeserializeObjectActivity_1">
       <ecaaj:DeserializeObjectActivity.JsonString>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">resultText</mca:CSharpValue>
@@ -108,14 +125,14 @@
         </OutArgument>
       </ecaaj:DeserializeObjectActivity.Result>
     </ecaaj:DeserializeObjectActivity>
-    <ecaac:InvokeCSharpCodeActivity ActivityName="执行C#代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行C#代码" sap:VirtualizedContainerService.HintSize="455,93" sap2010:WorkflowViewState.IdRef="InvokeCSharpCodeActivity_1">
+    <ecaac:InvokeCSharpCodeActivity ActivityName="执行C#代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行C#代码" sap:VirtualizedContainerService.HintSize="469,93" sap2010:WorkflowViewState.IdRef="InvokeCSharpCodeActivity_1">
       <ecaac:InvokeCSharpCodeActivity.CodeFilePath>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">.code\CSharp\text拼接换行.cs</Literal>
         </InArgument>
       </ecaac:InvokeCSharpCodeActivity.CodeFilePath>
     </ecaac:InvokeCSharpCodeActivity>
-    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="455,213" sap2010:WorkflowViewState.IdRef="CommentActivity_1">
+    <eae:CommentActivity DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="469,213" sap2010:WorkflowViewState.IdRef="CommentActivity_1">
       <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="349,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
         <baast:LogActivity.LogContent>
           <InArgument x:TypeArguments="x:String">
@@ -124,7 +141,7 @@
         </baast:LogActivity.LogContent>
       </baast:LogActivity>
     </eae:CommentActivity>
-    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="455,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;resultTextFirst&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;resultList[0]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
+    <bfa:MultipleAssign ActivityName="赋值（多个）" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="赋值（多个）" sap:VirtualizedContainerService.HintSize="469,91" sap2010:WorkflowViewState.IdRef="MultipleAssign_1" IsIgnore="False" Text="[{&quot;To&quot;:&quot;resultTextFirst&quot;,&quot;ToTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;Val&quot;:&quot;resultList[0]&quot;,&quot;ValTypeName&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;}]">
       <bfa:MultipleAssign.AssignModels>
         <bfa:AssignModel Index="1" IsNotFirst="False">
           <bfa:AssignModel.To>

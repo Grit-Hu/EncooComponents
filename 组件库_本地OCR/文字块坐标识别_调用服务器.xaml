@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:ecaap="clr-namespace:Encoo.CodeTool.Activity.Activities.Python;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="EncooWorkflow.Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:baast="clr-namespace:BotTime.ActivityLibrary.Activities.System.Tool;assembly=BotTime.ActivityLibrary" xmlns:bfa="clr-namespace:BotTime.Flow.Activities;assembly=BotTime.Flow.Activities" xmlns:ecaap="clr-namespace:Encoo.CodeTool.Activity.Activities.Python;assembly=Encoo.CodeTool.Activity" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:EncooWorkflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
   <x:Members>
     <x:Property Name="inStrImagePath" Type="InArgument(x:String)" />
     <x:Property Name="inStrPythonPath" Type="InArgument(x:String)" />
@@ -11,10 +11,10 @@
     </InArgument>
   </this:Main.inStrlanguage>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>511,556</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>531,711</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EncooWorkflow.defaultWorkflowSequence</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="9">
+    <scg:List x:TypeArguments="x:String" Capacity="10">
       <x:String>System</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Linq</x:String>
@@ -24,6 +24,7 @@
       <x:String>BotTime.ActivityLibrary.Activities.System.Tool</x:String>
       <x:String>Encoo.CodeTool.Activity.Activities.Python</x:String>
       <x:String>Microsoft.CSharp.Activities</x:String>
+      <x:String>BotTime.Flow.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -39,52 +40,72 @@
       <AssemblyReference>BotTime.ActivityLibrary</AssemblyReference>
       <AssemblyReference>Encoo.CodeTool.Activity</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>BotTime.Flow.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="471,476" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="序列_Root" sap:VirtualizedContainerService.HintSize="491,631" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="449,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
+    <baast:LogActivity ActivityName="写入日志" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="写入日志" sap:VirtualizedContainerService.HintSize="469,58" sap2010:WorkflowViewState.IdRef="LogActivity_1" Level="Info">
       <baast:LogActivity.LogContent>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">文字坐标识别_调用服务器.xaml</Literal>
         </InArgument>
       </baast:LogActivity.LogContent>
     </baast:LogActivity>
-    <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="449,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
-      <ecaap:PythonScopeActivity.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="PythonScope" />
-          </ActivityAction.Argument>
-          <ecaap:PythonExecuteFileActivity ActivityName="执行Python代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行Python代码: get_ocr_coordinate_and_text.py" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="PythonExecuteFileActivity_1">
-            <ecaap:PythonExecuteFileActivity.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="inStrImagePath">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">inStrImagePath</mca:CSharpValue>
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="inStrlanguage">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">inStrlanguage</mca:CSharpValue>
-              </InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="outStrOCRResultJSON">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">outStrOCRResultJSON</mca:CSharpReference>
-              </OutArgument>
-            </ecaap:PythonExecuteFileActivity.Arguments>
-            <ecaap:PythonExecuteFileActivity.PythonFilePath>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">.code\Python\get_ocr_coordinate_and_text.py</Literal>
-              </InArgument>
-            </ecaap:PythonExecuteFileActivity.PythonFilePath>
-          </ecaap:PythonExecuteFileActivity>
-        </ActivityAction>
-      </ecaap:PythonScopeActivity.Body>
-      <ecaap:PythonScopeActivity.PythonHomePath>
-        <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(inStrPythonPath)</mca:CSharpValue>
+    <bfa:Retry ActivityName="重试" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="重试" sap:VirtualizedContainerService.HintSize="469,409" sap2010:WorkflowViewState.IdRef="Retry_1" IsIgnore="False">
+      <bfa:Retry.RetryCount>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="1" />
         </InArgument>
-      </ecaap:PythonScopeActivity.PythonHomePath>
-    </ecaap:PythonScopeActivity>
+      </bfa:Retry.RetryCount>
+      <bfa:Retry.RetryTimeSpan>
+        <InArgument x:TypeArguments="x:TimeSpan">
+          <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="00:00:01" />
+        </InArgument>
+      </bfa:Retry.RetryTimeSpan>
+      <bfa:Retry.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="True" />
+        </InArgument>
+      </bfa:Retry.Condition>
+      <bfa:Retry.Body>
+        <ecaap:PythonScopeActivity WorkingFolder="{x:Null}" ActivityName="Python环境" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="Python环境" sap:VirtualizedContainerService.HintSize="449,254" sap2010:WorkflowViewState.IdRef="PythonScopeActivity_1">
+          <ecaap:PythonScopeActivity.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="PythonScope" />
+              </ActivityAction.Argument>
+              <ecaap:PythonExecuteFileActivity ActivityName="执行Python代码" ContinueOnError="No" DelayAfter="0" DelayBefore="0" DisplayName="执行Python代码: get_ocr_coordinate_and_text.py" sap:VirtualizedContainerService.HintSize="349,96" sap2010:WorkflowViewState.IdRef="PythonExecuteFileActivity_1">
+                <ecaap:PythonExecuteFileActivity.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="inStrImagePath">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">inStrImagePath</mca:CSharpValue>
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="inStrlanguage">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">inStrlanguage</mca:CSharpValue>
+                  </InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="outStrOCRResultJSON">
+                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">outStrOCRResultJSON</mca:CSharpReference>
+                  </OutArgument>
+                </ecaap:PythonExecuteFileActivity.Arguments>
+                <ecaap:PythonExecuteFileActivity.PythonFilePath>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">.code\Python\get_ocr_coordinate_and_text.py</Literal>
+                  </InArgument>
+                </ecaap:PythonExecuteFileActivity.PythonFilePath>
+              </ecaap:PythonExecuteFileActivity>
+            </ActivityAction>
+          </ecaap:PythonScopeActivity.Body>
+          <ecaap:PythonScopeActivity.PythonHomePath>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">System.Convert.ToString(inStrPythonPath)</mca:CSharpValue>
+            </InArgument>
+          </ecaap:PythonScopeActivity.PythonHomePath>
+        </ecaap:PythonScopeActivity>
+      </bfa:Retry.Body>
+    </bfa:Retry>
   </Sequence>
 </Activity>
