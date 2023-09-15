@@ -525,7 +525,7 @@
     },
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
+      "Version": "2.0.2308.1",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },

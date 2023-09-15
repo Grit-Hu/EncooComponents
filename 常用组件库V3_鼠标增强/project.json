@@ -143,7 +143,7 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
+      "Version": "2.0.2308.1",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
@@ -1261,11 +1261,11 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-07-28T10:30:58.145672+08:00",
+  "LastModifyTime": "2023-09-15T12:54:44.4650222+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2305.7"
+  "LastStudioVersion": "1.1.2305.11"
 }
