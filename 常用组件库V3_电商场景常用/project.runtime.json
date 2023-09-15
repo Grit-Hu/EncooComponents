@@ -84,6 +84,12 @@
       "AutoUpgrade": true,
       "UpgradeVersionPattern": "1.0.*",
       "Type": "ActivityOrCode"
+    },
+    {
+      "Id": "BotTime.Office.Activity",
+      "AutoUpgrade": false,
+      "UpgradeVersionPattern": "2.*.*.*",
+      "Type": "ActivityOrCode"
     }
   ],
   "ProjectDependencyItems": [
@@ -555,7 +561,7 @@
     },
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
+      "Version": "2.0.2308.1",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
@@ -768,33 +774,33 @@
     },
     {
       "Id": "常用组件库V3_鼠标增强",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_鼠标增强",
       "InnerDependencies": [
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2308.1"
         },
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_随机数",
           "MaxVersion": null,
           "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
         }
       ]
     },
@@ -812,38 +818,185 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.3",
+      "Version": "1.0.4",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
           "Id": "AutomationActivity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.3"
+          "MinVersion": "2.0.2305.5"
         },
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.2"
+          "MinVersion": "1.0.3"
         },
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
+        }
+      ]
+    },
+    {
+      "Id": "BotTime.Office.Activity",
+      "Version": "2.0.2305.7",
+      "Title": "BotTime.Office.Activity",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Editors",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Ribbon",
+          "MaxVersion": null,
+          "MinVersion": "20.1.1"
+        },
+        {
+          "Id": "ClosedXML",
+          "MaxVersion": null,
+          "MinVersion": "0.95.4"
+        },
+        {
+          "Id": "DocumentFormat.OpenXml",
+          "MaxVersion": null,
+          "MinVersion": "2.9.1"
+        },
+        {
+          "Id": "Microsoft.Office.Interop.Excel",
+          "MaxVersion": null,
+          "MinVersion": "15.0.4795.1000"
+        },
+        {
+          "Id": "NPOI",
+          "MaxVersion": null,
+          "MinVersion": "2.4.1"
+        },
+        {
+          "Id": "Panuon.UI.Silver",
+          "MaxVersion": null,
+          "MinVersion": "1.0.8.7"
+        },
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.Editors",
+      "Version": "20.1.1",
+      "Title": "Actipro Editors (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "ActiproSoftware.Controls.WPF.Ribbon",
+      "Version": "20.1.1",
+      "Title": "Actipro Ribbon (for WPF)",
+      "InnerDependencies": [
+        {
+          "Id": "ActiproSoftware.Controls.WPF.Shared",
+          "MaxVersion": "20.1.1",
+          "MinVersion": "20.1.1"
+        }
+      ]
+    },
+    {
+      "Id": "ClosedXML",
+      "Version": "0.95.4",
+      "Title": "ClosedXML",
+      "InnerDependencies": [
+        {
+          "Id": "DocumentFormat.OpenXml",
+          "MaxVersion": null,
+          "MinVersion": "2.7.2"
+        },
+        {
+          "Id": "ExcelNumberFormat",
+          "MaxVersion": null,
+          "MinVersion": "1.0.10"
+        },
+        {
+          "Id": "Microsoft.CSharp",
+          "MaxVersion": null,
+          "MinVersion": "4.7.0"
+        }
+      ]
+    },
+    {
+      "Id": "DocumentFormat.OpenXml",
+      "Version": "2.9.1",
+      "Title": "DocumentFormat.OpenXml",
+      "InnerDependencies": [
+        {
+          "Id": "System.IO.Packaging",
+          "MaxVersion": null,
+          "MinVersion": "4.5.0"
+        }
+      ]
+    },
+    {
+      "Id": "System.IO.Packaging",
+      "Version": "4.0.0",
+      "Title": "System.IO.Packaging",
+      "InnerDependencies": [
+        {
+          "Id": "System.IO.FileSystem.Primitives",
+          "MaxVersion": null,
+          "MinVersion": "4.0.1"
+        }
+      ]
+    },
+    {
+      "Id": "System.IO.FileSystem.Primitives",
+      "Version": "4.0.1",
+      "Title": "System.IO.FileSystem.Primitives",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "ExcelNumberFormat",
+      "Version": "1.0.10",
+      "Title": "ExcelNumberFormat",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "Microsoft.Office.Interop.Excel",
+      "Version": "15.0.4795.1000",
+      "Title": "Microsoft.Office.Interop.Excel",
+      "InnerDependencies": []
+    },
+    {
+      "Id": "NPOI",
+      "Version": "2.4.1",
+      "Title": "NPOI",
+      "InnerDependencies": [
+        {
+          "Id": "SharpZipLib",
+          "MaxVersion": null,
+          "MinVersion": "1.0.0"
         }
       ]
     },
