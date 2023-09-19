@@ -135,7 +135,7 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
+      "Version": "2.0.2308.1",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
@@ -1226,38 +1226,38 @@
     },
     {
       "Id": "常用组件库V3_Chrome配套",
-      "Version": "1.0.3",
+      "Version": "1.0.4",
       "Title": "常用组件库V3_Chrome配套",
       "InnerDependencies": [
         {
           "Id": "AutomationActivity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.3"
+          "MinVersion": "2.0.2305.5"
         },
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_日志增强",
           "MaxVersion": null,
-          "MinVersion": "1.0.2"
+          "MinVersion": "1.0.3"
         },
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2303.2"
+          "MinVersion": "2.0.2305.6"
         }
       ]
     },
@@ -1303,33 +1303,33 @@
     },
     {
       "Id": "常用组件库V3_鼠标增强",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Title": "常用组件库V3_鼠标增强",
       "InnerDependencies": [
         {
           "Id": "BotTime.Flow.Activities",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "BotTime.ActivityLibrary",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
+        },
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2308.1"
         },
         {
           "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2301.1"
+          "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_随机数",
           "MaxVersion": null,
           "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "AutomationActivity",
-          "MaxVersion": null,
-          "MinVersion": "2.0.2301.2"
         }
       ]
     },
@@ -1357,7 +1357,7 @@
     },
     {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.13",
+      "Version": "1.0.15",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
@@ -1371,17 +1371,17 @@
           "MinVersion": "2.0.2305.6"
         },
         {
+          "Id": "BotTime.Office.Activity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2305.7"
+        },
+        {
           "Id": "AutomationActivity",
           "MaxVersion": null,
-          "MinVersion": "2.0.2305.5"
+          "MinVersion": "2.0.2308.1"
         },
         {
-          "Id": "常用组件库V3_日志增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.3"
-        },
-        {
-          "Id": "Encoo.CodeTool.Activity",
+          "Id": "Encoo.Text.Activity",
           "MaxVersion": null,
           "MinVersion": "2.0.2305.6"
         },
@@ -1391,38 +1391,28 @@
           "MinVersion": "1.0.0"
         },
         {
-          "Id": "常用组件库V3_随机数",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "常用组件库V3_键盘增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.0"
-        },
-        {
-          "Id": "常用组件库V3_鼠标增强",
-          "MaxVersion": null,
-          "MinVersion": "1.0.2"
-        },
-        {
-          "Id": "Encoo.Text.Activity",
+          "Id": "Encoo.CodeTool.Activity",
           "MaxVersion": null,
           "MinVersion": "2.0.2305.6"
         },
         {
           "Id": "常用组件库V3_Chrome配套",
           "MaxVersion": null,
+          "MinVersion": "1.0.4"
+        },
+        {
+          "Id": "常用组件库V3_日志增强",
+          "MaxVersion": null,
           "MinVersion": "1.0.3"
         }
       ]
     }
   ],
-  "LastModifyTime": "2023-08-25T10:22:47.6080246+08:00",
+  "LastModifyTime": "2023-09-19T11:49:50.1099125+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2305.7"
+  "LastStudioVersion": "1.1.2305.11"
 }

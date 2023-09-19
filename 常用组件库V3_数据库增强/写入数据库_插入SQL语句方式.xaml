@@ -9,7 +9,7 @@
   </x:Members>
   <this:Main.筛选字段List>
     <InArgument x:TypeArguments="scg:List(x:String)">
-      <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">new List&lt;String&gt;{"店铺ID","日期"}</mca:CSharpValue>
+      <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_204">new List&lt;String&gt;{"店铺名称","日期"}</mca:CSharpValue>
     </InArgument>
   </this:Main.筛选字段List>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -715,12 +715,12 @@
             <bfa:AssignModel Index="1" IsNotFirst="False">
               <bfa:AssignModel.To>
                 <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String">插入ColumnString</mca:CSharpReference>
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_142">插入ColumnString</mca:CSharpReference>
                 </OutArgument>
               </bfa:AssignModel.To>
               <bfa:AssignModel.Value>
                 <InArgument x:TypeArguments="x:String">
-                  <mca:CSharpValue x:TypeArguments="x:String">"("</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_202">"("</mca:CSharpValue>
                 </InArgument>
               </bfa:AssignModel.Value>
             </bfa:AssignModel>
@@ -741,12 +741,12 @@
                 <bfa:AssignModel Index="1" IsNotFirst="False">
                   <bfa:AssignModel.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <mca:CSharpReference x:TypeArguments="x:String">插入ColumnString</mca:CSharpReference>
+                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_143">插入ColumnString</mca:CSharpReference>
                     </OutArgument>
                   </bfa:AssignModel.To>
                   <bfa:AssignModel.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String">插入ColumnString+ 数据表字段配置映射一层字典[模块名称][item.ColumnName]["数据库表字段名称"] +","</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_203">插入ColumnString+ 数据表字段配置映射一层字典[模块名称][item.ColumnName]["数据库表字段名称"] +","</mca:CSharpValue>
                     </InArgument>
                   </bfa:AssignModel.Value>
                 </bfa:AssignModel>

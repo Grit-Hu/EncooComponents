@@ -19,20 +19,17 @@
     ".code\\Python",
     ".code\\Python\\下载验证码图片计算偏移.py",
     ".code\\ToDelete",
+    ".code\\ToDelete\\test.xaml",
     ".code\\鼠标移动轨迹List.json",
-    "登录电商平台",
-    "登录电商平台\\登录生意参谋帐号.xaml",
-    "滑块验证",
-    "滑块验证\\抖店滑块验证.xaml",
-    "滑块验证\\生意参谋滑块验证.xaml",
+    "获取工作簿表1名称.xaml",
     "另存为窗口指定路径.xaml",
     "模块运行错误处理.xaml",
     "模块运行完成处理.xaml",
     "鼠标按轨迹移动.xaml",
     "数值单位标准化.xaml",
     "下载并返回文件全路径.xaml",
-    ".code\\ToDelete\\test.xaml",
-    "获取工作簿表1名称.xaml"
+    ".unittesting",
+    ".unittesting\\unittesting1.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -1350,9 +1347,20 @@
     },
     {
       "Id": "常用组件库V3_键盘增强",
-      "Version": "1.0.0",
+      "Version": "1.0.1",
       "Title": "常用组件库V3_键盘增强",
-      "InnerDependencies": []
+      "InnerDependencies": [
+        {
+          "Id": "AutomationActivity",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2308.1"
+        },
+        {
+          "Id": "BotTime.ActivityLibrary",
+          "MaxVersion": null,
+          "MinVersion": "2.0.2305.6"
+        }
+      ]
     },
     {
       "Id": "常用组件库V3_鼠标增强",
@@ -1387,7 +1395,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-09-15T12:56:54.4942913+08:00",
+  "LastModifyTime": "2023-09-19T11:47:49.9482217+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
