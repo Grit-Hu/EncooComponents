@@ -1357,7 +1357,7 @@
     },
     {
       "Id": "常用组件库V3_电商场景常用",
-      "Version": "1.0.15",
+      "Version": "1.0.16",
       "Title": "常用组件库V3_电商场景常用",
       "InnerDependencies": [
         {
@@ -1408,7 +1408,7 @@
       ]
     }
   ],
-  "LastModifyTime": "2023-09-19T11:49:50.1099125+08:00",
+  "LastModifyTime": "2023-09-19T12:01:07.2010394+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,

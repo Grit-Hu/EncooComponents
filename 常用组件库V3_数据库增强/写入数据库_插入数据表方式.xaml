@@ -9,7 +9,7 @@
   </x:Members>
   <this:Main.筛选字段List>
     <InArgument x:TypeArguments="scg:List(x:String)">
-      <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_285">new List&lt;String&gt;{"店铺名称","日期"}</mca:CSharpValue>
+      <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_289">new List&lt;String&gt;{"店铺名称","日期"};</mca:CSharpValue>
     </InArgument>
   </this:Main.筛选字段List>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>

@@ -542,6 +542,12 @@
       "InnerDependencies": []
     },
     {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Title": "System.ValueTuple",
+      "InnerDependencies": []
+    },
+    {
       "Id": "BotTime.Office.Activity",
       "Version": "2.0.2305.7",
       "Title": "BotTime.Office.Activity",
@@ -821,12 +827,6 @@
           "MinVersion": "4.5.0"
         }
       ]
-    },
-    {
-      "Id": "System.ValueTuple",
-      "Version": "4.5.0",
-      "Title": "System.ValueTuple",
-      "InnerDependencies": []
     },
     {
       "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
