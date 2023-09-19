@@ -15,13 +15,15 @@
   ],
   "ProjectEntryItem": "",
   "Items": [
+    "ESC.xaml",
     "菜单.xaml",
     "复制.xaml",
     "回车.xaml",
     "模拟全选输入.xaml",
     "全选.xaml",
     "设置剪贴板文本并粘贴.xaml",
-    "粘贴.xaml"
+    "粘贴.xaml",
+    "Tab.xaml"
   ],
   "TargetFramework": ".NETFramework,Version=v4.6.2",
   "ProjectDependencies": [
@@ -125,7 +127,7 @@
   "ProjectDependencyItems": [
     {
       "Id": "AutomationActivity",
-      "Version": "2.0.2305.5",
+      "Version": "2.0.2308.1",
       "Title": "BotTime.Automation.Activity",
       "InnerDependencies": []
     },
@@ -1209,11 +1211,11 @@
       "InnerDependencies": []
     }
   ],
-  "LastModifyTime": "2023-07-26T11:46:20.4667718+08:00",
+  "LastModifyTime": "2023-09-18T09:52:04.6029898+08:00",
   "ProjectReferences": [],
   "TerminationHandler": null,
   "ExceptionHandler": null,
   "ParallelWorkflows": null,
   "CreatedStudioVersion": "1.1.2206.34",
-  "LastStudioVersion": "1.1.2305.7"
+  "LastStudioVersion": "1.1.2305.11"
 }
