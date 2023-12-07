@@ -54,7 +54,7 @@
       </bfa:Assign.To>
       <bfa:Assign.Value>
         <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"-2.13%"</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"-1.5%"</mca:CSharpValue>
         </InArgument>
       </bfa:Assign.Value>
     </bfa:Assign>
